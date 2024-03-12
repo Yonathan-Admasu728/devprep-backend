@@ -1,0 +1,228 @@
+[
+    {
+      "question": "What is React?",
+      "answer": "React is a JavaScript library for building user interfaces, primarily for single-page applications. It's used for handling the view layer."
+    },
+    {
+      "question": "What are React components?",
+      "answer": "Components are the building blocks of a React application's UI. They split the UI into reusable, independent pieces."
+    },
+    
+     {
+      "question": "How is a React component defined?",
+      "answer": "A React component is a piece of the UI (user interface) that has its own logic and appearance. React components are JavaScript functions that return markup. For example: `function MyButton() { return <button>I'm a button</button>; }`."
+    },
+     {
+      "question": "What is JSX and how is it different from HTML?",
+      "answer": "JSX is a markup syntax used in React that allows developers to write HTML-like code within their JavaScript code. It is optional but commonly used in React projects for its convenience. Unlike HTML, JSX is stricter, requiring tags like `<br />` to be closed and components to be wrapped in a shared parent if multiple JSX tags are returned."
+    },
+    {
+      "question": "How do you specify a CSS class in a React component?",
+      "answer": "In React, you specify a CSS class using the `className` attribute. It works the same way as the HTML `class` attribute. For example: `<img className=\"avatar\" />`."
+    },
+     {
+      "question": "How does JSX handle data display and embedding JavaScript variables?",
+      "answer": "JSX lets you embed JavaScript expressions inside curly braces `{}` to display data or embed variable values. For example, to display the `user.name` variable, you would use `{user.name}` within your JSX."
+    },
+    
+      {
+        "question": "What is Redux?",
+        "answer": "Redux is a predictable state container for JavaScript apps. It helps you manage the state of your app."
+      },
+      {
+        "question": "How does React work?",
+        "answer": "React creates a virtual DOM. When state changes in a component, it calculates the difference between the virtual DOM and the real DOM and updates the real DOM with the minimal number of changes."
+      },
+      {
+        "question": "What are lifecycle methods?",
+        "answer": "Lifecycle methods are special methods that automatically get called as your component achieves certain milestones."
+      },
+      {
+        "question": "Why is the virtual DOM necessary?",
+        "answer": "The virtual DOM is a lightweight representation of the actual DOM elements. The rendering engine can quickly make changes to the virtual DOM and subsequently update the real DOM in a more efficient and optimized manner."
+      },
+      {
+        "question": "Explain React's unidirectional data flow.",
+        "answer": "Unidirectional data flow means that when designing a React app, you often nest child components within parent components. The parent can pass its state down to the child via props, but the child cannot send data back to the parent or modify the data directly."
+      },
+      
+      {
+        "question": "What is conditional rendering in React?",
+        "answer": "Conditional rendering in React refers to the ability to render different UI elements based on certain conditions. React doesn't have a special syntax for this; instead, developers use regular JavaScript techniques, such as `if` statements or the ternary operator, to conditionally include JSX."
+      },
+       {
+        "question": "How do you render lists in React?",
+        "answer": "In React, lists can be rendered using JavaScript features like the `map()` function. For example, if you have an array of products, you can use the `map()` function to transform this array into an array of `<li>` items."
+      },
+       {
+        "question": "How do you handle events in React?",
+        "answer": "In React, events are handled by declaring event handler functions inside components. These functions can be passed to JSX elements using attributes like `onClick`. For example: `<button onClick={handleClick}>Click me</button>`."
+      },
+       {
+        "question": "What is state in React and how is it used?",
+        "answer": "State in React allows components to 'remember' information and display it. It's a way to store dynamic data that might change over time or in response to user actions. State can be declared using the `useState` hook, which provides the current state and a function to update it."
+      },
+    
+      {
+        "question": "What is the significance of the `export default` keywords in React?",
+        "answer": "The `export default` keywords in React specify the main component in a file. It allows the component to be imported and used in other files or components."
+      },
+      {
+        "question": "How do you add styles to a React component?",
+        "answer": "In React, styles can be added directly to components using the `style` attribute. For example, `style={{ width: imageSize }}`. Additionally, CSS classes can be applied using the `className` attribute, and the actual CSS rules can be defined in a separate CSS file."
+      },
+       {
+        "question": "What is the difference between using `className` and `style` in React?",
+        "answer": "In React, `className` is used to apply CSS classes defined in external stylesheets, while the `style` attribute is used to apply inline styles directly to the component. The `style` attribute accepts a JavaScript object with camelCased properties."
+      },
+       {
+        "question": "How does React handle conditional rendering inside JSX?",
+        "answer": "React doesn't have a special syntax for conditional rendering inside JSX. Instead, developers can use regular JavaScript techniques, such as the ternary operator (`? :`), the logical `&&` operator, or traditional `if...else` statements outside the JSX."
+      },
+       {
+        "question": "What is the purpose of the `key` attribute when rendering lists in React?",
+        "answer": "The `key` attribute in React helps identify which items in a list have changed, been added, or been removed. It should be a unique and stable identifier for each item. React uses the `key` to optimize the rendering process and improve performance by minimizing DOM updates."
+      },
+       {
+        "question": "What are React Hooks?",
+        "answer": "React Hooks are functions that allow developers to use state and other React features in functional components. They start with the word `use`, such as `useState` or `useEffect`. Hooks provide a way to reuse stateful logic across components without changing their structure."
+      },
+       {
+        "question": "How do you share data between components in React?",
+        "answer": "In React, data can be shared between components by lifting the state up to a common ancestor component. This state can then be passed down to child components as props. When the state changes in the parent component, all child components receiving that state as props will re-render with the updated data."
+      },
+      {
+        "question": "What are `props` in React?",
+        "answer": "In React, `props` (short for 'properties') are a way to pass data from parent to child components. They are read-only and help to make components reusable. Props are passed to components via attributes in JSX."
+      },
+      {
+        "question": "How do you update the screen or UI in React after an event, like a button click?",
+        "answer": "In React, the UI can be updated by changing the component's state. When the state changes, React re-renders the component, updating the UI to reflect the new state. Event handlers, like those for button clicks, can call functions that update the state using hooks like `useState`."
+      },
+      {
+        "question": "What does it mean to 'lift state up' in React?",
+        "answer": "Lifting state up in React refers to the practice of moving state from a child component to a common ancestor when multiple components need access to the same state. This allows sibling components to share and synchronize data through the ancestor component."
+      },
+       {
+        "question": "How does React ensure efficient updates and rendering?",
+        "answer": "React uses a virtual DOM to ensure efficient updates and rendering. When state or props change, React creates a virtual representation of the new UI. It then compares this representation with the previous one using a diffing algorithm and updates only the changed parts in the real DOM. This process is called reconciliation."
+      },
+      {
+        "question": "What is the significance of the `children` prop in React?",
+        "answer": "The `children` prop in React allows components to be composed together. It represents any content placed between the opening and closing tags of a component. For example, in `<MyComponent>Hello</MyComponent>`, `Hello` is passed to `MyComponent` as `props.children`."
+      },
+       {
+        "question": "How do you handle forms and user input in React?",
+        "answer": "In React, forms and user input can be handled using controlled components. This means that the form element's value is controlled by the React state. Event handlers, like `onChange`, can be used to update the state as the user interacts with the form. When the form is submitted, the current state represents the form's data."
+      },
+       {
+        "question": "What is a controlled component in React?",
+        "answer": "A controlled component in React is an input element, like a text field or checkbox, whose value is controlled by the React state. Instead of letting the DOM handle the input's state, React controls it using event handlers and state updates."
+      },
+       {
+        "question": "How do you handle side effects in React components?",
+        "answer": "In React, side effects (like data fetching, subscriptions, or manual DOM manipulations) can be handled using the `useEffect` hook. The `useEffect` hook runs after the component renders and can be configured to run in response to specific state or prop changes."
+      },
+       {
+        "question": "What is the purpose of the dependency array in the `useEffect` hook?",
+        "answer": "The dependency array in the `useEffect` hook specifies which state or props the effect should watch. If values in the dependency array change between renders, the effect will run. If the array is empty, the effect will only run once after the initial render."
+      },
+       {
+        "question": "How do you share logic between components in React?",
+        "answer": "In React, logic can be shared between components using custom hooks. Custom hooks are functions that start with the word `use` and can use other hooks inside them. They allow for the reuse of stateful logic across multiple components."
+      },
+       {
+        "question": "What is context in React?",
+        "answer": "Context in React provides a way to share values (like themes or authentication status) between components without passing props down manually at every level. It's useful when certain data needs to be accessible by many components at different nesting levels."
+      },
+       {
+        "question": "How do you optimize performance in React applications?",
+        "answer": "Performance in React applications can be optimized using techniques like memoization, lazy loading of components, using the `React.memo` function for functional components, and the `shouldComponentUpdate` lifecycle method or `PureComponent` for class components. Additionally, tools like the React DevTools can help identify performance bottlenecks."
+      },
+       {
+        "question": "What are portals in React?",
+        "answer": "Portals in React provide a way to render children into a DOM node that exists outside the DOM hierarchy of the parent component. This is useful for cases like modals or tooltips where the component needs to break out of its container in the DOM."
+      },
+    
+       {
+        "question": "What is the significance of React's component-based architecture?",
+        "answer": "React's component-based architecture allows developers to build encapsulated components that manage their own state. These components can be reused throughout the application, promoting code reusability, maintainability, and a clear separation of concerns. This modular approach also simplifies debugging and testing."
+      },
+       {
+        "question": "How does React handle forward refs?",
+        "answer": "React provides the `forwardRef` function to pass refs from a parent component to a child component. This is useful when you need to access a child's DOM element or instance directly from a parent component. `forwardRef` creates a React component that forwards the `ref` attribute it receives to another component."
+      },
+      {
+        "question": "What are fragments in React?",
+        "answer": "Fragments in React allow developers to group a list of children without adding extra nodes to the DOM. It's a common pattern when a component needs to return multiple elements, but you don't want to wrap them in a parent container element. Fragments can be used with the shorthand syntax `<>...</>` or `<React.Fragment>...</React.Fragment>`."
+      },
+       {
+        "question": "How do you handle errors and exceptions in React components?",
+        "answer": "In React, errors and exceptions in components can be handled using error boundaries. An error boundary is a React component that catches JavaScript errors anywhere in its child component tree, logs those errors, and displays a fallback UI instead of the component tree that crashed."
+      },
+      {
+        "question": "What is the significance of the `key` prop when working with lists in React?",
+        "answer": "The `key` prop is essential when working with lists in React as it helps React identify which items have changed, been added, or been removed. It ensures efficient updates and rendering by minimizing unnecessary re-renders. Each `key` should be unique among its siblings."
+      },
+       {
+        "question": "How do you integrate third-party libraries or plugins with React?",
+        "answer": "Third-party libraries or plugins can be integrated with React by installing them via npm or yarn, importing them in the component where they're needed, and using them as per their documentation. Some libraries might also offer React-specific wrappers or components for easier integration."
+      },
+      {
+        "question": "What are controlled and uncontrolled components in React?",
+        "answer": "Controlled components in React have their state managed by React, typically using the `useState` hook. Their value is controlled by React, and changes are handled using event handlers like `onChange`. Uncontrolled components, on the other hand, maintain their own state internally and provide a ref to access their DOM value directly."
+      },
+       {
+        "question": "How does React handle server-side rendering (SSR)?",
+        "answer": "React supports server-side rendering using the `ReactDOMServer` object. It provides methods like `renderToString` and `renderToStaticMarkup` to render React components on the server. SSR in React improves performance, SEO, and ensures content is available upon the initial load."
+      },
+       {
+        "question": "What is the significance of the virtual DOM in React?",
+        "answer": "The virtual DOM in React is a lightweight representation of the actual DOM. When changes occur in a React application, they are first performed on the virtual DOM. React then compares the current virtual DOM with the previous one using a diffing algorithm and updates only the changed parts in the real DOM. This process, called reconciliation, ensures efficient and optimized updates."
+      },
+      {
+        "question": "How do you handle state management in large React applications?",
+        "answer": "In large React applications, state management can be handled using libraries like Redux, MobX, or Zustand. These libraries provide centralized stores to manage application state, ensuring consistent state updates and facilitating complex state logic."
+      },
+      {
+        "question": "How do you handle side effects in React components?",
+        "answer": "Side effects in React components, such as data fetching, subscriptions, or manual DOM manipulations, can be handled using the `useEffect` hook. The `useEffect` hook runs after the component renders and can be configured to run in response to specific state or prop changes."
+      },
+       {
+        "question": "What is the difference between `useState` and `useReducer` in React?",
+        "answer": "Both `useState` and `useReducer` are hooks in React used for state management. While `useState` is suitable for handling simple state logic, `useReducer` is more suited for state logic that involves multiple sub-values or when the next state depends on the previous one. `useReducer` also provides a more structured way to handle complex state transitions."
+      },
+       {
+        "question": "How do you optimize re-renders in React?",
+        "answer": "Re-renders in React can be optimized using techniques like memoization with `React.memo` for functional components, using the `shouldComponentUpdate` lifecycle method for class components, and leveraging the `useMemo` and `useCallback` hooks to prevent unnecessary recalculations or function re-creations."
+      },
+       {
+        "question": "What is prop drilling and how can it be avoided in React?",
+        "answer": "Prop drilling refers to the process of passing data through multiple layers of components, even if intermediate components don't need the data. It can lead to unnecessary renders and make the component tree harder to maintain. Prop drilling can be avoided using context, Redux, or other state management solutions to provide data directly to the components that need it."
+      },
+      {
+        "question": "How do you handle forms in React?",
+        "answer": "Forms in React can be handled using controlled components, where the form element's value is controlled by the React state. Event handlers, like `onChange`, can be used to update the state as the user interacts with the form. When the form is submitted, the current state represents the form's data."
+      },
+      {
+        "question": "What are higher-order components (HOCs) in React?",
+        "answer": "Higher-order components (HOCs) in React are functions that take a component and return a new component with additional props or behaviors. HOCs allow for code reuse by sharing common logic between multiple components."
+      },
+      {
+        "question": "How do you handle asynchronous operations in React, like data fetching?",
+        "answer": "Asynchronous operations in React, like data fetching, can be handled using the `useEffect` hook in combination with async functions, Promises, or libraries like Axios. The fetched data can be stored in the component's state using the `useState` hook."
+      },
+      {
+        "question": "What is the context API in React?",
+        "answer": "The context API in React provides a way to share values, like themes or authentication status, between components without passing props down manually at every level. It's useful when certain data needs to be accessible by many components at different nesting levels."
+      },
+       {
+        "question": "How do you handle routing in React applications?",
+        "answer": "Routing in React applications can be handled using libraries like React Router. React Router provides components like `BrowserRouter`, `Route`, and `Link` to define and navigate between different routes in the application."
+      },
+      {
+        "question": "What are the lifecycle methods in React class components?",
+        "answer": "Lifecycle methods in React class components are special methods that automatically get called as the component achieves certain milestones in its life. Some of the common lifecycle methods include `componentDidMount`, `shouldComponentUpdate`, `render`, and `componentWillUnmount`."
+      }
+  ]
+            

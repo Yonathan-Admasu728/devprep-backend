@@ -1,0 +1,203 @@
+[
+    {
+      "question": "What is the purpose of the 'final' keyword in Java?",
+      "options": [
+        "To finalize the value of variables",
+        "To create a final class that can't be inherited",
+        "To indicate that a method cannot be overridden",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "question": "What is a correct way to create a thread in Java?",
+      "options": [
+        "Extending the Thread class",
+        "Implementing the Runnable interface",
+        "Both A and B",
+        "None of the above"
+      ],
+      "correctAnswer": "Both A and B"
+    },
+    {
+      "question": "What does the 'static' keyword in Java indicate?",
+      "options": [
+        "Memory management by the programmer",
+        "Association with class rather than instances",
+        "Automatic memory allocation",
+        "Immutable variables"
+      ],
+      "correctAnswer": "Association with class rather than instances"
+    },
+    {
+      "question": "What is the default size of a load factor in hashing based collections in Java?",
+      "options": [
+        "0.75",
+        "1.0",
+        "0.5",
+        "1.25"
+      ],
+      "correctAnswer": "0.75"
+    },
+    {
+      "question": "What is the purpose of the 'transient' keyword in Java?",
+      "options": [
+        "To make a variable persistent",
+        "To exclude a variable from the serialization process",
+        "To make a variable thread-safe",
+        "To indicate that a variable is immutable"
+      ],
+      "correctAnswer": "To exclude a variable from the serialization process"
+    },
+    {
+      "question": "Which of these is not an access modifier in Java?",
+      "options": [
+        "public",
+        "protected",
+        "transient",
+        "private"
+      ],
+      "correctAnswer": "transient"
+    },
+    {
+      "question": "What does the 'volatile' keyword ensure?",
+      "options": [
+        "Variable changes are always visible to all threads",
+        "The variable is excluded from serialization",
+        "The variable is stored in the main memory",
+        "None of the above"
+      ],
+      "correctAnswer": "Variable changes are always visible to all threads"
+    },
+    {
+      "question": "What is the base class of all exception classes in Java?",
+      "options": [
+        "RuntimeException",
+        "Throwable",
+        "Error",
+        "Exception"
+      ],
+      "correctAnswer": "Throwable"
+    },
+    {
+      "question": "What does the 'implements' keyword signify in Java?",
+      "options": [
+        "Inheritance",
+        "Interface implementation",
+        "Method overriding",
+        "None of the above"
+      ],
+      "correctAnswer": "Interface implementation"
+    },
+    {
+      "question": "What is the correct way to handle exceptions in Java?",
+      "options": [
+        "try-catch block",
+        "throws keyword",
+        "try-finally block",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "question": "Which interface represents a collection of objects in Java?",
+      "options": [
+        "Set",
+        "List",
+        "Collection",
+        "Map"
+      ],
+      "correctAnswer": "Collection"
+    },
+    {
+      "question": "What is the primary use of Java's 'super' keyword?",
+      "options": [
+        "To call a superclass's variable",
+        "To call a superclass's method",
+        "To call a superclass's constructor",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "question": "What does the 'this' keyword represent in Java?",
+      "options": [
+        "The current instance of a method or constructor",
+        "A static reference of a class",
+        "A method",
+        "None of the above"
+      ],
+      "correctAnswer": "The current instance of a method or constructor"
+    },
+    {
+      "question": "What is 'encapsulation' in Java?",
+      "options": [
+        "Binding data with methods",
+        "A type of inheritance",
+        "A package system",
+        "A way of making classes abstract"
+      ],
+      "correctAnswer": "Binding data with methods"
+    },
+    {
+      "question": "What is the function of the 'hashCode()' method in Java?",
+      "options": [
+        "To provide a unique identifier for an object",
+        "To return the memory address of an object",
+        "To provide a unique hash for an object used in collections",
+        "To encrypt object data"
+      ],
+      "correctAnswer": "To provide a unique hash for an object used in collections"
+    },
+    {
+      "question": "Which method must be implemented by a class implementing the 'Runnable' interface?",
+      "options": [
+        "run()",
+        "start()",
+        "execute()",
+        "perform()"
+      ],
+      "correctAnswer": "run()"
+    },
+    {
+      "question": "What is the purpose of 'garbage collection' in Java?",
+      "options": [
+        "Memory management",
+        "Deleting unused variables",
+        "Cleaning the code",
+        "Optimizing database storage"
+      ],
+      "correctAnswer": "Memory management"
+    },
+    {
+      "question": "What is 'polymorphism' in Java?",
+      "options": [
+        "The ability of a class to derive properties from another class",
+        "The ability of a variable to store multiple types of data",
+        "The ability of a method or object to take many forms",
+        "The ability of a class to remain hidden from other classes"
+      ],
+      "correctAnswer": "The ability of a method or object to take many forms"
+    },
+    {
+      "question": "What is the return type of a constructor in Java?",
+      "options": [
+        "A new instance of the class",
+        "void",
+        "int",
+        "None of the above"
+      ],
+      "correctAnswer": "None of the above"
+    },
+    {
+      "question": "Which of these collections is ordered in Java?",
+      "options": [
+        "HashSet",
+        "TreeSet",
+        "HashMap",
+        "LinkedHashMap"
+      ],
+      "correctAnswer": "LinkedHashMap"
+    }
+  ]
+  

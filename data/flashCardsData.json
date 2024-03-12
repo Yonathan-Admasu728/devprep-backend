@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Master React Interviews",
+        "description": "Dive into essential React questions and solidify your knowledge.",
+        "frameworkKey": "react",
+        "language": ""
+    },
+    {
+        "title": "Next.js Essential Q&A",
+        "description": "Conquer Next.js interviews with top-notch guidance and insights.",
+        "frameworkKey": "next",
+        "language": ""
+    },
+    {
+        "title": "Python Algo Mastery",
+        "description": "Challenge yourself with Python algorithm questions and ace your interviews.",
+        "frameworkKey": "algo-python-mastery",
+        "language": "python"
+    },
+    {
+        "title": "JavaScript Algo Drill",
+        "description": "Prep for success with curated JavaScript algorithm and data structure questions.",
+        "frameworkKey": "algo-javascript-drill",
+        "language": "javascript"
+    },
+    {
+        "title": "Vue.js Interview Prep",
+        "description": "Get up to speed with Vue.js interview topics and best practices.",
+        "frameworkKey": "vue-js",
+        "language": ""
+    },
+    {
+        "title": "Java Fundamentals Explained",
+        "description": "Solidify your Java understanding to tackle any interview with confidence.",
+        "frameworkKey": "java",
+        "language": ""
+    },
+    {
+        "title": "Angular.js Advanced Concepts",
+        "description": "Deep dive into Angular.js complexities and interview essentials.",
+        "frameworkKey": "angular-js",
+        "language": ""
+    },
+    {
+        "title": "Bun.js Interviews Demystified",
+        "description": "Unravel the intricacies of Bun.js with targeted interview questions.",
+        "frameworkKey": "bun",
+        "language": ""
+    },
+    {
+        "title": "Node.js Backend Proficiency",
+        "description": "Ensure backend excellence with Node.js-focused interview preparation.",
+        "frameworkKey": "node",
+        "language": ""
+    },
+    {
+        "title": "Algorithmic Thinking with Python",
+        "description": "Enhance your problem-solving tactics for Python algorithms.",
+        "frameworkKey": "algo-python-thinking",
+        "language": "python"
+    },
+    {
+        "title": "Vue.js Core Principles",
+        "description": "Gain a deep understanding of Vue.js core principles for your next interview.",
+        "frameworkKey": "vue-core",
+        "language": ""
+    },
+    {
+        "title": "Angular Mastery",
+        "description": "Become an Angular expert with our comprehensive interview question set.",
+        "frameworkKey": "angular-master",
+        "language": ""
+    },
+    {
+        "title": "Python Data Science Insights",
+        "description": "Navigate the data science landscape with Python confidently.",
+        "frameworkKey": "algo-python-data-science",
+        "language": "python"
+    },
+    {
+        "title": "Machine Learning Interview Guide",
+        "description": "Unlock the secrets to machine learning interviews with our expert guide.",
+        "frameworkKey": "algo-python-machine-learning",
+        "language": "python"
+    },
+    {
+        "title": "Django Development Uncovered",
+        "description": "Ace Django interviews with our in-depth question compilation.",
+        "frameworkKey": "django",
+        "language": ""
+    }
+]

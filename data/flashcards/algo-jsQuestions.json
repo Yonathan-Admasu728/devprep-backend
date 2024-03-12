@@ -1,0 +1,515 @@
+[
+  
+ 
+    {
+      "title": "Two Sum",
+      "question": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
+      "solution": "JavaScript",
+      "answer": "function twoSum(nums, target) {\n  const numDict = {};\n  for (let i = 0; i < nums.length; i++) {\n    const diff = target - nums[i];\n    if (diff in numDict) {\n      return [numDict[diff], i];\n    }\n    numDict[nums[i]] = i;\n  }\n  return null;\n}"
+    },
+    {
+      "title": "Add Two Numbers",
+      "question": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.",
+      "solution": "JavaScript",
+      "answer": "function addTwoNumbers(l1, l2) {\n  let dummy = new ListNode(0);\n  let current = dummy;\n  let carry = 0;\n  while (l1 !== null || l2 !== null) {\n    let sum = carry;\n    if (l1 !== null) {\n      sum += l1.val;\n      l1 = l1.next;\n    }\n    if (l2 !== null) {\n      sum += l2.val;\n      l2 = l2.next;\n    }\n    carry = Math.floor(sum / 10);\n    current.next = new ListNode(sum % 10);\n    current = current.next;\n  }\n  if (carry > 0) {\n    current.next = new ListNode(carry);\n  }\n  return dummy.next;\n}"
+    },
+    {
+      "title": "Longest Substring Without Repeating Characters",
+      "question": "Write a function to find the length of the longest substring without repeating characters.",
+      "solution": "JavaScript",
+      "answer": "function lengthOfLongestSubstring(s) {\n  let start = 0, maxLen = 0;\n  const map = new Map();\n  for(let i = 0; i < s.length; i++) {\n    const ch = s[i];\n    if(map.has(ch) && map.get(ch) >= start) {\n      start = map.get(ch) + 1;\n    }\n    map.set(ch, i);\n    maxLen = Math.max(maxLen, i - start + 1);\n  }\n  return maxLen;\n}"
+    }
+  
+,
+ 
+    {
+      "title": "Median of Two Sorted Arrays",
+      "question": "Write a function to find the median of two sorted arrays.",
+      "solution": "JavaScript",
+      "answer": "function findMedianSortedArrays(nums1, nums2) {\n  let [m, n] = [nums1.length, nums2.length];\n  if (m > n) [nums1, nums2, m, n] = [nums2, nums1, n, m];\n  let [imin, imax, halfLen] = [0, m, Math.floor((m + n + 1) / 2)];\n  while (imin <= imax) {\n    const i = Math.floor((imin + imax) / 2);\n    const j = halfLen - i;\n    if (i < m && nums2[j-1] > nums1[i]) {\n      imin = i + 1;\n    } else if (i > 0 && nums1[i-1] > nums2[j]) {\n      imax = i - 1;\n    } else {\n      const maxOfLeft = Math.max(i > 0 ? nums1[i-1] : Number.NEGATIVE_INFINITY, j > 0 ? nums2[j-1] : Number.NEGATIVE_INFINITY);\n      if ((m + n) % 2 === 1) return maxOfLeft;\n      const minOfRight = Math.min(i < m ? nums1[i] : Number.POSITIVE_INFINITY, j < n ? nums2[j] : Number.POSITIVE_INFINITY);\n      return (maxOfLeft + minOfRight) / 2.0;\n    }\n  }\n  return 0;\n}"
+    },
+    {
+      "title": "Longest Palindromic Substring",
+      "question": "Write a function to find the longest palindromic substring in a given string.",
+      "solution": "JavaScript",
+      "answer": "function longestPalindrome(s) {\n  let start = 0, end = 0;\n  for (let i = 0; i < s.length; i++) {\n    const len1 = expandAroundCenter(s, i, i);\n    const len2 = expandAroundCenter(s, i, i + 1);\n    const len = Math.max(len1, len2);\n    if (len > end - start) {\n      start = i - Math.floor((len - 1) / 2);\n      end = i + Math.floor(len / 2);\n    }\n  }\n  return s.substring(start, end + 1);\n}\n\nfunction expandAroundCenter(s, left, right) {\n  while (left >= 0 && right < s.length && s[left] === s[right]) {\n    left--;\n    right++;\n  }\n  return right - left - 1;\n}"
+    }
+  
+,
+ 
+    {
+      "title": "ZigZag Conversion",
+      "question": "Write a function that converts a string into a zigzag pattern given a number of rows.",
+      "solution": "JavaScript",
+      "answer": "function convert(s, numRows) {\n  if (numRows === 1) return s;\n  const rows = Array.from({ length: Math.min(numRows, s.length) }, () => '');\n  let curRow = 0;\n  let goingDown = false;\n  for (const c of s) {\n    rows[curRow] += c;\n    if (curRow === 0 || curRow === numRows - 1) goingDown = !goingDown;\n    curRow += goingDown ? 1 : -1;\n  }\n  return rows.join('');\n}"
+    },
+    {
+      "title": "Reverse Integer",
+      "question": "Write a function to reverse an integer.",
+      "solution": "JavaScript",
+      "answer": "function reverse(x) {\n  let rev = 0;\n  while (x !== 0) {\n    const pop = x % 10;\n    x = Math.floor(x / 10);\n    if (rev > Math.floor(Number.MAX_SAFE_INTEGER / 10) || (rev === Math.floor(Number.MAX_SAFE_INTEGER / 10) && pop > 7)) return 0;\n    if (rev < Math.ceil(Number.MIN_SAFE_INTEGER / 10) || (rev === Math.ceil(Number.MIN_SAFE_INTEGER / 10) && pop < -8)) return 0;\n    rev = rev * 10 + pop;\n  }\n  return rev;\n}"
+    }
+  
+,
+ 
+    {
+      "title": "String to Integer (atoi)",
+      "question": "Write a function to convert a string to an integer.",
+      "solution": "JavaScript",
+      "answer": "function myAtoi(s) {\n  let i = 0, sign = 1, num = 0;\n  while (s[i] === ' ') i++;\n  if (s[i] === '-' || s[i] === '+') sign = s[i++] === '-' ? -1 : 1;\n  while (s[i] >= '0' && s[i] <= '9') {\n    num = num * 10 + parseInt(s[i++]);\n    if (num * sign > 2147483647) return 2147483647;\n    if (num * sign < -2147483648) return -2147483648;\n  }\n  return num * sign;\n}"
+    },
+    {
+      "title": "Palindrome Number",
+      "question": "Write a function to check if a number is a palindrome.",
+      "solution": "JavaScript",
+      "answer": "function isPalindrome(x) {\n  if (x < 0) return false;\n  let reversed = 0, original = x;\n  while (x !== 0) {\n    reversed = reversed * 10 + x % 10;\n    x = Math.floor(x / 10);\n  }\n  return original === reversed;\n}"
+    },
+    {
+      "title": "Regular Expression Matching",
+      "question": "Write a function to implement regular expression matching with support for '.' and '*'.",
+      "solution": "JavaScript",
+      "answer": "function isMatch(s, p) {\n  const dp = Array(s.length + 1).fill(null).map(() => Array(p.length + 1).fill(false));\n  dp[0][0] = true;\n  for (let i = 1; i <= p.length; i++) {\n    if (p[i - 1] === '*') dp[0][i] = dp[0][i - 2];\n  }\n  for (let i = 1; i <= s.length; i++) {\n    for (let j = 1; j <= p.length; j++) {\n      if (p[j - 1] === s[i - 1] || p[j - 1] === '.') dp[i][j] = dp[i - 1][j - 1];\n      else if (p[j - 1] === '*') dp[i][j] = dp[i][j - 2] || ((s[i - 1] === p[j - 2] || p[j - 2] === '.') && dp[i - 1][j]);\n    }\n  }\n  return dp[s.length][p.length];\n}"
+    },
+    {
+      "title": "Container With Most Water",
+      "question": "Write a function to find two lines, which together with the x-axis forms a container that can hold the most water.",
+      "solution": "JavaScript",
+      "answer": "function maxArea(height) {\n  let max = 0, left = 0, right = height.length - 1;\n  while (left < right) {\n    max = Math.max(max, Math.min(height[left], height[right]) * (right - left));\n    if (height[left] < height[right]) left++;\n    else right--;\n  }\n  return max;\n}"
+    },
+    {
+      "title": "Integer to Roman",
+      "question": "Write a function to convert an integer to a Roman numeral.",
+      "solution": "JavaScript",
+      "answer": "function intToRoman(num) {\n  const val = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];\n  const syms = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];\n  let roman = '';\n  for (let i = 0; i < val.length; i++) {\n    while (num >= val[i]) {\n      num -= val[i];\n      roman += syms[i];\n    }\n  }\n  return roman;\n}"
+    }
+  
+,
+ 
+    {
+      "title": "Roman to Integer",
+      "question": "Write a function to convert a Roman numeral to an integer.",
+      "solution": "JavaScript",
+      "answer": "function romanToInt(s) {\n  const map = { 'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000 };\n  let num = 0;\n  for (let i = 0; i < s.length; i++) {\n    if (map[s[i]] < map[s[i + 1]]) num -= map[s[i]];\n    else num += map[s[i]];\n  }\n  return num;\n}"
+    },
+    {
+      "title": "Longest Common Prefix",
+      "question": "Write a function to find the longest common prefix string amongst an array of strings.",
+      "solution": "JavaScript",
+      "answer": "function longestCommonPrefix(strs) {\n  if (!strs.length) return '';\n  let prefix = strs[0];\n  for (let i = 1; i < strs.length; i++) {\n    while (strs[i].indexOf(prefix) !== 0) {\n      prefix = prefix.substring(0, prefix.length - 1);\n      if (!prefix) return '';\n    }\n  }\n  return prefix;\n}"
+    },
+    {
+      "title": "3Sum",
+      "question": "Write a function that takes an array of integers and returns all unique triplets that sum up to a specific target.",
+      "solution": "JavaScript",
+      "answer": "function threeSum(nums) {\n  nums.sort((a, b) => a - b);\n  const res = [];\n  for (let i = 0; i < nums.length - 2; i++) {\n    if (i === 0 || (i > 0 && nums[i] !== nums[i - 1])) {\n      let lo = i + 1, hi = nums.length - 1, sum = -nums[i];\n      while (lo < hi) {\n        if (nums[lo] + nums[hi] === sum) {\n          res.push([nums[i], nums[lo], nums[hi]]);\n          while (lo < hi && nums[lo] === nums[lo + 1]) lo++;\n          while (lo < hi && nums[hi] === nums[hi - 1]) hi--;\n          lo++; hi--;\n        } else if (nums[lo] + nums[hi] < sum) lo++;\n        else hi--;\n      }\n    }\n  }\n  return res;\n}"
+    },
+    {
+      "title": "3Sum Closest",
+      "question": "Write a function that takes an array of integers and a target, and returns the sum of three integers in the array such that the sum is closest to the target.",
+      "solution": "JavaScript",
+      "answer": "function threeSumClosest(nums, target) {\n  nums.sort((a, b) => a - b);\n  let closest = Infinity;\n  for (let i = 0; i < nums.length - 2; i++) {\n    let lo = i + 1, hi = nums.length - 1;\n    while (lo < hi) {\n      const sum = nums[i] + nums[lo] + nums[hi];\n      if (Math.abs(target - sum) < Math.abs(target - closest)) closest = sum;\n      if (sum < target) lo++;\n      else hi--;\n    }\n  }\n  return closest;\n}"
+    },
+    {
+      "title": "Letter Combinations of a Phone Number",
+      "question": "Write a function that takes a string containing digits from 2-9 inclusive and returns all possible letter combinations that the number could represent.",
+      "solution": "JavaScript",
+      "answer": "function letterCombinations(digits) {\n  if (!digits) return [];\n  const map = ['0', '1', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz'];\n  const res = [];\n  function backtrack(combination, nextDigits) {\n    if (nextDigits.length === 0) res.push(combination);\n    else {\n      const digit = nextDigits.substring(0, 1);\n      const letters = map[parseInt(digit)];\n      for (let i = 0; i < letters.length; i++) {\n        backtrack(combination + letters[i], nextDigits.substring(1));\n      }\n    }\n  }\n  backtrack('', digits);\n  return res;\n}"
+    }
+  
+,
+ 
+    {
+      "title": "Remove Nth Node From End of List",
+      "question": "Write a function to remove the nth node from the end of a linked list.",
+      "solution": "JavaScript",
+      "answer": "function removeNthFromEnd(head, n) {\n  let dummy = new ListNode(0);\n  dummy.next = head;\n  let first = dummy;\n  let second = dummy;\n  for (let i = 1; i <= n + 1; i++) {\n    first = first.next;\n  }\n  while (first !== null) {\n    first = first.next;\n    second = second.next;\n  }\n  second.next = second.next.next;\n  return dummy.next;\n}"
+    },
+    {
+      "title": "Valid Parentheses",
+      "question": "Write a function to determine if a string containing just the characters '(', ')', '{', '}', '[' and ']' is valid.",
+      "solution": "JavaScript",
+      "answer": "function isValid(s) {\n  const stack = [];\n  const map = { ')': '(', '}': '{', ']': '[' };\n  for (let char of s) {\n    if (['(', '{', '['].includes(char)) stack.push(char);\n    else {\n      if (stack.pop() !== map[char]) return false;\n    }\n  }\n  return stack.length === 0;\n}"
+    },
+    {
+      "title": "Merge Two Sorted Lists",
+      "question": "Write a function to merge two sorted linked lists and return it as a new sorted list.",
+      "solution": "JavaScript",
+      "answer": "function mergeTwoLists(l1, l2) {\n  let dummy = new ListNode(0);\n  let current = dummy;\n  while (l1 !== null && l2 !== null) {\n    if (l1.val < l2.val) {\n      current.next = l1;\n      l1 = l1.next;\n    } else {\n      current.next = l2;\n      l2 = l2.next;\n    }\n    current = current.next;\n  }\n  current.next = l1 || l2;\n  return dummy.next;\n}"
+    },
+    {
+      "title": "Generate Parentheses",
+      "question": "Write a function to generate all combinations of well-formed parentheses for a given n.",
+      "solution": "JavaScript",
+      "answer": "function generateParenthesis(n) {\n  const res = [];\n  function backtrack(s, left, right) {\n    if (s.length === 2 * n) {\n      res.push(s);\n      return;\n    }\n    if (left < n) backtrack(s + '(', left + 1, right);\n    if (right < left) backtrack(s + ')', left, right + 1);\n  }\n  backtrack('', 0, 0);\n  return res;\n}"
+    },
+    {
+      "title": "Merge k Sorted Lists",
+      "question": "Write a function to merge k sorted linked lists and return it as one sorted list.",
+      "solution": "JavaScript",
+      "answer": "function mergeKLists(lists) {\n  if (!lists.length) return null;\n  while (lists.length > 1) {\n    let a = lists.shift();\n    let b = lists.shift();\n    const h = mergeTwoLists(a, b);\n    lists.push(h);\n  }\n  return lists[0];\n  function mergeTwoLists(a, b) {\n    let dummy = new ListNode(0);\n    let current = dummy;\n    while (a && b) {\n      if (a.val < b.val) {\n        current.next = a;\n        a = a.next;\n      } else {\n        current.next = b;\n        b = b.next;\n      }\n      current = current.next;\n    }\n    current.next = a || b;\n    return dummy.next;\n  }\n}"
+    }
+  
+,
+ 
+    {
+      "title": "Swap Nodes in Pairs",
+      "question": "Write a function to swap every two adjacent nodes in a linked list.",
+      "solution": "JavaScript",
+      "answer": "function swapPairs(head) {\n  const dummy = new ListNode(0);\n  dummy.next = head;\n  let prev = dummy;\n  while (head && head.next) {\n    const first = head;\n    const second = head.next;\n    prev.next = second;\n    first.next = second.next;\n    second.next = first;\n    prev = first;\n    head = first.next;\n  }\n  return dummy.next;\n}"
+    },
+    {
+      "title": "Reverse Nodes in k-Group",
+      "question": "Write a function to reverse the nodes of a linked list k at a time.",
+      "solution": "JavaScript",
+      "answer": "function reverseKGroup(head, k) {\n  let count = 0;\n  let node = head;\n  while (node && count !== k) {\n    node = node.next;\n    count++;\n  }\n  if (count === k) {\n    node = reverseKGroup(node, k);\n    while (count-- > 0) {\n      const tmp = head.next;\n      head.next = node;\n      node = head;\n      head = tmp;\n    }\n    head = node;\n  }\n  return head;\n}"
+    },
+    {
+      "title": "Search in Rotated Sorted Array",
+      "question": "Write a function to search a target value in a rotated sorted array.",
+      "solution": "JavaScript",
+      "answer": "function search(nums, target) {\n  let left = 0, right = nums.length - 1;\n  while (left <= right) {\n    const mid = Math.floor((left + right) / 2);\n    if (nums[mid] === target) return mid;\n    if (nums[left] <= nums[mid]) {\n      if (target >= nums[left] && target < nums[mid]) right = mid - 1;\n      else left = mid + 1;\n    } else {\n      if (target > nums[mid] && target <= nums[right]) left = mid + 1;\n      else right = mid - 1;\n    }\n  }\n  return -1;\n}"
+    },
+    {
+      "title": "Combination Sum",
+      "question": "Write a function to find all unique combinations in an array where the candidate numbers can be chosen multiple times and the sum equals a target.",
+      "solution": "JavaScript",
+      "answer": "function combinationSum(candidates, target) {\n  const res = [];\n  function backtrack(start, target, path) {\n    if (target === 0) {\n      res.push([...path]);\n      return;\n    }\n    for (let i = start; i < candidates.length; i++) {\n      if (candidates[i] <= target) {\n        path.push(candidates[i]);\n        backtrack(i, target - candidates[i], path);\n        path.pop();\n      }\n    }\n  }\n  backtrack(0, target, []);\n  return res;\n}"
+    },
+    {
+      "title": "First Missing Positive",
+      "question": "Write a function to find the smallest missing positive integer from an unsorted array.",
+      "solution": "JavaScript",
+      "answer": "function firstMissingPositive(nums) {\n  const n = nums.length;\n  for (let i = 0; i < n; i++) {\n    while (nums[i] > 0 && nums[i] <= n && nums[nums[i] - 1] !== nums[i]) {\n      [nums[i], nums[nums[i] - 1]] = [nums[nums[i] - 1], nums[i]];\n    }\n  }\n  for (let i = 0; i < n; i++) {\n    if (nums[i] !== i + 1) return i + 1;\n  }\n  return n + 1;\n}"
+    }
+  
+,
+ 
+    {
+      "title": "Trapping Rain Water",
+      "question": "Write a function to compute how much water can be trapped between the bars of different heights.",
+      "solution": "JavaScript",
+      "answer": "function trap(height) {\n  let left = 0, right = height.length - 1, leftMax = 0, rightMax = 0, ans = 0;\n  while (left < right) {\n    if (height[left] < height[right]) {\n      height[left] >= leftMax ? (leftMax = height[left]) : ans += (leftMax - height[left]);\n      ++left;\n    } else {\n      height[right] >= rightMax ? (rightMax = height[right]) : ans += (rightMax - height[right]);\n      --right;\n    }\n  }\n  return ans;\n}"
+    },
+    {
+      "title": "Jump Game",
+      "question": "Write a function to determine if you can reach the last index starting from the first index, given an array of non-negative integers where each element represents your maximum jump length.",
+      "solution": "JavaScript",
+      "answer": "function canJump(nums) {\n  let maxReach = 0;\n  for (let i = 0; i < nums.length; i++) {\n    if (i > maxReach) return false;\n    maxReach = Math.max(maxReach, i + nums[i]);\n  }\n  return true;\n}"
+    },
+    {
+      "title": "Merge Intervals",
+      "question": "Write a function to merge all overlapping intervals.",
+      "solution": "JavaScript",
+      "answer": "function merge(intervals) {\n  if (!intervals.length) return intervals;\n  intervals.sort((a, b) => a[0] - b[0]);\n  const res = [intervals[0]];\n  for (let i = 1; i < intervals.length; i++) {\n    if (res[res.length - 1][1] >= intervals[i][0]) {\n      res[res.length - 1][1] = Math.max(res[res.length - 1][1], intervals[i][1]);\n    } else {\n      res.push(intervals[i]);\n    }\n  }\n  return res;\n}"
+    },
+    {
+      "title": "Insert Interval",
+      "question": "Write a function to insert a new interval into a set of non-overlapping intervals, merge any overlapping intervals if necessary.",
+      "solution": "JavaScript",
+      "answer": "function insert(intervals, newInterval) {\n  const res = [];\n  let i = 0;\n  const n = intervals.length;\n  while (i < n && intervals[i][1] < newInterval[0]) {\n    res.push(intervals[i++]);\n  }\n  while (i < n && intervals[i][0] <= newInterval[1]) {\n    newInterval[0] = Math.min(newInterval[0], intervals[i][0]);\n    newInterval[1] = Math.max(newInterval[1], intervals[i][1]);\n    i++;\n  }\n  res.push(newInterval);\n  while (i < n) res.push(intervals[i++]);\n  return res;\n}"
+    },
+    {
+      "title": "Unique Paths",
+      "question": "Write a function to find the number of unique paths from the top-left corner to the bottom-right corner of a grid.",
+      "solution": "JavaScript",
+      "answer": "function uniquePaths(m, n) {\n  const dp = Array(m).fill(0).map(() => Array(n).fill(0));\n  for (let i = 0; i < m; i++) dp[i][0] = 1;\n  for (let j = 0; j < n; j++) dp[0][j] = 1;\n  for (let i = 1; i < m; i++) {\n    for (let j = 1; j < n; j++) {\n      dp[i][j] = dp[i - 1][j] + dp[i][j - 1];\n    }\n  }\n  return dp[m - 1][n - 1];\n}"
+    }
+  
+,
+ 
+    {
+      "title": "Minimum Path Sum",
+      "question": "Write a function to find the minimum path sum from the top-left corner to the bottom-right corner of a grid, where you can only move down or right.",
+      "solution": "JavaScript",
+      "answer": "function minPathSum(grid) {\n  const m = grid.length, n = grid[0].length;\n  for (let i = 1; i < m; i++) grid[i][0] += grid[i - 1][0];\n  for (let j = 1; j < n; j++) grid[0][j] += grid[0][j - 1];\n  for (let i = 1; i < m; i++) {\n    for (let j = 1; j < n; j++) {\n      grid[i][j] += Math.min(grid[i - 1][j], grid[i][j - 1]);\n    }\n  }\n  return grid[m - 1][n - 1];\n}"
+    },
+    {
+      "title": "Climbing Stairs",
+      "question": "Write a function to find the number of distinct ways to climb a staircase with n steps, where you can take 1 or 2 steps at a time.",
+      "solution": "JavaScript",
+      "answer": "function climbStairs(n) {\n  let [a, b] = [1, 1];\n  for (let i = 2; i <= n; i++) {\n    [a, b] = [b, a + b];\n  }\n  return b;\n}"
+    },
+    {
+      "title": "Simplify Path",
+      "question": "Write a function to simplify a Unix-style file path.",
+      "solution": "JavaScript",
+      "answer": "function simplifyPath(path) {\n  const dirs = path.split('/');\n  const stack = [];\n  for (const dir of dirs) {\n    if (dir === '..') {\n      stack.pop();\n    } else if (dir && dir !== '.') {\n      stack.push(dir);\n    }\n  }\n  return '/' + stack.join('/');\n}"
+    },
+    {
+      "title": "Set Matrix Zeroes",
+      "question": "Write a function to set an entire row and column to zero if an element in a matrix is zero.",
+      "solution": "JavaScript",
+      "answer": "function setZeroes(matrix) {\n  let firstRowHasZero = false, firstColHasZero = false;\n  for (let i = 0; i < matrix.length; i++) {\n    for (let j = 0; j < matrix[0].length; j++) {\n      if (matrix[i][j] === 0) {\n        if (i === 0) firstRowHasZero = true;\n        if (j === 0) firstColHasZero = true;\n        matrix[i][0] = 0;\n        matrix[0][j] = 0;\n      }\n    }\n  }\n  for (let i = 1; i < matrix.length; i++) {\n    for (let j = 1; j < matrix[0].length; j++) {\n      if (matrix[i][0] === 0 || matrix[0][j] === 0) {\n        matrix[i][j] = 0;\n      }\n    }\n  }\n  if (firstRowHasZero) matrix[0].fill(0);\n  if (firstColHasZero) {\n    for (let i = 0; i < matrix.length; i++) {\n      matrix[i][0] = 0;\n    }\n  }\n}"
+    },
+    {
+      "title": "Search a 2D Matrix",
+      "question": "Write a function to search for a value in a 2D matrix, where each row is sorted in ascending order from left to right, and the first integer of each row is greater than the last integer of the previous row.",
+      "solution": "JavaScript",
+      "answer": "function searchMatrix(matrix, target) {\n  let row = 0, col = matrix[0].length - 1;\n  while (row < matrix.length && col >= 0) {\n    if (matrix[row][col] === target) return true;\n    else if (matrix[row][col] > target) col--;\n    else row++;\n  }\n  return false;\n}"
+    }
+  
+,
+ 
+    {
+      "title": "Valid Sudoku",
+      "question": "Write a function to determine if a Sudoku board is valid.",
+      "solution": "JavaScript",
+      "answer": "function isValidSudoku(board) {\n  const rows = new Array(9).fill(null).map(() => new Set());\n  const cols = new Array(9).fill(null).map(() => new Set());\n  const boxes = new Array(9).fill(null).map(() => new Set());\n  for (let i = 0; i < 9; i++) {\n    for (let j = 0; j < 9; j++) {\n      const val = board[i][j];\n      if (val === '.') continue;\n      const boxIndex = Math.floor(i / 3) * 3 + Math.floor(j / 3);\n      if (rows[i].has(val) || cols[j].has(val) || boxes[boxIndex].has(val)) return false;\n      rows[i].add(val);\n      cols[j].add(val);\n      boxes[boxIndex].add(val);\n    }\n  }\n  return true;\n}"
+    },
+    {
+      "title": "Rotate Image",
+      "question": "Write a function to rotate an image by 90 degrees in-place.",
+      "solution": "JavaScript",
+      "answer": "function rotate(matrix) {\n  const n = matrix.length;\n  for (let i = 0; i < Math.floor(n / 2); i++) {\n    for (let j = i; j < n - i - 1; j++) {\n      const temp = matrix[i][j];\n      matrix[i][j] = matrix[n - j - 1][i];\n      matrix[n - j - 1][i] = matrix[n - i - 1][n - j - 1];\n      matrix[n - i - 1][n - j - 1] = matrix[j][n - i - 1];\n      matrix[j][n - i - 1] = temp;\n    }\n  }\n}"
+    },
+    {
+      "title": "Group Anagrams",
+      "question": "Write a function to group anagrams from a list of strings.",
+      "solution": "JavaScript",
+      "answer": "function groupAnagrams(strs) {\n  const map = new Map();\n  for (const str of strs) {\n    const sorted = Array.from(str).sort().join('');\n    if (!map.has(sorted)) map.set(sorted, []);\n    map.get(sorted).push(str);\n  }\n  return Array.from(map.values());\n}"
+    },
+    {
+      "title": "Maximum Subarray",
+      "question": "Write a function to find the contiguous subarray with the largest sum.",
+      "solution": "JavaScript",
+      "answer": "function maxSubArray(nums) {\n  let maxSum = nums[0], currentSum = nums[0];\n  for (let i = 1; i < nums.length; i++) {\n    currentSum = Math.max(nums[i], currentSum + nums[i]);\n    maxSum = Math.max(maxSum, currentSum);\n  }\n  return maxSum;\n}"
+    },
+    {
+      "title": "Spiral Matrix",
+      "question": "Write a function to return all elements of a matrix in spiral order.",
+      "solution": "JavaScript",
+      "answer": "function spiralOrder(matrix) {\n  const res = [];\n  let top = 0, bottom = matrix.length - 1, left = 0, right = matrix[0].length - 1;\n  while (top <= bottom && left <= right) {\n    for (let i = left; i <= right; i++) res.push(matrix[top][i]);\n    top++;\n    for (let i = top; i <= bottom; i++) res.push(matrix[i][right]);\n    right--;\n    if (top <= bottom) {\n      for (let i = right; i >= left; i--) res.push(matrix[bottom][i]);\n      bottom--;\n    }\n    if (left <= right) {\n      for (let i = bottom; i >= top; i--) res.push(matrix[i][left]);\n      left++;\n    }\n  }\n  return res;\n}"
+    }
+  
+,
+ 
+    {
+      "title": "Jump Game",
+      "question": "Write a function to determine if you can reach the last index starting from the first index, given an array of non-negative integers where each integer represents the maximum jump length at that position.",
+      "solution": "JavaScript",
+      "answer": "function canJump(nums) {\n  let maxReach = 0;\n  for (let i = 0; i < nums.length; i++) {\n    if (i > maxReach) return false;\n    maxReach = Math.max(maxReach, i + nums[i]);\n  }\n  return true;\n}"
+    },
+    {
+      "title": "Merge Intervals",
+      "question": "Write a function to merge overlapping intervals.",
+      "solution": "JavaScript",
+      "answer": "function merge(intervals) {\n  if (!intervals.length) return [];\n  intervals.sort((a, b) => a[0] - b[0]);\n  const res = [intervals[0]];\n  for (let i = 1; i < intervals.length; i++) {\n    const [start, end] = intervals[i];\n    if (start <= res[res.length - 1][1]) {\n      res[res.length - 1][1] = Math.max(end, res[res.length - 1][1]);\n    } else {\n      res.push(intervals[i]);\n    }\n  }\n  return res;\n}"
+    },
+    {
+      "title": "Insert Interval",
+      "question": "Write a function to insert a new interval into a list of sorted, non-overlapping intervals.",
+      "solution": "JavaScript",
+      "answer": "function insert(intervals, newInterval) {\n  const res = [];\n  let i = 0;\n  const [start, end] = newInterval;\n  while (i < intervals.length && intervals[i][1] < start) {\n    res.push(intervals[i]);\n    i++;\n  }\n  while (i < intervals.length && intervals[i][0] <= end) {\n    newInterval[0] = Math.min(newInterval[0], intervals[i][0]);\n    newInterval[1] = Math.max(newInterval[1], intervals[i][1]);\n    i++;\n  }\n  res.push(newInterval);\n  while (i < intervals.length) {\n    res.push(intervals[i]);\n    i++;\n  }\n  return res;\n}"
+    },
+    {
+      "title": "Length of Last Word",
+      "question": "Write a function to find the length of the last word in a given string.",
+      "solution": "JavaScript",
+      "answer": "function lengthOfLastWord(s) {\n  let length = 0;\n  let tail = s.length - 1;\n  while (tail >= 0 && s[tail] === ' ') tail--;\n  while (tail >= 0 && s[tail] !== ' ') {\n    length++;\n    tail--;\n  }\n  return length;\n}"
+    },
+    {
+      "title": "Simplify Path",
+      "question": "Write a function to simplify a Unix-style file path.",
+      "solution": "JavaScript",
+      "answer": "function simplifyPath(path) {\n  const stack = [];\n  const parts = path.split('/');\n  for (const part of parts) {\n    if (part === '..') {\n      stack.pop();\n    } else if (part && part !== '.') {\n      stack.push(part);\n    }\n  }\n  return '/' + stack.join('/');\n}"
+    }
+  
+,
+ 
+    {
+      "title": "Search in Rotated Sorted Array",
+      "question": "Write a function to search a target value in a rotated sorted array. Assume no duplicates.",
+      "solution": "JavaScript",
+      "answer": "function search(nums, target) {\n  let left = 0, right = nums.length - 1;\n  while (left <= right) {\n    const mid = Math.floor((left + right) / 2);\n    if (nums[mid] === target) return mid;\n    if (nums[left] <= nums[mid]) {\n      if (target >= nums[left] && target < nums[mid]) right = mid - 1;\n      else left = mid + 1;\n    } else {\n      if (target > nums[mid] && target <= nums[right]) left = mid + 1;\n      else right = mid - 1;\n    }\n  }\n  return -1;\n}"
+    },
+    {
+      "title": "Remove Duplicates from Sorted Array",
+      "question": "Write a function to remove duplicates from a sorted array.",
+      "solution": "JavaScript",
+      "answer": "function removeDuplicates(nums) {\n  if (nums.length === 0) return 0;\n  let i = 0;\n  for (let j = 1; j < nums.length; j++) {\n    if (nums[j] !== nums[i]) {\n      i++;\n      nums[i] = nums[j];\n    }\n  }\n  return i + 1;\n}"
+    },
+    {
+      "title": "Remove Element",
+      "question": "Write a function to remove all instances of a given value in an array.",
+      "solution": "JavaScript",
+      "answer": "function removeElement(nums, val) {\n  let i = 0;\n  for (let j = 0; j < nums.length; j++) {\n    if (nums[j] !== val) {\n      nums[i] = nums[j];\n      i++;\n    }\n  }\n  return i;\n}"
+    },
+    {
+      "title": "Implement strStr()",
+      "question": "Write a function to implement the strStr() function.",
+      "solution": "JavaScript",
+      "answer": "function strStr(haystack, needle) {\n  if (needle === '') return 0;\n  for (let i = 0; i <= haystack.length - needle.length; i++) {\n    if (haystack.substring(i, i + needle.length) === needle) return i;\n  }\n  return -1;\n}"
+    },
+    {
+      "title": "Divide Two Integers",
+      "question": "Write a function to divide two integers without using multiplication, division, or mod operator.",
+      "solution": "JavaScript",
+      "answer": "function divide(dividend, divisor) {\n  if (dividend === -2147483648 && divisor === -1) return 2147483647;\n  let negatives = 2;\n  if (dividend > 0) {\n    negatives--;\n    dividend = -dividend;\n  }\n  if (divisor > 0) {\n    negatives--;\n    divisor = -divisor;\n  }\n  let quotient = 0;\n  while (dividend - divisor <= 0) {\n    dividend -= divisor;\n    quotient--;\n  }\n  if (negatives !== 1) quotient = -quotient;\n  return quotient;\n}"
+    }
+  
+,
+ 
+    {
+      "title": "Substring with Concatenation of All Words",
+      "question": "Write a function to find all starting indices of substring(s) in a string that is a concatenation of each word in a list exactly once and without any intervening characters.",
+      "solution": "JavaScript",
+      "answer": "function findSubstring(s, words) {\n  const result = [];\n  const wordLen = words[0].length, allWordsLen = wordLen * words.length;\n  const wordMap = {};\n  for (const word of words) {\n    wordMap[word] = (wordMap[word] || 0) + 1;\n  }\n  for (let i = 0; i <= s.length - allWordsLen; i++) {\n    const seen = {};\n    for (let j = 0; j < words.length; j++) {\n      const word = s.substr(i + j * wordLen, wordLen);\n      if (!wordMap[word]) break;\n      seen[word] = (seen[word] || 0) + 1;\n      if (seen[word] > wordMap[word]) break;\n      if (j === words.length - 1) result.push(i);\n    }\n  }\n  return result;\n}"
+    },
+    {
+      "title": "Next Permutation",
+      "question": "Write a function to implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.",
+      "solution": "JavaScript",
+      "answer": "function nextPermutation(nums) {\n  let i = nums.length - 2;\n  while (i >= 0 && nums[i] >= nums[i + 1]) i--;\n  if (i >= 0) {\n    let j = nums.length - 1;\n    while (nums[j] <= nums[i]) j--;\n    [nums[i], nums[j]] = [nums[j], nums[i]];\n  }\n  let left = i + 1, right = nums.length - 1;\n  while (left < right) {\n    [nums[left], nums[right]] = [nums[right], nums[left]];\n    left++;\n    right--;\n  }\n}"
+    },
+    {
+      "title": "Longest Valid Parentheses",
+      "question": "Write a function to find the length of the longest valid (well-formed) parentheses substring.",
+      "solution": "JavaScript",
+      "answer": "function longestValidParentheses(s) {\n  let maxLen = 0, stack = [-1];\n  for (let i = 0; i < s.length; i++) {\n    if (s[i] === '(') stack.push(i);\n    else {\n      stack.pop();\n      if (stack.length) maxLen = Math.max(maxLen, i - stack[stack.length - 1]);\n      else stack.push(i);\n    }\n  }\n  return maxLen;\n}"
+    },
+    {
+      "title": "Search a 2D Matrix",
+      "question": "Write a function to search a 2D matrix. The matrix has the following properties: integers in each row are sorted from left to right, and the first integer of each row is greater than the last integer of the previous row.",
+      "solution": "JavaScript",
+      "answer": "function searchMatrix(matrix, target) {\n  if (!matrix.length || !matrix[0].length) return false;\n  let row = 0, col = matrix[0].length - 1;\n  while (row < matrix.length && col >= 0) {\n    if (matrix[row][col] === target) return true;\n    else if (matrix[row][col] > target) col--;\n    else row++;\n  }\n  return false;\n}"
+    },
+    {
+      "title": "Set Matrix Zeroes",
+      "question": "Write a function to set an entire row and column to zero if an element is zero in a given 2D matrix.",
+      "solution": "JavaScript",
+      "answer": "function setZeroes(matrix) {\n  let firstRowHasZero = false, firstColHasZero = false;\n  for (let i = 0; i < matrix.length; i++) {\n    if (matrix[i][0] === 0) firstColHasZero = true;\n  }\n  for (let j = 0; j < matrix[0].length; j++) {\n    if (matrix[0][j] === 0) firstRowHasZero = true;\n  }\n  for (let i = 0; i < matrix.length; i++) {\n    for (let j = 0; j < matrix[0].length; j++) {\n      if (matrix[i][j] === 0) {\n        matrix[i][0] = 0;\n        matrix[0][j] = 0;\n      }\n    }\n  }\n  for (let i = 1; i < matrix.length; i++) {\n    for (let j = 1; j < matrix[0].length; j++) {\n      if (matrix[i][0] === 0 || matrix[0][j] === 0) matrix[i][j] = 0;\n    }\n  }\n  if (firstRowHasZero) {\n    for (let j = 0; j < matrix[0].length; j++) matrix[0][j] = 0;\n  }\n  if (firstColHasZero) {\n    for (let i = 0; i < matrix.length; i++) matrix[i][0] = 0;\n  }\n}"
+    }
+  
+,
+ 
+    {
+      "title": "Search for a Range",
+      "question": "Write a function to find the starting and ending position of a given target value in a sorted array.",
+      "solution": "JavaScript",
+      "answer": "function searchRange(nums, target) {\n  let left = 0, right = nums.length - 1;\n  const result = [-1, -1];\n  while (left <= right) {\n    const mid = Math.floor((left + right) / 2);\n    if (nums[mid] < target) left = mid + 1;\n    else right = mid - 1;\n  }\n  result[0] = left;\n  left = 0, right = nums.length - 1;\n  while (left <= right) {\n    const mid = Math.floor((left + right) / 2);\n    if (nums[mid] <= target) left = mid + 1;\n    else right = mid - 1;\n  }\n  result[1] = right;\n  if (result[0] <= result[1]) return result;\n  return [-1, -1];\n}"
+    },
+    {
+      "title": "Sort Colors",
+      "question": "Write a function to sort an array consisting of red, white, and blue in-place.",
+      "solution": "JavaScript",
+      "answer": "function sortColors(nums) {\n  let red = 0, white = 0, blue = nums.length - 1;\n  while (white <= blue) {\n    if (nums[white] === 0) {\n      [nums[red], nums[white]] = [nums[white], nums[red]];\n      red++;\n      white++;\n    } else if (nums[white] === 2) {\n      [nums[white], nums[blue]] = [nums[blue], nums[white]];\n      blue--;\n    } else {\n      white++;\n    }\n  }\n}"
+    },
+    {
+      "title": "Minimum Window Substring",
+      "question": "Write a function to find the minimum window in a string which will contain all the characters in another string.",
+      "solution": "JavaScript",
+      "answer": "function minWindow(s, t) {\n  const map = {};\n  for (const char of t) map[char] = (map[char] || 0) + 1;\n  let start = 0, end = 0, counter = Object.keys(map).length, minLen = Infinity, minStart = 0;\n  while (end < s.length) {\n    if (map[s[end]] !== undefined) map[s[end]]--;\n    if (map[s[end]] === 0) counter--;\n    end++;\n    while (counter === 0) {\n      if (end - start < minLen) {\n        minLen = end - start;\n        minStart = start;\n      }\n      if (map[s[start]] !== undefined) map[s[start]]++;\n      if (map[s[start]] > 0) counter++;\n      start++;\n    }\n  }\n  return minLen === Infinity ? '' : s.substr(minStart, minLen);\n}"
+    },
+    {
+      "title": "Combinations",
+      "question": "Write a function to return all possible k combinations of n numbers.",
+      "solution": "JavaScript",
+      "answer": "function combine(n, k) {\n  const result = [];\n  function backtrack(start, path) {\n    if (path.length === k) {\n      result.push([...path]);\n      return;\n    }\n    for (let i = start; i <= n; i++) {\n      path.push(i);\n      backtrack(i + 1, path);\n      path.pop();\n    }\n  }\n  backtrack(1, []);\n  return result;\n}"
+    },
+    {
+      "title": "Permutation Sequence",
+      "question": "Write a function to get the kth permutation sequence of n numbers.",
+      "solution": "JavaScript",
+      "answer": "function getPermutation(n, k) {\n  const nums = [], factorial = [1];\n  let ans = '';\n  for (let i = 1; i <= n; i++) {\n    factorial[i] = factorial[i - 1] * i;\n    nums.push(i);\n  }\n  k--;\n  for (let i = n; i >= 1; i--) {\n    const j = Math.floor(k / factorial[i - 1]);\n    k %= factorial[i - 1];\n    ans += nums[j];\n    nums.splice(j, 1);\n  }\n  return ans;\n}"
+    }
+  
+,
+ 
+    {
+      "title": "Rotate Image",
+      "question": "Write a function to rotate an image by 90 degrees in-place.",
+      "solution": "JavaScript",
+      "answer": "function rotate(matrix) {\n  const n = matrix.length;\n  for (let i = 0; i < Math.floor(n / 2); i++) {\n    for (let j = i; j < n - i - 1; j++) {\n      const temp = matrix[i][j];\n      matrix[i][j] = matrix[n - j - 1][i];\n      matrix[n - j - 1][i] = matrix[n - i - 1][n - j - 1];\n      matrix[n - i - 1][n - j - 1] = matrix[j][n - i - 1];\n      matrix[j][n - i - 1] = temp;\n    }\n  }\n}"
+    },
+    {
+      "title": "Group Anagrams",
+      "question": "Write a function to group anagrams from a list of strings.",
+      "solution": "JavaScript",
+      "answer": "function groupAnagrams(strs) {\n  const map = {};\n  for (const str of strs) {\n    const sorted = Array.from(str).sort().join('');\n    if (!map[sorted]) map[sorted] = [];\n    map[sorted].push(str);\n  }\n  return Object.values(map);\n}"
+    },
+    {
+      "title": "Pow(x, n)",
+      "question": "Write a function to calculate x raised to the power n.",
+      "solution": "JavaScript",
+      "answer": "function myPow(x, n) {\n  if (n === 0) return 1;\n  if (n < 0) {\n    x = 1 / x;\n    n = -n;\n  }\n  let res = 1;\n  while (n > 0) {\n    if (n % 2 === 1) res *= x;\n    x *= x;\n    n = Math.floor(n / 2);\n  }\n  return res;\n}"
+    },
+    {
+      "title": "Jump Game",
+      "question": "Write a function to determine if you can reach the last index starting from the first index in an array of non-negative integers, each representing your maximum jump length at that position.",
+      "solution": "JavaScript",
+      "answer": "function canJump(nums) {\n  let maxReach = 0;\n  for (let i = 0; i < nums.length; i++) {\n    if (i > maxReach) return false;\n    maxReach = Math.max(maxReach, i + nums[i]);\n  }\n  return true;\n}"
+    },
+    {
+      "title": "Merge Intervals",
+      "question": "Write a function to merge all overlapping intervals.",
+      "solution": "JavaScript",
+      "answer": "function merge(intervals) {\n  if (!intervals.length) return [];\n  intervals.sort((a, b) => a[0] - b[0]);\n  const res = [intervals[0]];\n  for (let i = 1; i < intervals.length; i++) {\n    const [start, end] = intervals[i];\n    if (start <= res[res.length - 1][1]) {\n      res[res.length - 1][1] = Math.max(end, res[res.length - 1][1]);\n    } else {\n      res.push(intervals[i]);\n    }\n  }\n  return res;\n}"
+    }
+  
+,
+ 
+    {
+      "title": "Valid Sudoku",
+      "question": "Write a function to determine if a 9x9 Sudoku board is valid.",
+      "solution": "JavaScript",
+      "answer": "function isValidSudoku(board) {\n  const rows = new Array(9).fill(null).map(() => new Set());\n  const cols = new Array(9).fill(null).map(() => new Set());\n  const boxes = new Array(9).fill(null).map(() => new Set());\n  for (let i = 0; i < 9; i++) {\n    for (let j = 0; j < 9; j++) {\n      const val = board[i][j];\n      if (val === '.') continue;\n      const boxIndex = Math.floor(i / 3) * 3 + Math.floor(j / 3);\n      if (rows[i].has(val) || cols[j].has(val) || boxes[boxIndex].has(val)) {\n        return false;\n      }\n      rows[i].add(val);\n      cols[j].add(val);\n      boxes[boxIndex].add(val);\n    }\n  }\n  return true;\n}"
+    },
+    {
+      "title": "Rotate List",
+      "question": "Write a function to rotate a linked list to the right by k places.",
+      "solution": "JavaScript",
+      "answer": "function rotateRight(head, k) {\n  if (!head || k === 0) return head;\n  let len = 1, tail = head;\n  while (tail.next) {\n    tail = tail.next;\n    len++;\n  }\n  k %= len;\n  tail.next = head;\n  for (let i = 0; i < len - k; i++) {\n    tail = tail.next;\n  }\n  head = tail.next;\n  tail.next = null;\n  return head;\n}"
+    },
+    {
+      "title": "Unique Paths",
+      "question": "Write a function to find the number of unique paths from the top-left corner to the bottom-right corner of a grid.",
+      "solution": "JavaScript",
+      "answer": "function uniquePaths(m, n) {\n  const dp = new Array(m).fill(0).map(() => new Array(n).fill(0));\n  for (let i = 0; i < m; i++) dp[i][0] = 1;\n  for (let j = 0; j < n; j++) dp[0][j] = 1;\n  for (let i = 1; i < m; i++) {\n    for (let j = 1; j < n; j++) {\n      dp[i][j] = dp[i - 1][j] + dp[i][j - 1];\n    }\n  }\n  return dp[m - 1][n - 1];\n}"
+    },
+    {
+      "title": "Minimum Path Sum",
+      "question": "Write a function to find the minimum path sum from the top-left corner to the bottom-right corner of a grid, where you can only move down or right.",
+      "solution": "JavaScript",
+      "answer": "function minPathSum(grid) {\n  const m = grid.length, n = grid[0].length;\n  const dp = new Array(m).fill(0).map(() => new Array(n).fill(0));\n  dp[0][0] = grid[0][0];\n  for (let i = 1; i < m; i++) dp[i][0] = dp[i - 1][0] + grid[i][0];\n  for (let j = 1; j < n; j++) dp[0][j] = dp[0][j - 1] + grid[0][j];\n  for (let i = 1; i < m; i++) {\n    for (let j = 1; j < n; j++) {\n      dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j];\n    }\n  }\n  return dp[m - 1][n - 1];\n}"
+    },
+    {
+      "title": "Climbing Stairs",
+      "question": "Write a function to find the number of distinct ways to climb a staircase with n steps, where you can take 1 or 2 steps at a time.",
+      "solution": "JavaScript",
+      "answer": "function climbStairs(n) {\n  let a = 1, b = 1;\n  for (let i = 2; i <= n; i++) {\n    [a, b] = [b, a + b];\n  }\n  return b;\n}"
+    }
+  
+,
+ 
+    {
+      "title": "Maximum Subarray",
+      "question": "Write a function to find the contiguous subarray with the largest sum.",
+      "solution": "JavaScript",
+      "answer": "function maxSubArray(nums) {\n  let maxSum = nums[0], currentSum = nums[0];\n  for (let i = 1; i < nums.length; i++) {\n    currentSum = Math.max(nums[i], currentSum + nums[i]);\n    maxSum = Math.max(maxSum, currentSum);\n  }\n  return maxSum;\n}"
+    },
+    {
+      "title": "Two Sum",
+      "question": "Write a function that returns indices of the two numbers such that they add up to a specific target.",
+      "solution": "JavaScript",
+      "answer": "function twoSum(nums, target) {\n  const map = new Map();\n  for (let i = 0; i < nums.length; i++) {\n    const complement = target - nums[i];\n    if (map.has(complement)) {\n      return [map.get(complement), i];\n    }\n    map.set(nums[i], i);\n  }\n}"
+    },
+    {
+      "title": "Palindrome Number",
+      "question": "Write a function to check whether an integer is a palindrome.",
+      "solution": "JavaScript",
+      "answer": "function isPalindrome(x) {\n  if (x < 0) return false;\n  let reversed = 0, original = x;\n  while (x !== 0) {\n    reversed = reversed * 10 + x % 10;\n    x = Math.floor(x / 10);\n  }\n  return original === reversed;\n}"
+    },
+    {
+      "title": "Container With Most Water",
+      "question": "Write a function to find two lines, which together with the x-axis forms a container, such that the container contains the most water.",
+      "solution": "JavaScript",
+      "answer": "function maxArea(height) {\n  let max = 0, left = 0, right = height.length - 1;\n  while (left < right) {\n    const area = Math.min(height[left], height[right]) * (right - left);\n    max = Math.max(max, area);\n    if (height[left] < height[right]) {\n      left++;\n    } else {\n      right--;\n    }\n  }\n  return max;\n}"
+    },
+    {
+      "title": "Integer to Roman",
+      "question": "Write a function to convert an integer to a roman numeral.",
+      "solution": "JavaScript",
+      "answer": "function intToRoman(num) {\n  const val = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];\n  const syms = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];\n  let roman = '';\n  for (let i = 0; i < val.length; i++) {\n    while (num >= val[i]) {\n      num -= val[i];\n      roman += syms[i];\n    }\n  }\n  return roman;\n}"
+    }
+]
+

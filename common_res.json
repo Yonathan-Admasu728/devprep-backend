@@ -1,0 +1,215 @@
+[
+    {
+      "question": "What is React?",
+      "keyphrases": ["JavaScript library", "UI components", "virtual DOM"],
+      "affirmations": ["Great answer!", "You nailed it!", "Exactly!", "Spot on!", "You got it!"],
+      "corrections": ["Actually, React is a JavaScript library, not a framework.", "You're close, but React is more focused on building user interfaces."],
+      "elaborations": ["React is like a Lego set for UI components. You can build anything from a small button to a whole page.", "Think of React as the paintbrush for your web canvas. It helps you create dynamic, interactive UIs effortlessly."]
+    },
+    {
+      "question": "What is the MVC design pattern?",
+      "keyphrases": ["Model-View-Controller", "separation of concerns", "data, UI, logic"],
+      "affirmations": ["Excellent!", "You're right!", "Exactly!", "Great answer!", "You nailed it!"],
+      "corrections": ["MVC stands for Model-View-Controller.", "It's a design pattern that separates an application into three interconnected components."],
+      "elaborations": ["MVC is like a well-organized kitchen: the fridge (Model) stores ingredients, the display (View) shows the dish, and the chef (Controller) brings it all together.", "Think of MVC as a theater production: the script (Model), the stage (View), and the director (Controller)."]
+    },
+    {
+      "question": "What is Next.js?",
+      "keyphrases": ["React framework", "server-side rendering", "static site generation"],
+      "affirmations": ["You got it!", "Exactly!", "Great answer!", "You nailed it!", "Spot on!"],
+      "corrections": ["Next.js is a React framework.", "It's commonly used for server-side rendering and static site generation."],
+      "elaborations": ["Next.js is like React on steroids, offering more out-of-the-box features.", "Think of Next.js as the deluxe edition of a video game, with all the extra goodies included."]
+    },
+    {
+      "question": "What is the Box Model in CSS?",
+      "keyphrases": ["margin", "border", "padding", "content"],
+      "affirmations": ["You're right!", "You got it!", "Exactly!", "Great answer!", "You nailed it!"],
+      "corrections": ["The Box Model includes margin, border, padding, and content.", "It's a fundamental concept in CSS layout."],
+      "elaborations": ["The Box Model is like the layers of an onion, each part adding to the whole.", "Think of the Box Model as the frame of a painting, giving structure to your masterpiece."]
+    },
+    {
+      "question": "What are Progressive Web Apps (PWAs)?",
+      "keyphrases": ["web apps", "native-like", "offline access"],
+      "affirmations": ["Great answer!", "You nailed it!", "Exactly!", "You're right!", "Spot on!"],
+      "corrections": ["PWAs are web apps that behave like native apps.", "They offer features like offline access and push notifications."],
+      "elaborations": ["PWAs are like the chameleons of the web, adapting to both desktop and mobile environments.", "Think of PWAs as the Swiss Army knife of web apps, versatile and feature-rich."]
+    },
+    {
+      "question": "What is responsive design?",
+      "keyphrases": ["adaptive layout", "multiple devices", "media queries"],
+      "affirmations": ["You got it!", "Exactly!", "Great answer!", "You nailed it!", "Spot on!"],
+      "corrections": ["Responsive design adapts to different screen sizes.", "It often uses media queries to achieve this."],
+      "elaborations": ["Responsive design is like a fluid dance, gracefully adapting to any stage size.", "Think of responsive design as a shape-shifter, comfortable in any form."]
+    },
+    {
+      "question": "What are microinteractions?",
+      "keyphrases": ["small animations", "user engagement", "feedback"],
+      "affirmations": ["You're right!", "You got it!", "Exactly!", "Great answer!", "You nailed it!"],
+      "corrections": ["Microinteractions are small animations that engage the user.", "They provide feedback and guide the user through an interface."],
+      "elaborations": ["Microinteractions are like the seasoning in a dish, small but impactful.", "Think of microinteractions as the wink and smile in a conversation, subtle but meaningful."]
+    },
+    {
+      "question": "What is the DOM?",
+      "keyphrases": ["Document Object Model", "tree structure", "HTML elements"],
+      "affirmations": ["Great answer!", "You nailed it!", "Exactly!", "You're right!", "Spot on!"],
+      "corrections": ["The DOM stands for Document Object Model.", "It's a tree-like representation of HTML elements."],
+      "elaborations": ["The DOM is like the skeleton of a webpage, giving it structure and form.", "Think of the DOM as the backstage of a website, where all the elements hang out."]
+    },
+    {
+      "question": "What is A/B testing?",
+      "keyphrases": ["two versions", "user behavior", "optimize"],
+      "affirmations": ["You got it!", "Exactly!", "Great answer!", "You nailed it!", "Spot on!"],
+      "corrections": ["A/B testing involves comparing two versions of a webpage.", "It's used to optimize for a specific outcome."],
+      "elaborations": ["A/B testing is like a taste test, seeing which recipe the audience prefers.", "Think of A/B testing as a fork in the road, helping you choose the best path."]
+    },
+    {
+      "question": "What is accessibility in web development?",
+      "keyphrases": ["inclusive design", "WCAG", "assistive technologies"],
+      "affirmations": ["You're right!", "You got it!", "Exactly!", "Great answer!", "You nailed it!"],
+      "corrections": ["Accessibility ensures that websites are usable by as many people as possible.", "It often involves following WCAG guidelines."],
+      "elaborations": ["Accessibility is like building a ramp next to stairs, making sure everyone can enter.", "Think of accessibility as the universal remote of web design, usable by everyone."]
+    },
+  
+    {
+      "question": "What is CORS?",
+      "keyphrases": ["Cross-Origin Resource Sharing", "security", "HTTP headers"],
+      "affirmations": ["Excellent!", "You're right!", "Exactly!", "Great answer!", "You nailed it!"],
+      "corrections": ["CORS stands for Cross-Origin Resource Sharing.", "It's a security feature implemented by web browsers."],
+      "elaborations": ["CORS is like a bouncer at a club, checking if you're on the list before letting you in.", "Think of CORS as the customs officer at the border, inspecting your credentials."]
+    },
+    {
+      "question": "What is Webpack?",
+      "keyphrases": ["module bundler", "dependencies", "build tool"],
+      "affirmations": ["You got it!", "Exactly!", "Great answer!", "You nailed it!", "Spot on!"],
+      "corrections": ["Webpack is a module bundler.", "It takes modules with dependencies and generates static assets."],
+      "elaborations": ["Webpack is like a factory assembly line, putting together all the parts to create a final product.", "Think of Webpack as the conductor of an orchestra, coordinating all the instruments to create harmony."]
+    },
+    {
+      "question": "What is the difference between '==' and '===' in JavaScript?",
+      "keyphrases": ["loose equality", "strict equality", "type coercion"],
+      "affirmations": ["You're right!", "You got it!", "Exactly!", "Great answer!", "You nailed it!"],
+      "corrections": ["'==' performs type coercion.", "'===' checks both value and type."],
+      "elaborations": ["'==' is like saying a scooter and a motorcycle are the same because they both have wheels.", "'===' is saying a scooter and a motorcycle must also have the same engine size to be considered the same."]
+    },
+    {
+      "question": "What is the CSS 'z-index' property?",
+      "keyphrases": ["stacking order", "positioned elements", "integer values"],
+      "affirmations": ["Great answer!", "You nailed it!", "Exactly!", "You're right!", "Spot on!"],
+      "corrections": ["'z-index' controls the stacking order of positioned elements.", "It takes integer values."],
+      "elaborations": ["'z-index' is like the pecking order in a group, determining who gets to stand in front.", "Think of 'z-index' as the third dimension on a 2D plane, pulling elements closer or pushing them farther away."]
+    },
+    {
+      "question": "What is the 'this' keyword in JavaScript?",
+      "keyphrases": ["context", "object", "function invocation"],
+      "affirmations": ["You got it!", "Exactly!", "Great answer!", "You nailed it!", "Spot on!"],
+      "corrections": ["'this' refers to the object it belongs to.", "Its value depends on how the function is invoked."],
+      "elaborations": ["'this' is like a selfie stick, capturing whatever is in its current context.", "Think of 'this' as the subject of a sentence, indicating what the action is referring to."]
+    },
+    {
+      "question": "What is the 'async/await' syntax in JavaScript?",
+      "keyphrases": ["asynchronous code", "Promises", "syntactic sugar"],
+      "affirmations": ["You're right!", "You got it!", "Exactly!", "Great answer!", "You nailed it!"],
+      "corrections": ["'async/await' is syntactic sugar over Promises.", "It makes asynchronous code look synchronous."],
+      "elaborations": ["'async/await' is like the fast-forward button on a remote, letting you skip to the good parts.", "Think of 'async/await' as the express lane on a highway, bypassing the traffic of callback hell."]
+    },
+    {
+      "question": "What is GraphQL?",
+      "keyphrases": ["query language", "API", "data fetching"],
+      "affirmations": ["Great answer!", "You nailed it!", "Exactly!", "You're right!", "Spot on!"],
+      "corrections": ["GraphQL is a query language for APIs.", "It allows clients to request only the data they need."],
+      "elaborations": ["GraphQL is like a restaurant menu where you can customize your own meal.", "Think of GraphQL as the personal shopper of data, bringing you exactly what you asked for."]
+    },
+    {
+      "question": "What is the 'Viewport' meta tag?",
+      "keyphrases": ["responsive design", "browser window", "device width"],
+      "affirmations": ["You got it!", "Exactly!", "Great answer!", "You nailed it!", "Spot on!"],
+      "corrections": ["The 'Viewport' meta tag controls the page's dimensions and scaling.", "It's essential for responsive design."],
+      "elaborations": ["The 'Viewport' meta tag is like the director of a movie, setting the stage for how the audience sees the content.", "Think of the 'Viewport' as the frame of a camera, capturing the scene in a specific aspect ratio."]
+    },
+    {
+      "question": "What is CSS Grid?",
+      "keyphrases": ["layout system", "rows", "columns"],
+      "affirmations": ["You're right!", "You got it!", "Exactly!", "Great answer!", "You nailed it!"],
+      "corrections": ["CSS Grid is a 2D layout system.", "It allows you to create complex layouts using rows and columns."],
+      "elaborations": ["CSS Grid is like a chessboard, letting you place elements in any square.", "Think of CSS Grid as the blueprint of a building, outlining where each room goes."]
+    },
+    {
+      "question": "What is the 'Shadow DOM'?",
+      "keyphrases": ["encapsulation", "web components", "local scope"],
+      "affirmations": ["Great answer!", "You nailed it!", "Exactly!", "You're right!", "Spot on!"],
+      "corrections": ["The 'Shadow DOM' is used for encapsulation.", "It keeps an element's features private, so they can't be accidentally overwritten."],
+      "elaborations": ["The 'Shadow DOM' is like a VIP area in a club, exclusive and separate from the main floor.", "Think of the 'Shadow DOM' as a secret garden, hidden behind a wall for only a select few to see."]
+    },
+    {
+      "question": "What is SASS?",
+      "keyphrases": ["CSS preprocessor", "variables", "nested rules"],
+      "affirmations": ["Excellent!", "You're right!", "Exactly!", "Great answer!", "You nailed it!"],
+      "corrections": ["SASS is a CSS preprocessor.", "It allows for variables, nested rules, and more."],
+      "elaborations": ["SASS is like CSS with superpowers, adding features for more dynamic styling.", "Think of SASS as the deluxe art kit, offering more colors and tools than the basic set."]
+    },
+    {
+      "question": "What is the Virtual DOM?",
+      "keyphrases": ["in-memory representation", "DOM tree", "optimization"],
+      "affirmations": ["You got it!", "Exactly!", "Great answer!", "You nailed it!", "Spot on!"],
+      "corrections": ["The Virtual DOM is an in-memory representation of the real DOM.", "It's used for optimization to minimize direct manipulation of the DOM."],
+      "elaborations": ["The Virtual DOM is like a rehearsal before the actual performance, ensuring everything runs smoothly.", "Think of the Virtual DOM as the blueprint of a building, used to plan changes before actual construction."]
+    },
+    {
+      "question": "What is JSX?",
+      "keyphrases": ["JavaScript XML", "React", "syntactic sugar"],
+      "affirmations": ["You're right!", "You got it!", "Exactly!", "Great answer!", "You nailed it!"],
+      "corrections": ["JSX stands for JavaScript XML.", "It's syntactic sugar for writing HTML elements in React."],
+      "elaborations": ["JSX is like the shorthand of React, making it easier to write complex UI structures.", "Think of JSX as the autocorrect on your phone, simplifying what you're trying to say."]
+    },
+    {
+      "question": "What is Flexbox?",
+      "keyphrases": ["CSS layout", "one-dimensional", "flexible items"],
+      "affirmations": ["Great answer!", "You nailed it!", "Exactly!", "You're right!", "Spot on!"],
+      "corrections": ["Flexbox is a one-dimensional layout model in CSS.", "It allows you to design complex layout structures with a more predictable way."],
+      "elaborations": ["Flexbox is like a set of building blocks, easily rearranged to create different shapes.", "Think of Flexbox as the adjustable shelves in a cupboard, letting you fit items of different sizes."]
+    },
+    {
+      "question": "What is an IIFE in JavaScript?",
+      "keyphrases": ["Immediately Invoked Function Expression", "self-executing", "local scope"],
+      "affirmations": ["You got it!", "Exactly!", "Great answer!", "You nailed it!", "Spot on!"],
+      "corrections": ["IIFE stands for Immediately Invoked Function Expression.", "It's a function that runs as soon as it's defined."],
+      "elaborations": ["An IIFE is like a firework, igniting as soon as you light it.", "Think of an IIFE as a pop-up shop, opening and closing in one go."]
+    },
+    {
+      "question": "What is the 'alt' attribute in HTML?",
+      "keyphrases": ["alternative text", "image", "accessibility"],
+      "affirmations": ["You're right!", "You got it!", "Exactly!", "Great answer!", "You nailed it!"],
+      "corrections": ["The 'alt' attribute provides alternative text for images.", "It's important for accessibility."],
+      "elaborations": ["The 'alt' attribute is like a name tag for images, telling you what it is when you can't see it.", "Think of the 'alt' attribute as the narrator in an audiobook, describing the scenes you can't see."]
+    },
+    {
+      "question": "What is 'hoisting' in JavaScript?",
+      "keyphrases": ["variable declaration", "function declaration", "top of scope"],
+      "affirmations": ["Great answer!", "You nailed it!", "Exactly!", "You're right!", "Spot on!"],
+      "corrections": ["Hoisting moves variable and function declarations to the top of their containing scope.", "Only the declarations are hoisted, not the initializations."],
+      "elaborations": ["Hoisting is like setting up the chessboard before the game starts, placing pieces at their starting positions.", "Think of hoisting as the opening credits in a movie, introducing the main characters before the action starts."]
+    },
+    {
+      "question": "What is 'localStorage'?",
+      "keyphrases": ["web storage", "key-value pairs", "client-side"],
+      "affirmations": ["You got it!", "Exactly!", "Great answer!", "You nailed it!", "Spot on!"],
+      "corrections": ["'localStorage' is a web storage that allows you to store key-value pairs.", "It's client-side and has a larger storage limit than cookies."],
+      "elaborations": ["'localStorage' is like a personal notebook, keeping your data even when you leave the page.", "Think of 'localStorage' as the saved game feature in a video game, letting you pick up where you left off."]
+    },
+    {
+      "question": "What is 'debouncing' in JavaScript?",
+      "keyphrases": ["limit rate", "event firing", "delay"],
+      "affirmations": ["You're right!", "You got it!", "Exactly!", "Great answer!", "You nailed it!"],
+      "corrections": ["Debouncing limits the rate at which a function can fire.", "It's often used in handling events like scrolling and resizing."],
+      "elaborations": ["Debouncing is like a snooze button, delaying action until a set time has passed.", "Think of debouncing as the referee in a game, ensuring there's enough time between plays."]
+    },
+    {
+      "question": "What is 'throttling' in JavaScript?",
+      "keyphrases": ["limit rate", "event firing", "time interval"],
+      "affirmations": ["Great answer!", "You nailed it!", "Exactly!", "You're right!", "Spot on!"],
+      "corrections": ["Throttling limits the rate at which a function can fire, but unlike debouncing, it guarantees the function will execute regularly.", "It's used in scenarios like tracking scroll position in real-time."],
+      "elaborations": ["Throttling is like a metronome, ensuring a steady tempo for function calls.", "Think of throttling as the speed limit on a road, setting a maximum speed but allowing you to go slower."]
+    }
+  ]
+  
+    

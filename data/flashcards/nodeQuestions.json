@@ -1,0 +1,304 @@
+[
+  {
+    "question": "What is Node.js and what is it primarily used for?",
+    "answer": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It's used primarily for building scalable network applications, particularly on the server-side."
+  },
+  {
+    "question": "How does Node.js handle asynchronous operations?",
+    "answer": "Node.js handles asynchronous operations using callbacks, Promises, and async/await, allowing non-blocking I/O operations which makes it efficient for scalable applications."
+  },
+  {
+    "question": "What are the benefits of using Node.js for server-side development?",
+    "answer": "Benefits include its non-blocking I/O model, high performance for I/O-bound tasks, scalability, JavaScript usage for both client and server-side, and a large ecosystem of modules."
+  },
+  {
+    "question": "Explain what npm is in the context of Node.js.",
+    "answer": "npm (Node Package Manager) is the default package manager for Node.js, used for managing and sharing packages or modules to extend Node.js capabilities."
+  },
+  {
+    "question": "What are 'streams' in Node.js and why are they important?",
+    "answer": "Streams are collections of data that might not be available all at once and don't need to fit in memory. They are important for handling large volumes of data efficiently."
+  },
+  {
+    "question": "How does Node.js support real-time data applications?",
+    "answer": "Node.js supports real-time data applications through features like WebSockets, its event-driven architecture, and non-blocking I/O model, enabling efficient data handling."
+  },
+  {
+    "question": "What is the event loop in Node.js?",
+    "answer": "The event loop in Node.js is a mechanism that handles external events and converts them into callback invocations. It allows Node.js to perform non-blocking I/O operations."
+  },
+  {
+    "question": "Explain the difference between Node.js and traditional web servers.",
+    "answer": "Node.js differs from traditional web servers in its non-blocking, event-driven architecture, leading to efficient performance and scalability for network applications."
+  },
+  {
+    "question": "What is the purpose of module.exports in Node.js?",
+    "answer": "module.exports in Node.js is used to export modules, functions, objects, or any other JavaScript data type from one file to another, making them available for import using require."
+  },
+  {
+    "question": "How does Node.js handle child processes?",
+    "answer": "Node.js handles child processes using the 'child_process' module, allowing Node.js applications to run system commands and perform operations in separate processes."
+  },
+  {
+    "question": "What is the significance of package.json in a Node.js application?",
+    "answer": "package.json is the manifest file for Node.js applications, containing metadata (like project name, version), list of dependencies, scripts, and other configuration details."
+  },
+  {
+    "question": "How do you manage multiple Node.js versions in a development environment?",
+    "answer": "Multiple Node.js versions can be managed using version managers like nvm (Node Version Manager) or n, allowing easy switching between different versions for various projects."
+  },
+  {
+    "question": "What is the role of middleware in a Node.js application?",
+    "answer": "Middleware functions are those that have access to the request object (req), the response object (res), and the next function in the application’s request-response cycle. They can execute code, make changes to the request and response objects, and end the request-response cycle or call the next middleware."
+  },
+  {
+    "question": "Explain the concept of callback hell in Node.js.",
+    "answer": "Callback hell refers to a situation where callbacks are nested within other callbacks several levels deep, making the code hard to read and maintain. It is a common problem in asynchronous programming."
+  },
+  {
+    "question": "What is Express.js and how does it relate to Node.js?",
+    "answer": "Express.js is a web application framework for Node.js. It simplifies the server creation process by providing a robust set of features to develop web and mobile applications."
+  },
+  {
+    "question": "How does Node.js handle errors in asynchronous calls?",
+    "answer": "In Node.js, errors in asynchronous calls are handled using the error-first callback pattern, where the first parameter of any callback function is an error object, and subsequent parameters represent the result data."
+  },
+  {
+    "question": "What is a promise in Node.js and how are they beneficial?",
+    "answer": "A promise in Node.js is an object representing the eventual completion or failure of an asynchronous operation. They provide a cleaner, more robust way of handling asynchronous operations than traditional callbacks."
+  },
+  {
+    "question": "Can you explain what clustering in Node.js is and its benefits?",
+    "answer": "Clustering in Node.js is a way to create child processes that run on separate cores of the CPU, enhancing performance and scalability by distributing the workload."
+  },
+  {
+    "question": "What is the difference between process.nextTick() and setImmediate() in Node.js?",
+    "answer": "process.nextTick() defers the execution of a callback until the next iteration of the event loop, whereas setImmediate() schedules a callback to be invoked after the current poll phase of the event loop."
+  },
+  {
+    "question": "How do you ensure your Node.js application's scalability?",
+    "answer": "To ensure scalability, optimize code for asynchronous execution, use clustering to distribute load, leverage caching, manage resources efficiently, and use load balancers."
+  },
+  {
+    "question": "What are Environment Variables in Node.js?",
+    "answer": "Environment variables in Node.js are external variables, often used for setting configuration options and settings, which affect the behavior of the running process."
+  },
+  {
+    "question": "Explain the difference between readFile and createReadStream in Node.js.",
+    "answer": "readFile reads a file in full into memory, while createReadStream reads a file in parts using streams, which is more memory efficient and suitable for large files."
+  },
+  {
+    "question": "What is a buffer in Node.js?",
+    "answer": "A buffer in Node.js is a temporary holding spot for data being moved from one place to another, particularly beneficial for dealing with binary data."
+  },
+  {
+    "question": "How do global variables work in Node.js?",
+    "answer": "In Node.js, global variables are properties of the global object. Unlike in browsers, where the window is the global scope, Node.js has its own global scope."
+  },
+  {
+    "question": "Explain how Node.js supports multi-threading.",
+    "answer": "Node.js supports multi-threading using the 'worker_threads' module, allowing the execution of JavaScript on multiple threads, suitable for CPU-intensive tasks."
+  },
+  {
+    "question": "What is the purpose of the EventEmitter in Node.js?",
+    "answer": "EventEmitter in Node.js is used for handling events, allowing objects to emit named events which can then be listened to and handled asynchronously."
+  },
+  {
+    "question": "How does Node.js support server-side rendering?",
+    "answer": "Node.js supports server-side rendering by dynamically generating HTML on the server before sending it to the client, improving load times and SEO for web applications."
+  },
+  {
+    "question": "What are the best practices for error handling in Node.js?",
+    "answer": "Best practices include using the error-first callback pattern, handling exceptions with try-catch, using promises for better control flow, and proper logging of errors."
+  },
+  {
+    "question": "How do you monitor the performance of a Node.js application?",
+    "answer": "Performance can be monitored using tools like PM2, Node.js built-in profiler, and external APM solutions like New Relic or Dynatrace, to track metrics and detect issues."
+  },
+  {
+    "question": "Explain the concept of middleware in Express.js.",
+    "answer": "Middleware in Express.js are functions that execute during the request to the server, used for executing code, modifying the request and response objects, and ending the request-response cycle."
+  },
+  {
+    "question": "How is database management handled in Node.js?",
+    "answer": "Database management in Node.js is handled using various ORM (Object-Relational Mapping) tools or database drivers specific to the database being used, like MongoDB, PostgreSQL, or MySQL."
+  },
+  {
+    "question": "What is the significance of non-blocking I/O in Node.js?",
+    "answer": "Non-blocking I/O allows Node.js to handle many operations concurrently without waiting for any single operation to complete, significantly increasing the efficiency of resource usage."
+  },
+  {
+    "question": "Explain how memory leaks happen in Node.js and how to prevent them.",
+    "answer": "Memory leaks in Node.js can happen due to unused variables, closures, not freeing up memory, or improper handling of streams. Preventing them involves careful coding, profiling, and monitoring memory usage."
+  },
+  {
+    "question": "How do you handle file uploads in Node.js?",
+    "answer": "File uploads in Node.js can be handled using middleware like Multer in Express.js, which processes file uploads and makes them available in the request object."
+  },
+  {
+    "question": "What are the differences between Node.js and browser JavaScript?",
+    "answer": "Key differences include the environment (server-side vs client-side), available APIs and modules, the global object (global in Node.js vs window in browsers"
+  },
+
+  {
+    "question": "Explain the callback pattern in Node.js.",
+    "answer": "The callback pattern in Node.js is a technique used to deal with asynchronous operations. A callback function is passed as an argument to another function and is executed after the completion of an asynchronous operation, allowing the program to continue running in the meantime."
+  },
+  {
+    "question": "What are Environment Variables in Node.js?",
+    "answer": "Environment variables in Node.js are external configurations that your application can use. They are often used for setting configuration options and parameters, keeping sensitive data like API keys and passwords outside of the source code."
+  },
+  {
+    "question": "How does Node.js enable real-time application development?",
+    "answer": "Node.js enables real-time application development through its event-driven architecture and WebSocket support. This allows for the development of applications like chat apps and live notifications, where the server can push data to clients instantly."
+  },
+  {
+    "question": "What is the use of the Express framework in Node.js?",
+    "answer": "Express is a minimal and flexible Node.js web application framework that provides a robust set of features to develop web and mobile applications. It facilitates the rapid development of Node.js based web applications and RESTful APIs."
+  },
+  {
+    "question": "Explain the concept of middleware in Express.js.",
+    "answer": "Middleware in Express.js are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. They can execute code, make changes to the request/response, and end the cycle or call the next middleware."
+  },
+  {
+    "question": "How can you secure a Node.js application?",
+    "answer": "Securing a Node.js application involves implementing HTTPS, using security headers, managing dependencies, avoiding usage of eval(), validating and sanitizing input data, handling errors properly, and using tools like Helmet for enhancing security in Express apps."
+  },
+  {
+    "question": "Describe how to handle file uploads in Node.js.",
+    "answer": "File uploads in Node.js can be handled using middleware like 'multer' for Express.js applications. It allows for multipart/form-data to be processed and files to be stored in the filesystem or in memory."
+  },
+  {
+    "question": "What is the purpose of the Node.js 'cluster' module?",
+    "answer": "The 'cluster' module in Node.js allows for the creation of child processes that run simultaneously and share the same server port. This enables the handling of the load across multiple CPU cores and improves the performance of Node.js applications."
+  },
+  {
+    "question": "How does Node.js handle error management?",
+    "answer": "Node.js handles error management through callbacks, try-catch blocks (especially with async/await), and event listeners for uncaught exceptions. Proper error handling is crucial for avoiding crashes and maintaining application flow."
+  },
+  {
+    "question": "What are Promises in Node.js?",
+    "answer": "Promises in Node.js are objects that represent the eventual completion (or failure) of an asynchronous operation, and its resulting value. They provide a more robust way of handling asynchronous operations compared to callbacks."
+  },
+  {
+    "question": "Explain the difference between 'setImmediate()' and 'setTimeout()' in Node.js.",
+    "answer": "'setImmediate()' and 'setTimeout()' are both used to schedule execution of code at a later time. The primary difference is that 'setImmediate()' is designed to execute a script once the current poll phase completes, while 'setTimeout()' schedules a script to be run after a minimum threshold in ms has elapsed."
+  },
+  {
+    "question": "What is the use of the 'util' module in Node.js?",
+    "answer": "The 'util' module in Node.js is used for utility functions, primarily for internal use by Node.js. It provides functions like 'util.inherits' for inheritance, 'util.promisify' to convert callback-based functions to promise-based, and others."
+  },
+  {
+    "question": "How can you monitor the performance of a Node.js application?",
+    "answer": "The performance of a Node.js application can be monitored using tools like Node.js built-in 'process' object, 'console.time()', 'console.timeEnd()', Node.js profiler, N|Solid, PM2, and other external monitoring tools like New Relic or Datadog."
+  },
+  {
+    "question": "What are Global Objects in Node.js?",
+    "answer": "Global objects in Node.js are objects available in all modules. Some of these objects are actually in the global scope, while others are in the module scope but appear to be global. Examples include 'console', 'process', 'Buffer', 'setImmediate', 'clearImmediate', etc."
+  },
+  {
+    "question": "Explain the use of Buffers in Node.js.",
+    "answer": "Buffers in Node.js are used to handle binary data. They provide a way to handle streams of data in a memory-efficient and non-blocking way. Buffers are particularly important because JavaScript's native string handling functionality does not handle binary data efficiently."
+  },
+  {
+    "question": "What is the Event Emitter in Node.js?",
+    "answer": "The Event Emitter is a module in Node.js that allows objects to emit events and to attach listeners to them. It is the foundation of most of the Node.js Evented API, including streams, simple event handling, and even custom objects."
+  },
+  {
+    "question": "How does Node.js support multi-threading?",
+    "answer": "Node.js supports multi-threading through the 'worker_threads' module. It allows running JavaScript operations in parallel, thus improving performance for CPU-intensive tasks by creating additional threads."
+  },
+  {
+    "question": "Explain the process of memory leak detection in Node.js.",
+    "answer": "Memory leak detection in Node.js can be done by monitoring the memory usage of the application over time using tools like Chrome DevTools, tracking garbage collection, and analyzing heap snapshots to identify unintended references."
+  },
+  {
+    "question": "What is REPL in Node.js?",
+    "answer": "REPL (Read Eval Print Loop) in Node.js is an interactive shell that processes Node.js expressions. It's useful for debugging, trying out code, or performing quick calculations within the Node.js environment."
+  },
+  {
+    "question": "How do you manage packages in a Node.js project?",
+    "answer": "Packages in a Node.js project are managed using npm or Yarn. These tools allow you to add, update, and remove packages, manage versions and dependencies, and automate scripts and tasks."
+  },
+
+  {
+    "question": "Describe the differences between Node.js and Ajax in terms of their use in web applications.",
+    "answer": "Node.js is a server-side platform for developing server-side applications, while Ajax (Asynchronous JavaScript and XML) is a client-side technique used for creating asynchronous web requests. Node.js is used for building the back-end of applications, whereas Ajax is used for updating parts of a web page without reloading the entire page."
+  },
+  {
+    "question": "How can Node.js be used alongside microservices architecture?",
+    "answer": "Node.js is well-suited for microservices architecture due to its lightweight nature and efficient handling of I/O operations. It can be used to develop individual microservices that communicate over lightweight protocols like HTTP/REST or message queues."
+  },
+  {
+    "question": "Explain the role of package-lock.json in a Node.js project.",
+    "answer": "The package-lock.json file in a Node.js project is an automatically generated file that tracks the exact version of each installed npm package. This ensures that the same versions of the packages are installed in all environments, providing consistency."
+  },
+  {
+    "question": "What is the purpose of the 'async' and 'await' keywords in Node.js?",
+    "answer": "The 'async' and 'await' keywords in Node.js are used for handling asynchronous operations. 'async' is used to declare an asynchronous function, and 'await' is used within these functions to wait for asynchronous operations like API calls or database queries to complete."
+  },
+  {
+    "question": "How does Node.js handle exceptions?",
+    "answer": "Node.js handles exceptions using try-catch blocks for synchronous code and promise 'catch' methods for asynchronous code. Unhandled exceptions can be caught using the 'uncaughtException' event on the process object."
+  },
+  {
+    "question": "Explain the concept of hoisting in Node.js.",
+    "answer": "Hoisting in Node.js is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compilation phase. This means that variables and functions can be used before they are declared in the code."
+  },
+  {
+    "question": "What are the benefits of using TypeScript with Node.js?",
+    "answer": "Using TypeScript with Node.js offers benefits like static typing, improved code quality and readability, early detection of errors, better support for modern JavaScript features, and enhanced code autocompletion and intelligence in IDEs."
+  },
+  {
+    "question": "How do you handle configuration management in Node.js applications?",
+    "answer": "Configuration management in Node.js applications is typically handled using environment variables, configuration files like .env, or configuration management libraries like 'config' to manage settings across different environments (development, production, etc.)."
+  },
+  {
+    "question": "What are the best practices for writing clean and maintainable code in Node.js?",
+    "answer": "Best practices for writing clean and maintainable Node.js code include following a consistent coding style, using linters, writing modular and reusable code, proper error handling, writing tests, and documenting the code."
+  },
+  {
+    "question": "Explain the use of generators in Node.js.",
+    "answer": "Generators in Node.js are functions that can be paused and resumed, allowing for better control over asynchronous operations. They are used with the 'yield' keyword to produce an iterable sequence of values."
+  },
+  {
+    "question": "What is the significance of the 'this' keyword in Node.js?",
+    "answer": "In Node.js, the 'this' keyword refers to the object that the function is a property of. It can change based on the context in which the function is called, especially with different invocation patterns like method, function, or constructor calls."
+  },
+  {
+    "question": "How can memory leaks be prevented in Node.js applications?",
+    "answer": "Preventing memory leaks in Node.js applications involves avoiding global variables, cleaning up event listeners, managing the scope of variables and closures carefully, and using profiling tools to track memory usage and leaks."
+  },
+  {
+    "question": "Explain the difference between process.nextTick() and setImmediate() in Node.js.",
+    "answer": "In Node.js, process.nextTick() schedules a callback function to be invoked in the next iteration of the event loop, while setImmediate() schedules a callback to execute after the current poll phase of the event loop. This difference affects the order of execution of these callbacks."
+  },
+  {
+    "question": "What is server-side rendering and how can it be implemented in Node.js?",
+    "answer": "Server-side rendering in Node.js is the process of rendering web pages on the server instead of the client's browser. It can be implemented using templating engines like EJS, Pug, or with frameworks like Next.js for React applications."
+  },
+  {
+    "question": "How can Node.js be integrated with a front-end framework like React or Angular?",
+    "answer": "Node.js can be integrated with front-end frameworks like React or Angular by setting up Node.js as the backend server to handle API requests, database operations, and serve static files, while the front-end framework manages the user interface and client-side logic."
+  },
+  {
+    "question": "Explain the concept of session management in Node.js.",
+    "answer": "Session management in Node.js involves tracking the state of a user across multiple requests. This is typically done using cookies and session stores (like Redis, MongoDB) to store user-related data between client requests."
+  },
+  {
+    "question": "What are the typical tasks of a Node.js build tool like Webpack or Gulp?",
+    "answer": "Node.js build tools like Webpack or Gulp are used for tasks like bundling JavaScript files, transpiling ES6 to compatible JavaScript, minifying code, compiling SASS or LESS, and automating various development tasks."
+  },
+  {
+    "question": "How does Node.js support test-driven development (TDD)?",
+    "answer": "Node.js supports test-driven development by providing an environment where developers can write and run tests using frameworks like Mocha, Jest, or Jasmine. TDD involves writing tests before writing the actual code."
+  },
+  {
+    "question": "What is the role of a Node.js reverse proxy?",
+    "answer": "A reverse proxy in Node.js is used to forward client requests to other servers and return responses to the client, providing features like load balancing, SSL termination, and improved security and performance."
+  },
+  {
+    "question": "Explain the use of Docker with Node.js applications.",
+    "answer": "Using Docker with Node.js applications involves containerizing the Node.js application and its environment. This ensures consistency across different development and deployment environments, simplifies deployment, and supports microservices architectures."
+  }
+]

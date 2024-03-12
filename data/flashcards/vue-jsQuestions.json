@@ -1,0 +1,202 @@
+[
+    {
+        "question": "What is Vue.js and what are its main features?",
+        "answer": "Vue.js is a progressive JavaScript framework used for building user interfaces and single-page applications. Its main features include a reactive data binding system, component-based architecture, and a simple integration process with other projects and libraries."
+    },
+    {
+        "question": "Can you explain the Vue.js lifecycle and its different stages?",
+        "answer": "The Vue.js lifecycle consists of several stages: creation (initialization of events and lifecycle), mounting (template rendering), updating (when reactive properties change), and unmounting (teardown of the component). Each stage has corresponding hooks like 'created', 'mounted', 'updated', and 'unmounted'."
+    },
+    {
+        "question": "How does Vue.js handle reactivity, and what is the role of the `data` property?",
+        "answer": "Vue.js handles reactivity using a getter-setter mechanism under the hood. The `data` property in a Vue instance is made reactive through this mechanism, enabling automatic updates to the DOM when data changes."
+    },
+    {
+        "question": "Describe the use of directives in Vue.js. Can you provide examples?",
+        "answer": "Directives are special tokens in the markup that tell the library to do something to a DOM element. Common examples include `v-if` for conditional rendering, `v-for` for rendering lists, `v-bind` for binding attributes, and `v-on` for handling events."
+    },
+    {
+        "question": "What are components in Vue.js and how do they improve an application's structure?",
+        "answer": "Components are reusable Vue instances with a name that encapsulate a block of HTML, CSS, and JavaScript. They help in structuring Vue applications by breaking the user interface into reusable parts."
+    },
+    {
+        "question": "How do you handle events in Vue.js? Give an example of using `v-on`.",
+        "answer": "Events in Vue.js are handled using the `v-on` directive. For instance, `v-on:click='methodName'` calls the `methodName` method when the element is clicked."
+    },
+    {
+        "question": "What is Vue CLI and what are its benefits?",
+        "answer": "Vue CLI is a command-line tool for rapidly building Vue.js applications. It provides a standard structure, a set of build tools, and a project generator to streamline development."
+    },
+    {
+        "question": "How do you implement form input bindings in Vue.js?",
+        "answer": "Form input bindings in Vue.js are handled using the `v-model` directive, which creates a two-way binding on an `input`, `textarea`, or `select` element."
+    },
+    {
+        "question": "Explain the concept of computed properties in Vue.js.",
+        "answer": "Computed properties are a feature in Vue.js that allow you to declare reactive properties that depend on other data. Unlike data properties, computed properties are cached and only re-evaluate when their dependencies change."
+    },
+    {
+        "question": "What are Vue.js mixins and how are they used?",
+        "answer": "Mixins in Vue.js are a way to distribute reusable functionalities for Vue components. A mixin object can contain any component options. When a component uses a mixin, all options in the mixin will be 'mixed' into the component's own options."
+    },
+    {
+        "question": "What is Vue.js single-file component (SFC) and its advantages?",
+        "answer": "A Vue.js Single-File Component (SFC) is a file with a `.vue` extension that encapsulates the template, script, and style of a Vue component in a single file. It enhances readability, maintainability, and development efficiency."
+    },
+    {
+        "question": "Explain Vue.js reactivity principles. How does Vue track changes to data?",
+        "answer": "Vue.js reactivity is based on JavaScript getters and setters. Vue.js converts data objects into reactive objects using these getters and setters, allowing it to track changes and update the DOM efficiently when data changes."
+    },
+    {
+        "question": "What are Vue.js filters and how are they used?",
+        "answer": "Filters in Vue.js are used to apply common text formatting. They are appended to the end of JavaScript expressions and take the value of the expression as their input. Filters can be used in two places: mustache interpolations and `v-bind` expressions."
+    },
+    {
+        "question": "How does Vue.js handle transitions and animations?",
+        "answer": "Vue.js provides a `<transition>` wrapper component that allows you to add entering/leaving transitions for any element or component. Vue offers various ways to apply transition effects when items are inserted, updated, or removed from the DOM."
+    },
+    {
+        "question": "Describe Vue.js mixins and how they differ from components.",
+        "answer": "Vue.js mixins are a flexible way to distribute reusable functionalities for Vue components. They allow you to define reusable properties, methods, and hooks that can be added to components. Unlike components, mixins are not standalone entities but are merged into component options."
+    },
+    {
+        "question": "What is Vuex and how does it help in state management?",
+        "answer": "Vuex is a state management pattern and library for Vue.js applications. It serves as a centralized store for all the components in an application, with rules ensuring that the state can only be mutated in a predictable fashion."
+    },
+    {
+        "question": "Explain the difference between computed properties and methods in Vue.js.",
+        "answer": "In Vue.js, computed properties are more efficient than methods for data that depends on other data. Computed properties are cached based on their dependencies, while methods always run when a re-render happens."
+    },
+    {
+        "question": "How do you pass data from parent to child component in Vue.js?",
+        "answer": "Data is passed from parent to child components in Vue.js using props. The parent component binds data to a prop, and the child component declares the prop to receive the data."
+    },
+    {
+        "question": "What are slots in Vue.js and how are they used?",
+        "answer": "Slots are a mechanism for Vue components that allows you to compose components like HTML elements, where you insert content inside another component. They provide a way to render content inside a component's template from where the component is used."
+    },
+    {
+        "question": "What is Vue Router and how is it used in single-page applications?",
+        "answer": "Vue Router is the official router for Vue.js. It is used to create a single-page application with Vue.js by enabling navigation between pages without refreshing the page."
+    },
+    {
+        "question": "How do you communicate between child and parent components in Vue.js?",
+        "answer": "In Vue.js, communication from child to parent components is achieved through events. The child component emits an event, and the parent component listens to that event using the `v-on` directive."
+    },
+    {
+        "question": "What is the purpose of the key attribute in Vue.js lists and why is it important?",
+        "answer": "The `key` attribute is used to provide a unique identifier for each element in a list. It is important for Vue\u2019s reactivity system to track changes to the list and optimize the rendering process, avoiding unnecessary DOM manipulations."
+    },
+    {
+        "question": "Explain the concept of watch properties in Vue.js.",
+        "answer": "Watch properties in Vue.js are used to perform actions when a specific data property changes. They are useful for executing code in response to state changes, especially for asynchronous operations."
+    },
+    {
+        "question": "How does Vue.js handle data binding?",
+        "answer": "Vue.js handles data binding with a directive called `v-model`, which creates a two-way binding on form elements. It synchronizes the value of a Vue instance\u2019s data property with the input, ensuring that the data is kept up-to-date with user inputs."
+    },
+    {
+        "question": "What is the virtual DOM in Vue.js and how does it work?",
+        "answer": "The virtual DOM is an in-memory representation of the real DOM elements. Vue.js uses this concept to create a virtual copy of the DOM and then compares it with the actual DOM to determine the most efficient way to update the view."
+    },
+    {
+        "question": "What are Vue.js directives and how do you create a custom directive?",
+        "answer": "Vue.js directives are special tokens in the markup that provide instructions to the DOM. To create a custom directive, you can register it globally using `Vue.directive('directiveName', {})`, or locally in a component with the `directives` option."
+    },
+    {
+        "question": "How do you use mixins in Vue.js?",
+        "answer": "Mixins in Vue.js are a way to reuse code across components. They can contain a mix of methods, computed properties, and lifecycle hooks. Mixins are used by including them in a component's `mixins` option."
+    },
+    {
+        "question": "Explain the difference between reactive properties and refs in Vue.js.",
+        "answer": "Reactive properties in Vue.js are declared in the `data` function and are part of the component's reactive state. Refs are part of the Vue Composition API, returned by the `ref` function, and can be used to create reactive references to inner properties."
+    },
+    {
+        "question": "What is the purpose of the `provide` and `inject` features in Vue.js?",
+        "answer": "The `provide` and `inject` features in Vue.js enable ancestor components to define and provide data that can be 'injected' into all its descendant components, regardless of how deep they are, without having to pass through every layer of components."
+    },
+    {
+        "question": "Describe how to handle routing in Vue.js.",
+        "answer": "Routing in Vue.js is primarily handled by Vue Router. It allows you to define routes and components that should be rendered for each route, enabling navigation without full page reloads."
+    },
+    {
+        "question": "What is the Composition API in Vue.js and how does it differ from the Options API?",
+        "answer": "The Composition API in Vue.js is a set of additive, function-based APIs that allow for flexible composition of component logic. Unlike the Options API, which organizes logic by options, the Composition API organizes logic by activity, making it more efficient for complex components."
+    },
+    {
+        "question": "How do you make API calls in Vue.js?",
+        "answer": "API calls in Vue.js can be made using JavaScript libraries like Axios or Fetch API. These calls are typically made within the `mounted` lifecycle hook or within methods."
+    },
+    {
+        "question": "Explain how to use v-model with custom components in Vue.js.",
+        "answer": "In Vue.js, `v-model` can be used with custom components by handling the `input` event and using a prop, typically named `value`, to pass the current value. The custom component emits an `input` event with the new value when it needs to update."
+    },
+    {
+        "question": "What are dynamic components in Vue.js and how are they used?",
+        "answer": "Dynamic components in Vue.js are used to dynamically switch between multiple components using the `<component>` tag with the `is` attribute. This is useful for reusing component layouts or behaviors."
+    },
+    {
+        "question": "How do you handle state management in large Vue.js applications?",
+        "answer": "In large Vue.js applications, state management is commonly handled using Vuex, which provides a centralized store for all the components with strict rules to ensure the state changes predictably."
+    },
+    {
+        "question": "How do you handle error handling in Vue.js?",
+        "answer": "Error handling in Vue.js can be managed using the `errorHandler` global handler, try-catch blocks in component methods, and the `errorCaptured` lifecycle hook for capturing errors in child components."
+    },
+    {
+        "question": "What are scoped slots in Vue.js and how do they work?",
+        "answer": "Scoped slots in Vue.js are a feature that allows parent components to access child component data in the slot content. They enable more flexible and reusable components by allowing the slot content to be dynamic based on child component data."
+    },
+    {
+        "question": "Explain server-side rendering (SSR) in Vue.js.",
+        "answer": "Server-side rendering (SSR) in Vue.js is the process of rendering Vue components on the server and sending the resulting HTML to the client. It helps with SEO and improves the initial page load time by reducing the amount of JavaScript needed to be downloaded and executed."
+    },
+    {
+        "question": "How do you implement global state management without Vuex in Vue.js?",
+        "answer": "Global state management in Vue.js without Vuex can be implemented using a simple global event bus, or by creating a global object that components can import and use as a shared state."
+    },
+    {
+        "question": "Describe the process of unit testing in Vue.js applications.",
+        "answer": "Unit testing in Vue.js applications involves testing individual components in isolation. Tools like Jest or Mocha are typically used, along with Vue Test Utils, which provides utilities for mounting components in a controlled environment and asserting their behavior."
+    },
+    {
+        "question": "How can you optimize the performance of a Vue.js application?",
+        "answer": "Performance in Vue.js can be optimized by using lazy loading for routes and components, avoiding unnecessary re-renders, using computed properties wisely, optimizing watchers, and splitting Vuex store into modules."
+    },
+    {
+        "question": "Explain the concept of Vue.js mixins. How do they differ from regular methods?",
+        "answer": "Mixins in Vue.js are a way to create reusable code segments that can be added to components. Unlike regular methods, mixins can contain a variety of component options like methods, computed properties, and lifecycle hooks, and are merged with the component\u2019s options."
+    },
+    {
+        "question": "What is Nuxt.js and how does it relate to Vue.js?",
+        "answer": "Nuxt.js is a framework for building Vue.js applications. It simplifies the process of creating universal or single-page Vue applications by abstracting common tasks and configurations. Nuxt.js provides features like automatic code splitting, server-side rendering, and powerful routing options."
+    },
+    {
+        "question": "How do you manage state in Vue.js without Vuex?",
+        "answer": "State in Vue.js without Vuex can be managed using a global event bus, reactive properties, or by leveraging the provide/inject API for passing data down to deeply nested components."
+    },
+    {
+        "question": "What are Vue.js filters and how do you create a custom filter?",
+        "answer": "Vue.js filters are used to apply text formatting. Custom filters can be created by defining a filter globally using `Vue.filter('filterName', function(value) {})`, or locally in a component\u2019s filters option."
+    },
+    {
+        "question": "Describe the use of `v-show` and `v-if` in Vue.js. How do they differ?",
+        "answer": "`v-show` and `v-if` are both used to conditionally render elements in Vue.js. `v-show` toggles the display CSS property of the element, keeping it in the DOM. `v-if`, on the other hand, adds or removes the element from the DOM based on the condition."
+    },
+    {
+        "question": "How do you use props in Vue.js?",
+        "answer": "Props in Vue.js are used to pass data from a parent component to a child component. Props are declared in the child component and assigned values by the parent, enabling a one-way data flow from parent to child."
+    },
+    {
+        "question": "What is the purpose of the `methods` property in a Vue.js component?",
+        "answer": "The `methods` property in a Vue.js component is used to define functions that can be called from within the component's template. These methods can react to events, modify data, or perform other actions when invoked."
+    },
+    {
+        "question": "Explain how to use event modifiers in Vue.js.",
+        "answer": "Event modifiers in Vue.js are special postfixes denoted by a dot that indicate that a certain behavior should be applied to an event. For example, `.prevent` in `v-on:click.prevent` will call `event.preventDefault()` when the event is triggered."
+    },
+    {
+        "question": "How do you implement two-way data binding on custom components in Vue.js?",
+        "answer": "Two-way data binding on custom components in Vue.js can be achieved using `v-model`, which is syntactic sugar for binding the `value` prop and listening to the `input` event. The child component must emit an `input` event with the new value for the parent to update its data."
+    }
+]

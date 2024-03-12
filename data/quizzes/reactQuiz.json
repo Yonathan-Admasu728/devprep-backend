@@ -1,0 +1,79 @@
+[
+    {
+      "question": "Which of the following statements about React is NOT true?",
+      "options": [
+        "React is a JavaScript library for building user interfaces.",
+        "JSX is a markup syntax used in React that allows developers to write HTML-like code within their JavaScript code.",
+        "React components are JavaScript functions that return markup.",
+        "React uses a real DOM to ensure efficient updates and rendering."
+      ],
+      "correctAnswer": "React uses a real DOM to ensure efficient updates and rendering."
+    },
+    {
+      "question": "Which of the following is NOT a benefit of the virtual DOM in React?",
+      "options": [
+        "It provides a lightweight representation of the actual DOM elements.",
+        "It allows for the direct manipulation of the real DOM.",
+        "It ensures efficient and optimized updates by minimizing unnecessary re-renders.",
+        "It uses a diffing algorithm to update only the changed parts in the real DOM."
+      ],
+      "correctAnswer": "It allows for the direct manipulation of the real DOM."
+    },
+     {
+        "question": "Which of the following is NOT a JavaScript framework?",
+        "options": ["React", "Vue", "Django", "Angular"],
+        "correctAnswer": "Django"
+      },
+      {
+        "question": "Which of these is a popular CSS preprocessor?",
+        "options": ["Sass", "TypeScript", "jQuery", "JSON"],
+        "correctAnswer": "Sass"
+      },
+      {
+        "question": "Which tag is used in HTML to create a hyperlink?",
+        "options": ["<hl>", "<ahref>", "<link>", "<a>"],
+        "correctAnswer": "<a>"
+      },
+      {
+        "question": "Which of the following is NOT a valid HTTP request method?",
+        "options": ["GET", "POST", "FETCH", "PUT"],
+        "correctAnswer": "FETCH"
+      },
+      {
+        "question": "Which company developed the React library?",
+        "options": ["Google", "Microsoft", "Facebook", "Apple"],
+        "correctAnswer": "Facebook"
+      },
+      {
+        "question": "How can state management in large React applications be effectively handled?",
+        "options": ["Using only useState", "Using Redux or MobX", "Using CSS modules", "Using React Router"],
+        "correctAnswer": "Using Redux or MobX"
+    },
+    {
+        "question": "What is the primary use of the `useEffect` hook in React?",
+        "options": ["For state management", "For handling side effects", "For routing", "For memoization"],
+        "correctAnswer": "For handling side effects"
+    },
+    {
+        "question": "Which hook in React is more suited for state logic that involves multiple sub-values?",
+        "options": ["useState", "useEffect", "useContext", "useReducer"],
+        "correctAnswer": "useReducer"
+    },
+    {
+        "question": "What problem does the context API in React primarily solve?",
+        "options": [
+            "Data fetching",
+            "Component rendering",
+            "Avoiding prop drilling",
+            "Handling form submissions"
+        ],
+        "correctAnswer": "Avoiding prop drilling"
+    },
+    {
+        "question": "Which tool is commonly used for handling routing in React applications?",
+        "options": ["Axios", "Redux", "React Router", "Zustand"],
+        "correctAnswer": "React Router"
+    }
+      
+  ]
+  

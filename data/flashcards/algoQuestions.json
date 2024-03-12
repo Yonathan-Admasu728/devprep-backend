@@ -1,0 +1,899 @@
+[
+  {
+    "id": 1,
+    "title": "Array Pair Sum",
+    "question": "Find all unique pairs in an array that, when added together, equal a specific target sum. For example, given the array [2, 4, 5, 6, 7] and a target sum of 9, the pairs are (2, 7) and (4, 5)",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def array_pair_sum(arr, target_sum):\\n    if len(arr) < 2:\\n        return []\\n    seen = set()\\n    output = set()\\n    for num in arr:\\n        target = target_sum - num\\n        if target not in seen:\\n            seen.add(num)\\n        else:\\n            output.add((min(num, target), max(num, target)))\\n    return list(output)",
+      "javascript": "function arrayPairSum(arr, targetSum) {\\n    const seen = new Set();\\n    const output = new Set();\\n    for (let num of arr) {\\n        const target = targetSum - num;\\n        if (!seen.has(target)) {\\n            seen.add(num);\\n        } else {\\n            output.add([Math.min(num, target), Math.max(num, target)].toString());\\n        }\\n    }\\n    return Array.from(output).map(e => e.split(','));\\n}"
+    },
+    "starterCode": {
+      "python": "def array_pair_sum(arr, target_sum):\\n    # Your code here",
+      "javascript": "function arrayPairSum(arr, targetSum) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Longest Substring Without Repeating Characters",
+    "question": "Determine the length of the longest substring in a given string that does not have any repeating characters. For instance, in the string 'abcabcbb', the longest substring without repeating characters is 'abc', which has a length of 3.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def longest_substring_without_repeating(s):\\n    start = maxLength = 0\\n    usedChar = {}\\n    for i in range(len(s)):\\n        if s[i] in usedChar and start <= usedChar[s[i]]:\\n            start = usedChar[s[i]] + 1\\n        else:\\n            maxLength = max(maxLength, i - start + 1)\\n        usedChar[s[i]] = i\\n    return maxLength",
+      "javascript": "function longestSubstringWithoutRepeating(s) {\\n    let start = 0, maxLength = 0;\\n    const usedChar = {};\\n    for (let i = 0; i < s.length; i++) {\\n        if (usedChar[s[i]] >= start) {\\n            start = usedChar[s[i]] + 1;\\n        }\\n        usedChar[s[i]] = i;\\n        maxLength = Math.max(maxLength, i - start + 1);\\n    }\\n    return maxLength;\\n}"
+    },
+    "starterCode": {
+      "python": "def longest_substring_without_repeating(s):\\n    # Your code here",
+      "javascript": "function longestSubstringWithoutRepeating(s) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Merge Intervals",
+    "question": "Given a collection of intervals, merge all overlapping intervals into one. For example, given [[1,3], [2,6], [8,10], [15,18]], the result after merging would be [[1,6], [8,10], [15,18]].",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def merge(intervals):\\n    intervals.sort(key=lambda x: x[0])\\n    merged = []\\n    for interval in intervals:\\n        if not merged or merged[-1][1] < interval[0]:\\n            merged.append(interval)\\n        else:\\n            merged[-1][1] = max(merged[-1][1], interval[1])\\n    return merged",
+      "javascript": "function merge(intervals) {\\n    intervals.sort((a, b) => a[0] - b[0]);\\n    const merged = [];\\n    for (let i = 0; i < intervals.length; i++) {\\n        if (merged.length === 0 || merged[merged.length - 1][1] < intervals[i][0]) {\\n            merged.push(intervals[i]);\\n        } else {\\n            merged[merged.length - 1][1] = Math.max(merged[merged.length - 1][1], intervals[i][1]);\\n        }\\n    }\\n    return merged;\\n}"
+    },
+    "starterCode": {
+      "python": "def merge(intervals):\\n    # Your code here",
+      "javascript": "function merge(intervals) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Binary Tree Maximum Path Sum",
+    "question": "Find the maximum sum of any path in a binary tree. This path may start and end at any node. For example, in a tree where the root node has a value of 10, and its left child is -2 and right child is 7, the maximum path sum is 17 (from node 7 to node 10).",
+     "category": "algorithm",
+     "solutions": {
+      "python": "class TreeNode:\\n    def __init__(self, value=0, left=None, right=None):\\n        self.value = value\\n        self.left = left\\n        self.right = right\\n\\ndef max_path_sum(root):\\n    def max_gain(node):\\n        nonlocal max_sum\\n        if not node:\\n            return 0\\n        left_gain = max(max_gain(node.left), 0)\\n        right_gain = max(max_gain(node.right), 0)\\n        price_newpath = node.value + left_gain + right_gain\\n        max_sum = max(max_sum, price_newpath)\\n        return node.value + max(left_gain, right_gain)\\n\\n    max_sum = float('-inf')\\n    max_gain(root)\\n    return max_sum",
+      "javascript": "function TreeNode(value, left = null, right = null) {\\n    this.value = value;\\n    this.left = left;\\n    this.right = right;\\n}\\nfunction maxPathSum(root) {\\n    let maxSum = Number.MIN_SAFE_INTEGER;\\n    function maxGain(node) {\\n        if (!node) return 0;\\n        const leftGain = Math.max(maxGain(node.left), 0);\\n        const rightGain = Math.max(maxGain(node.right), 0);\\n        const priceNewPath = node.value + leftGain + rightGain;\\n        maxSum = Math.max(maxSum, priceNewPath);\\n        return node.value + Math.max(leftGain, rightGain);\\n    }\\n    maxGain(root);\\n    return maxSum;\\n}"
+    },
+    "starterCode": {
+      "python": "def max_path_sum(root):\\n    # Your code here",
+      "javascript": "function maxPathSum(root) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 5,
+    "title": "Minimum Window Substring",
+    "question": "Find the smallest window in a string containing all characters of another string. For example, given S = 'ADOBECODEBANC' and T = 'ABC', the minimum window substring is 'BANC'.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def min_window(s, t):\\n    if not t or not s:\\n        return ''\\n    dict_t = Counter(t)\\n    required = len(dict_t)\\n    l, r = 0, 0\\n    formed = 0\\n    window_counts = {}\\n    ans = float('inf'), None, None\\n    while r < len(s):\\n        character = s[r]\\n        window_counts[character] = window_counts.get(character, 0) + 1\\n        if character in dict_t and window_counts[character] == dict_t[character]:\\n            formed += 1\\n        while l <= r and formed == required:\\n            character = s[l]\\n            if r - l + 1 < ans[0]:\\n                ans = (r - l + 1, l, r)\\n            window_counts[character] -= 1\\n            if character in dict_t and window_counts[character] < dict_t[character]:\\n                formed -= 1\\n            l += 1    \\n        r += 1    \\n    return '' if ans[0] == float('inf') else s[ans[1] : ans[2] + 1]",
+      "javascript": "function minWindow(s, t) {\\n    if (!t || !s) return '';\\n    let dictT = new Map(), windowCounts = new Map();\\n    for (let char of t) dictT.set(char, (dictT.get(char) || 0) + 1);\\n    let have = 0, need = dictT.size;\\n    let res = [Infinity, null, null], l = 0;\\n    for (let r = 0; r < s.length; r++) {\\n        let c = s[r];\\n        windowCounts.set(c, (windowCounts.get(c) || 0) + 1);\\n        if (dictT.has(c) && windowCounts.get(c) === dictT.get(c)) have++;\\n        while (have === need) {\\n            if (r - l + 1 < res[0]) res = [r - l + 1, l, r];\\n            windowCounts.set(s[l], windowCounts.get(s[l]) - 1);\\n            if (dictT.has(s[l]) && windowCounts.get(s[l]) < dictT.get(s[l])) have--;\\n            l++;\\n        }\\n    }\\n    return res[0] === Infinity ? '' : s.substring(res[1], res[2] + 1);\\n}"
+    },
+    "starterCode": {
+      "python": "def min_window(s, t):\\n    # Your code here",
+      "javascript": "function minWindow(s, t) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Longest Palindromic Substring",
+    "question": "Identify the longest palindromic substring in a given string. For example, if the input is 'babad', one possible longest palindromic substring is 'bab' (or 'aba').",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def longest_palindrome(s):\\n    def expandFromCenter(left, right):\\n        while left >= 0 and right < len(s) and s[left] == s[right]:\\n            left -= 1\\n            right += 1\\n        return right - left - 1\\n    start, end = 0, 0\\n    for i in range(len(s)):\\n        len1 = expandFromCenter(i, i)\\n        len2 = expandFromCenter(i, i + 1)\\n        maxlen = max(len1, len2)\\n        if maxlen > end - start:\\n            start = i - (maxlen - 1) // 2\\n            end = i + maxlen // 2\\n    return s[start:end + 1]",
+      "javascript": "function longestPalindrome(s) {\\n    function expandFromCenter(left, right) {\\n        while (left >= 0 && right < s.length && s[left] === s[right]) {\\n            left--;\\n            right++;\\n        }\\n        return right - left - 1;\\n    }\\n    let start = 0, end = 0;\\n    for (let i = 0; i < s.length; i++) {\\n        let len1 = expandFromCenter(i, i);\\n        let len2 = expandFromCenter(i, i + 1);\\n        let maxlen = Math.max(len1, len2);\\n        if (maxlen > end - start) {\\n            start = i - Math.floor((maxlen - 1) / 2);\\n            end = i + Math.floor(maxlen / 2);\\n        }\\n    }\\n    return s.substring(start, end + 1);\\n}"
+    },
+    "starterCode": {
+      "python": "def longest_palindrome(s):\\n    # Your code here",
+      "javascript": "function longestPalindrome(s) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 7,
+    "title": "Serialize and Deserialize a Binary Tree",
+    "question": "Devise a method to serialize a binary tree into a string and then deserialize that string back into the original tree structure. For instance, the tree with root 1, and children 2 and 3 (where 2 is the left child and 3 is the right child), can be serialized into the string '1,2,3,None,None,None,None', and then deserialized back into the original tree.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "class TreeNode:\\n    def __init__(self, value=0, left=None, right=None):\\n        self.value = value\\n        self.left = left\\n        self.right = right\\n\\ndef serialize(root):\\n    def rserialize(root, string):\\n        if root is None:\\n            string += 'None,'\\n        else:\\n            string += str(root.value) + ','\\n            string = rserialize(root.left, string)\\n            string = rserialize(root.right, string)\\n        return string\\n    return rserialize(root, '')\\n\\ndef deserialize(data):\\n    def rdeserialize(l):\\n        if l[0] == 'None':\\n            l.pop(0)\\n            return None\\n        root = TreeNode(l[0])\\n        l.pop(0)\\n        root.left = rdeserialize(l)\\n        root.right = rdeserialize(l)\\n        return root\\n    data_list = data.split(',')\\n    root = rdeserialize(data_list)\\n    return root",
+      "javascript": "function TreeNode(value, left = null, right = null) {\\n    this.value = value;\\n    this.left = left;\\n    this.right = right;\\n}\\nfunction serialize(root) {\\n    function rserialize(node) {\\n        if (node === null) {\\n            return 'None,';\\n        } else {\\n            return '' + node.value + ',' + rserialize(node.left) + rserialize(node.right);\\n        }\\n    }\\n    return rserialize(root);\\n}\\nfunction deserialize(data) {\\n    let list = data.split(',');\\n    function rdeserialize(list) {\\n        if (list[0] === 'None') {\\n            list.shift();\\n            return null;\\n        } else {\\n            let root = new TreeNode(parseInt(list.shift()));\\n            root.left = rdeserialize(list);\\n            root.right = rdeserialize(list);\\n            return root;\\n        }\\n    }\\n    return rdeserialize(list);\\n}"
+    },
+    "starterCode": {
+      "python": "def serialize(root):\\n    # Your code here\\n\\ndef deserialize(data):\\n    # Your code here",
+      "javascript": "function serialize(root) {\\n    // Your code here\\n}\\nfunction deserialize(data) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 8,
+    "title": "LRU Cache Implementation",
+    "question": "Implement a Least Recently Used (LRU) cache mechanism with a fixed size. It should support the operations of retrieving a value (get) and updating or inserting a value (put). For example, if the cache has a capacity of 2, and we put entries (1, 1) and (2, 2) into it, and then get 1, the cache should now evict entry 2 when a new entry is put into the cache, because 2 is the least recently used.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "class LRUCache:\\n    def __init__(self, capacity):\\n        self.cache = OrderedDict()\\n        self.capacity = capacity\\n\\n    def get(self, key):\\n        if key not in self.cache:\\n            return -1\\n        self.cache.move_to_end(key)\\n        return self.cache[key]\\n\\n    def put(self, key, value):\\n        if key in self.cache:\\n            self.cache.move_to_end(key)\\n        elif len(self.cache) >= self.capacity:\\n            self.cache.popitem(last=False)\\n        self.cache[key] = value",
+      "javascript": "class LRUCache {\\n    constructor(capacity) {\\n        this.capacity = capacity;\\n        this.cache = new Map();\\n    }\\n\\n    get(key) {\\n        if (!this.cache.has(key)) return -1;\\n        const value = this.cache.get(key);\\n        this.cache.delete(key);\\n        this.cache.set(key, value);\\n        return value;\\n    }\\n\\n    put(key, value) {\\n        if (this.cache.has(key)) {\\n            this.cache.delete(key);\\n        } else if (this.cache.size === this.capacity) {\\n            this.cache.delete(this.cache.keys().next().value);\\n        }\\n        this.cache.set(key, value);\\n    }\\n}"
+    },
+    "starterCode": {
+      "python": "class LRUCache:\\n    def __init__(self, capacity):\\n        # Your code here\\n    def get(self, key):\\n        # Your code here\\n    def put(self, key, value):\\n        # Your code here",
+      "javascript": "class LRUCache {\\n    constructor(capacity) {\\n        // Your code here\\n    }\\n    get(key) {\\n        // Your code here\\n    }\\n    put(key, value) {\\n        // Your code here\\n    }\\n}"
+    }
+  },
+  {
+    "id": 9,
+    "title": "Word Ladder Problem",
+    "question": "Given two words (beginWord and endWord), and a dictionary's word list, find the length of the shortest transformation sequence from beginWord to endWord, such that only one letter can be changed at a time and each transformed word must exist in the word list. For example, given beginWord = 'hit', endWord = 'cog', and wordList = ['hot', 'dot', 'dog', 'lot', 'log', 'cog'], the shortest transformation sequence is 'hit' -> 'hot' -> 'dot' -> 'dog' -> 'cog', which has a length of 5.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def ladderLength(beginWord, endWord, wordList):\\n    wordSet = set(wordList)\\n    if endWord not in wordSet:\\n        return 0\\n    queue = collections.deque([(beginWord, 1)])\\n    while queue:\\n        word, length = queue.popleft()\\n        if word == endWord:\\n            return length\\n        for i in range(len(word)):\\n            for c in 'abcdefghijklmnopqrstuvwxyz':\\n                next_word = word[:i] + c + word[i+1:]\\n                if next_word in wordSet:\\n                    wordSet.remove(next_word)\\n                    queue.append((next_word, length + 1))\\n    return 0",
+      "javascript": "function ladderLength(beginWord, endWord, wordList) {\\n    const wordSet = new Set(wordList);\\n    if (!wordSet.has(endWord)) return 0;\\n    let queue = [[beginWord, 1]];\\n    while (queue.length) {\\n        const [word, length] = queue.shift();\\n        if (word === endWord) return length;\\n        for (let i = 0; i < word.length; i++) {\\n            for (let c = 97; c <= 122; c++) {\\n                const nextWord = word.substring(0, i) + String.fromCharCode(c) + word.substring(i + 1);\\n                if (wordSet.has(nextWord)) {\\n                    wordSet.delete(nextWord);\\n                    queue.push([nextWord, length + 1]);\\n                }\\n            }\\n        }\\n    }\\n    return 0;\\n}"
+    },
+    "starterCode": {
+      "python": "def ladderLength(beginWord, endWord, wordList):\\n    # Your code here",
+      "javascript": "function ladderLength(beginWord, endWord, wordList) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 10,
+    "title": "Kth Largest Element in an Array",
+    "question": "Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element. For example, given [3,2,1,5,6,4] and k = 2, the function should return 5.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def findKthLargest(nums, k):\\n    return sorted(nums, reverse=True)[k-1]",
+      "javascript": "function findKthLargest(nums, k) {\\n    nums.sort((a, b) => b - a);\\n    return nums[k - 1];\\n}"
+    },
+    "starterCode": {
+      "python": "def findKthLargest(nums, k):\\n    # Your code here",
+      "javascript": "function findKthLargest(nums, k) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 11,
+    "title": "Maximum Subarray Problem",
+    "question": "Find the contiguous subarray within an array, containing at least one number, which has the largest sum. For example, given the array [-2,1,-3,4,-1,2,1,-5,4], the contiguous subarray [4,-1,2,1] has the largest sum = 6.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def maxSubArray(nums):\\n    max_sum = curr_sum = nums[0]\\n    for num in nums[1:]:\\n        curr_sum = max(num, curr_sum + num)\\n        max_sum = max(max_sum, curr_sum)\\n    return max_sum",
+      "javascript": "function maxSubArray(nums) {\\n    let maxSum = nums[0], currSum = nums[0];\\n    for (let i = 1; i < nums.length; i++) {\\n        currSum = Math.max(nums[i], currSum + nums[i]);\\n        maxSum = Math.max(maxSum, currSum);\\n    }\\n    return maxSum;\\n}"
+    },
+    "starterCode": {
+      "python": "def maxSubArray(nums):\\n    # Your code here",
+      "javascript": "function maxSubArray(nums) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 12,
+    "title": "Sudoku Solver",
+    "question": "Write a program to solve a Sudoku puzzle by filling the empty cells. A sudoku solution must satisfy all of the following rules: Each of the digits 1-9 must occur exactly once in each row, column, and 3x3 sub-grid. The '.' character indicates empty cells. For example, given a partially filled grid, your program should fill in the missing numbers to complete the puzzle.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def solveSudoku(board):\\n    def is_valid(x, y, val):\\n        for i in range(9):\\n            if board[i][y] == val: return False\\n            if board[x][i] == val: return False\\n            if board[3 * (x // 3) + i // 3][3 * (y // 3) + i % 3] == val: return False\\n        return True\\n    def solve():\\n        for i in range(9):\\n            for j in range(9):\\n                if board[i][j] == '.':\\n                    for c in '123456789':\\n                        if is_valid(i, j, c):\\n                            board[i][j] = c\\n                            if solve(): return True\\n                            board[i][j] = '.'\\n                    return False\\n        return True\\n    solve()",
+      "javascript": "function solveSudoku(board) {\\n    function isValid(x, y, val) {\\n        for (let i = 0; i < 9; i++) {\\n            if (board[i][y] === val) return false;\\n            if (board[x][i] === val) return false;\\n            if (board[3 * Math.floor(x / 3) + Math.floor(i / 3)][3 * Math.floor(y / 3) + i % 3] === val) return false;\\n        }\\n        return true;\\n    }\\n    function solve() {\\n        for (let i = 0; i < 9; i++) {\\n            for (let j = 0; j < 9; j++) {\\n                if (board[i][j] === '.') {\\n                    for (let c = 1; c <= 9; c++) {\\n                        if (isValid(i, j, c.toString())) {\\n                            board[i][j] = c.toString();\\n                            if (solve()) return true;\\n                            board[i][j] = '.';\\n                        }\\n                    }\\n                    return false;\\n                }\\n            }\\n        }\\n        return true;\\n    }\\n    solve();\\n}"
+    },
+    "starterCode": {
+      "python": "def solveSudoku(board):\\n    # Your code here",
+      "javascript": "function solveSudoku(board) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 13,
+    "title": "Top K Frequent Elements in an Array",
+    "question": "Given a non-empty array of integers, return the k most frequent elements. For instance, given the array [1,1,1,2,2,3] and k = 2, the function should return [1,2] since 1 and 2 are the most frequent elements.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def topKFrequent(nums, k):\\n    count = {}\\n    freq = [[] for i in range(len(nums) + 1)]\\n    for n in nums:\\n        count[n] = 1 + count.get(n, 0)\\n    for n, c in count.items():\\n        freq[c].append(n)\\n    res = []\\n    for i in range(len(freq) - 1, 0, -1):\\n        for n in freq[i]:\\n            res.append(n)\\n            if len(res) == k:\\n                return res",
+      "javascript": "function topKFrequent(nums, k) {\\n    const count = {};\\n    nums.forEach(n => count[n] = (count[n] || 0) + 1);\\n    const freq = Array.from({ length: nums.length + 1 }, () => []);\\n    Object.keys(count).forEach(n => freq[count[n]].push(Number(n)));\\n    const res = [];\\n    for (let i = freq.length - 1; i > 0 && res.length < k; i--) {\\n        res.push(...freq[i]);\\n    }\\n    return res.slice(0, k);\\n}"
+    },
+    "starterCode": {
+      "python": "def topKFrequent(nums, k):\\n    # Your code here",
+      "javascript": "function topKFrequent(nums, k) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 14,
+    "title": "Clone Graph",
+    "question": "Given a reference to a node in a connected undirected graph, return a deep copy (clone) of the graph. Each node in the graph contains a val (int) and a list (List[Node]) of its neighbors. For example, given a graph where a node A has neighbors B and C, and B has neighbor A and C, and C has neighbors A and B, clone this graph.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "class Node:\\n    def __init__(self, val = 0, neighbors = None):\\n        self.val = val\\n        self.neighbors = neighbors if neighbors is not None else []\\n\\ndef cloneGraph(node):\\n    if not node:\\n        return node\\n    old_to_new = {}\\n    def dfs(node):\\n        if node in old_to_new:\\n            return old_to_new[node]\\n        copy = Node(node.val)\\n        old_to_new[node] = copy\\n        for neighbor in node.neighbors:\\n            copy.neighbors.append(dfs(neighbor))\\n        return copy\\n    return dfs(node)",
+      "javascript": "function Node(val, neighbors) {\\n    this.val = val === undefined ? 0 : val;\\n    this.neighbors = neighbors === undefined ? [] : neighbors;\\n}\\nfunction cloneGraph(node) {\\n    if (!node) return null;\\n    const oldToNew = new Map();\\n    function dfs(node) {\\n        if (oldToNew.has(node)) return oldToNew.get(node);\\n        const copy = new Node(node.val);\\n        oldToNew.set(node, copy);\\n        node.neighbors.forEach(neighbor => {\\n            copy.neighbors.push(dfs(neighbor));\\n        });\\n        return copy;\\n    }\\n    return dfs(node);\\n}"
+    },
+    "starterCode": {
+      "python": "class Node:\\n    def __init__(self, val = 0, neighbors = None):\\n        # Your code here\\ndef cloneGraph(node):\\n    # Your code here",
+      "javascript": "function Node(val, neighbors) {\\n    // Your code here\\n}\\nfunction cloneGraph(node) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 15,
+    "title": "Number of Islands",
+    "question": "Given a 2D grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. For example, given the grid [['1','1','1','0','0'], ['1','1','0','0','0'], ['0','0','0','1','1'], ['0','0','0','0','1']], there are 3 islands.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def numIslands(grid):\\n    if not grid:\\n        return 0\\n    count = 0\\n    def dfs(i, j):\\n        if i < 0 or j < 0 or i >= len(grid) or j >= len(grid[0]) or grid[i][j] != '1':\\n            return\\n        grid[i][j] = '#'\\n        dfs(i + 1, j)\\n        dfs(i - 1, j)\\n        dfs(i, j + 1)\\n        dfs(i, j - 1)\\n    for i in range(len(grid)):\\n        for j in range(len(grid[0])):\\n            if grid[i][j] == '1':\\n                dfs(i, j)\\n                count += 1\\n    return count",
+      "javascript": "function numIslands(grid) {\\n    if (!grid.length) return 0;\\n    let count = 0;\\n    function dfs(i, j) {\\n        if (i < 0 || j < 0 || i >= grid.length || j >= grid[0].length || grid[i][j] !== '1') return;\\n        grid[i][j] = '#';\\n        dfs(i + 1, j);\\n        dfs(i - 1, j);\\n        dfs(i, j + 1);\\n        dfs(i, j - 1);\\n    }\\n    for (let i = 0; i < grid.length; i++) {\\n        for (let j = 0; j < grid[0].length; j++) {\\n            if (grid[i][j] === '1') {\\n                dfs(i, j);\\n                count++;\\n            }\\n        }\\n    }\\n    return count;\\n}"
+    },
+    "starterCode": {
+      "python": "def numIslands(grid):\\n    # Your code here",
+      "javascript": "function numIslands(grid) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 16,
+    "title": "Implement Trie (Prefix Tree)",
+    "question": "Implement a trie with insert, search, and startsWith methods. A trie is a special tree used for storing sequences, typically strings, where each node stores a character. For example, after inserting 'apple', 'app', and 'apex' into the Trie, searching for 'app' should return true.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "class Trie:\\n    def __init__(self):\\n        self.root = {}\\n    def insert(self, word):\\n        node = self.root\\n        for char in word:\\n            node = node.setdefault(char, {})\\n        node['#'] = True\\n    def search(self, word):\\n        node = self.root\\n        for char in word:\\n            if char not in node:\\n                return False\\n            node = node[char]\\n        return '#' in node\\n    def startsWith(self, prefix):\\n        node = self.root\\n        for char in prefix:\\n            if char not in node:\\n                return False\\n            node = node[char]\\n        return True",
+      "javascript": "class Trie {\\n    constructor() {\\n        this.root = {};\\n    }\\n    insert(word) {\\n        let node = this.root;\\n        for (let char of word) {\\n            if (!node[char]) node[char] = {};\\n            node = node[char];\\n        }\\n        node['#'] = true;\\n    }\\n    search(word) {\\n        let node = this.root;\\n        for (let char of word) {\\n            if (!node[char]) return false;\\n            node = node[char];\\n        }\\n        return '#' in node;\\n    }\\n    startsWith(prefix) {\\n        let node = this.root;\\n        for (let char of prefix) {\\n            if (!node[char]) return false;\\n            node = node[char];\\n        }\\n        return true;\\n    }\\n}"
+    },
+    "starterCode": {
+      "python": "class Trie:\\n    def __init__(self):\\n        # Your code here\\n    def insert(self, word):\\n        # Your code here\\n    def search(self, word):\\n        # Your code here\\n    def startsWith(self, prefix):\\n        # Your code here",
+      "javascript": "class Trie {\\n    constructor() {\\n        // Your code here\\n    }\\n    insert(word) {\\n        // Your code here\\n    }\\n    search(word) {\\n        // Your code here\\n    }\\n    startsWith(prefix) {\\n        // Your code here\\n    }\\n}"
+    }
+  },
+
+  {
+    "id": 17,
+    "title": "Zigzag Conversion",
+    "question": "Convert a given string into a specific zigzag pattern on a given number of rows and then read it line by line. For example, given the string 'PAYPALISHIRING' and 3 rows, it should be arranged as follows: P   A   H   N, A P L S I I G, Y   I   R, and then read as 'PAHNAPLSIIGYIR'.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def convert(s, numRows):\\n    if numRows == 1 or numRows >= len(s):\\n        return s\\n    res = [''] * numRows\\n    index, step = 0, 1\\n    for char in s:\\n        res[index] += char\\n        if index == 0:\\n            step = 1\\n        elif index == numRows -1:\\n            step = -1\\n        index += step\\n    return ''.join(res)",
+      "javascript": "function convert(s, numRows) {\\n    if (numRows === 1 || numRows >= s.length) return s;\\n    let res = new Array(numRows).fill('');\\n    let index = 0, step = 1;\\n    for (let char of s) {\\n        res[index] += char;\\n        if (index === 0) step = 1;\\n        else if (index === numRows - 1) step = -1;\\n        index += step;\\n    }\\n    return res.join('');\\n}"
+    },
+    "starterCode": {
+      "python": "def convert(s, numRows):\\n    # Your code here",
+      "javascript": "function convert(s, numRows) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 18,
+    "title": "Meeting Rooms II",
+    "question": "Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), find the minimum number of conference rooms required. For example, given [[0, 30],[5, 10],[15, 20]], at least two rooms are needed.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def minMeetingRooms(intervals):\\n    starts = sorted([i[0] for i in intervals])\\n    ends = sorted([i[1] for i in intervals])\\n    e, numRooms, available = 0, 0, 0\\n    for start in starts:\\n        while ends[e] <= start:\\n            e += 1\\n            available += 1\\n        if available:\\n            available -= 1\\n        else:\\n            numRooms += 1\\n    return numRooms",
+      "javascript": "function minMeetingRooms(intervals) {\\n    const starts = intervals.map(interval => interval[0]).sort((a, b) => a - b);\\n    const ends = intervals.map(interval => interval[1]).sort((a, b) => a - b);\\n    let e = 0, numRooms = 0, available = 0;\\n    for (let start of starts) {\\n        while (ends[e] <= start) {\\n            e++;\\n            available++;\\n        }\\n        if (available) available--;\\n        else numRooms++;\\n    }\\n    return numRooms;\\n}"
+    },
+    "starterCode": {
+      "python": "def minMeetingRooms(intervals):\\n    # Your code here",
+      "javascript": "function minMeetingRooms(intervals) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 19,
+    "title": "Alien Dictionary (Topological Sort)",
+    "question": "Given a sorted dictionary (array of words) of an alien language, find the order of characters in the language. For example, given the words ['wrt','wrf','er','ett','rftt'], the correct order of characters is 'wertf'.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def alienOrder(words):\\n    adj = { c : set() for word in words for c in word }\\n    for i in range(len(words) - 1):\\n        w1, w2 = words[i], words[i+1]\\n        minLength = min(len(w1), len(w2))\\n        if len(w1) > len(w2) and w1[:minLength] == w2[:minLength]:\\n            return ''\\n        for j in range(minLength):\\n            if w1[j] != w2[j]:\\n                adj[w1[j]].add(w2[j])\\n                break\\n    visit = {}\\n    res = []\\n    def dfs(c):\\n        if c in visit:\\n            return visit[c]\\n        visit[c] = True\\n        for nei in adj[c]:\\n            if dfs(nei):\\n                return True\\n        visit[c] = False\\n        res.append(c)\\n    if any(dfs(c) for c in adj):\\n        return ''\\n    return ''.join(res[::-1])",
+      "javascript": "function alienOrder(words) {\\n    const adj = new Map();\\n    words.forEach(word => {\\n        word.split('').forEach(char => adj.set(char, new Set()));\\n    });\\n    for (let i = 0; i < words.length - 1; i++) {\\n        const w1 = words[i], w2 = words[i + 1];\\n        const minLength = Math.min(w1.length, w2.length);\\n        if (w1.length > w2.length && w1.slice(0, minLength) === w2.slice(0, minLength)) return '';\\n        for (let j = 0; j < minLength; j++) {\\n            if (w1[j] !== w2[j]) {\\n                adj.get(w1[j]).add(w2[j]);\\n                break;\\n            }\\n        }\\n    }\\n    const visit = new Map();\\n    const res = [];\\n    function dfs(c) {\\n        if (visit.has(c)) return visit.get(c);\\n        visit.set(c, true);\\n        for (let nei of adj.get(c)) {\\n            if (dfs(nei)) return true;\\n        }\\n        visit.set(c, false);\\n        res.push(c);\\n        return false;\\n    }\\n    for (let c of adj.keys()) {\\n        if (dfs(c)) return '';\\n    }\\n    return res.reverse().join('');\\n}"
+    },
+    "starterCode": {
+      "python": "def alienOrder(words):\\n    # Your code here",
+      "javascript": "function alienOrder(words) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 20,
+    "title": "Skyline Problem",
+    "question": "Given a collection of buildings represented as a triplet of integers (start, end, height), return the skyline formed by these buildings collectively. The skyline should be represented as a list of 'key points' that consists of the critical points where the skyline changes. For example, given buildings [[2,9,10], [3,7,15], [5,12,12], [15,20,10], [19,24,8]], the skyline should be [[2,10], [3,15], [7,12], [12,0], [15,10], [20,8], [24,0]].",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def getSkyline(buildings):\\n    events = [(L, -H, R) for L, R, H in buildings] + list({(R, 0, 0) for _, R, _ in buildings})\\n    events.sort()\\n    res = [[0, 0]]\\n    heap = [(0, float('inf'))]\\n    for L, negH, R in events:\\n        while L >= heap[0][1]:\\n            heapq.heappop(heap)\\n        if negH:\\n            heapq.heappush(heap, (negH, R))\\n        if res[-1][1] != -heap[0][0]:\\n            res.append([L, -heap[0][0]])\\n    return res[1:]",
+      "javascript": "function getSkyline(buildings) {\\n    const events = buildings.map(([L, R, H]) => [L, -H, R]).concat(buildings.map(([, R]) => [R, 0, 0]));\\n    events.sort((a, b) => a[0] - b[0] || a[1] - b[1]);\\n    const res = [[0, 0]];\\n    const heap = [[0, Infinity]];\\n    for (let [L, negH, R] of events) {\\n        while (L >= heap[0][1]) {\\n            heap.shift();\\n        }\\n        if (negH) heap.push([negH, R]);\\n        heap.sort((a, b) => a[0] - b[0]);\\n        if (res[res.length - 1][1] !== -heap[0][0]) {\\n            res.push([L, -heap[0][0]]);\\n        }\\n    }\\n    return res.slice(1);\\n}"
+    },
+    "starterCode": {
+      "python": "def getSkyline(buildings):\\n    # Your code here",
+      "javascript": "function getSkyline(buildings) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 21,
+    "title": "Find All Anagrams in a String",
+    "question": "Given a string s and a non-empty string p, find all the start indices of p's anagrams in s. Example: Given s = 'cbaebabacd' and p = 'abc', the output should be [0, 6].",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def findAnagrams(s, p):\\n    res = []\\n    pCounter = collections.Counter(p)\\n    sCounter = collections.Counter(s[:len(p)-1])\\n    for i in range(len(p)-1, len(s)):\\n        sCounter[s[i]] += 1   # include a new char in the window\\n        if sCounter == pCounter:    # compare current window with the target\\n            res.append(i-len(p)+1)   # append the starting index\\n        sCounter[s[i-len(p)+1]] -= 1   # decrease the count of oldest char in the window\\n        if sCounter[s[i-len(p)+1]] == 0:\\n            del sCounter[s[i-len(p)+1]]  # remove the count if it is zero\\n    return res",
+      "javascript": "function findAnagrams(s, p) {\\n    const res = [];\\n    const pCounter = new Map();\\n    [...p].forEach(char => pCounter.set(char, (pCounter.get(char) || 0) + 1));\\n    const sCounter = new Map();\\n    for (let i = 0; i < p.length - 1; i++) {\\n        sCounter.set(s[i], (sCounter.get(s[i]) || 0) + 1);\\n    }\\n    for (let i = p.length - 1; i < s.length; i++) {\\n        sCounter.set(s[i], (sCounter.get(s[i]) || 0) + 1);\\n        if (new Map([...sCounter].sort()).toString() === new Map([...pCounter].sort()).toString()) {\\n            res.push(i - p.length + 1);\\n        }\\n        sCounter.set(s[i - p.length + 1], sCounter.get(s[i - p.length + 1]) - 1);\\n        if (sCounter.get(s[i - p.length + 1]) === 0) {\\n            sCounter.delete(s[i - p.length + 1]);\\n        }\\n    }\\n    return res;\\n}"
+    },
+    "starterCode": {
+      "python": "def findAnagrams(s, p):\\n    # Your code here",
+      "javascript": "function findAnagrams(s, p) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 22,
+    "title": "Course Schedule",
+    "question": "There are a total of numCourses courses you have to take, labeled from 0 to numCourses-1. Some courses may have prerequisites, for example, to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]. Given the total number of courses and a list of prerequisite pairs, return whether you can finish all courses.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def canFinish(numCourses, prerequisites):\\n    graph = [[] for _ in range(numCourses)]\\n    visit = [0 for _ in range(numCourses)]\\n    for x, y in prerequisites:\\n        graph[x].append(y)\\n    def dfs(i):\\n        if visit[i] == -1:\\n            return False\\n        if visit[i] == 1:\\n            return True\\n        visit[i] = -1\\n        for j in graph[i]:\\n            if not dfs(j):\\n                return False\\n        visit[i] = 1\\n        return True\\n    for i in range(numCourses):\\n        if not dfs(i):\\n            return False\\n    return True",
+      "javascript": "function canFinish(numCourses, prerequisites) {\\n    const graph = new Array(numCourses).fill(0).map(() => []);\\n    const visit = new Array(numCourses).fill(0);\\n    prerequisites.forEach(([x, y]) => graph[x].push(y));\\n    function dfs(i) {\\n        if (visit[i] === -1) return false;\\n        if (visit[i] === 1) return true;\\n        visit[i] = -1;\\n        for (let j of graph[i]) {\\n            if (!dfs(j)) return false;\\n        }\\n        visit[i] = 1;\\n        return true;\\n    }\\n    for (let i = 0; i < numCourses; i++) {\\n        if (!dfs(i)) return false;\\n    }\\n    return true;\\n}"
+    },
+    "starterCode": {
+      "python": "def canFinish(numCourses, prerequisites):\\n    # Your code here",
+      "javascript": "function canFinish(numCourses, prerequisites) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 23,
+    "title": "Find the Duplicate Number",
+    "question": "Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def findDuplicate(nums):\\n    slow = nums[0]\\n    fast = nums[nums[0]]\\n    while slow != fast:\\n        slow = nums[slow]\\n        fast = nums[nums[fast]]\\n    fast = 0\\n    while slow != fast:\\n        slow = nums[slow]\\n        fast = nums[fast]\\n    return slow",
+      "javascript": "function findDuplicate(nums) {\\n    let slow = nums[0];\\n    let fast = nums[nums[0]];\\n    while (slow !== fast) {\\n        slow = nums[slow];\\n        fast = nums[nums[fast]];\\n    }\\n    fast = 0;\\n    while (slow !== fast) {\\n        slow = nums[slow];\\n        fast = nums[fast];\\n    }\\n    return slow;\\n}"
+    },
+    "starterCode": {
+      "python": "def findDuplicate(nums):\\n    # Your code here",
+      "javascript": "function findDuplicate(nums) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 24,
+    "title": "Product of Array Except Self",
+    "question": "Given an array nums of n integers where n > 1, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def productExceptSelf(nums):\\n    output = [1] * len(nums)\\n    left = 1\\n    for i in range(len(nums)):\\n        output[i] *= left\\n        left *= nums[i]\\n    right = 1\\n    for i in range(len(nums) - 1, -1, -1):\\n        output[i] *= right\\n        right *= nums[i]\\n    return output",
+      "javascript": "function productExceptSelf(nums) {\\n    const output = new Array(nums.length).fill(1);\\n    let left = 1;\\n    for (let i = 0; i < nums.length; i++) {\\n        output[i] *= left;\\n        left *= nums[i];\\n    }\\n    let right = 1;\\n    for (let i = nums.length - 1; i >= 0; i--) {\\n        output[i] *= right;\\n        right *= nums[i];\\n    }\\n    return output;\\n}"
+    },
+    "starterCode": {
+      "python": "def productExceptSelf(nums):\\n    # Your code here",
+      "javascript": "function productExceptSelf(nums) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 25,
+    "title": "Search a 2D Matrix II",
+    "question": "Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties: Integers in each row are sorted in ascending from left to right; Integers in each column are sorted in ascending from top to bottom.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def searchMatrix(matrix, target):\\n    if not matrix or not matrix[0]:\\n        return False\\n    row, col = len(matrix), len(matrix[0])\\n    i, j = 0, col - 1\\n    while i < row and j >= 0:\\n        if matrix[i][j] == target:\\n            return True\\n        elif matrix[i][j] < target:\\n            i += 1\\n        else:\\n            j -= 1\\n    return False",
+      "javascript": "function searchMatrix(matrix, target) {\\n    if (!matrix.length || !matrix[0].length) return false;\\n    let i = 0, j = matrix[0].length - 1;\\n    while (i < matrix.length && j >= 0) {\\n        if (matrix[i][j] === target) return true;\\n        else if (matrix[i][j] < target) i++;\\n        else j--;\\n    }\\n    return false;\\n}"
+    },
+    "starterCode": {
+      "python": "def searchMatrix(matrix, target):\\n    # Your code here",
+      "javascript": "function searchMatrix(matrix, target) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 26,
+    "title": "Find Minimum in Rotated Sorted Array",
+    "question": "Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. Find the minimum element. The array may contain duplicates.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def findMin(nums):\\n    low, high = 0, len(nums) - 1\\n    while low < high:\\n        mid = (low + high) // 2\\n        if nums[mid] > nums[high]:\\n            low = mid + 1\\n        elif nums[mid] < nums[high]:\\n            high = mid\\n        else: # when nums[mid] and nums[high] are same\\n            high -= 1\\n    return nums[low]",
+      "javascript": "function findMin(nums) {\\n    let low = 0, high = nums.length - 1;\\n    while (low < high) {\\n        const mid = Math.floor((low + high) / 2);\\n        if (nums[mid] > nums[high]) low = mid + 1;\\n        else if (nums[mid] < nums[high]) high = mid;\\n        else high--;\\n    }\\n    return nums[low];\\n}"
+    },
+    "starterCode": {
+      "python": "def findMin(nums):\\n    # Your code here",
+      "javascript": "function findMin(nums) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 27,
+    "title": "Longest Increasing Subsequence",
+    "question": "Given an unsorted array of integers, find the length of longest increasing subsequence.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def lengthOfLIS(nums):\\n    if not nums:\\n        return 0\\n    dp = [1] * len(nums)\\n    for i in range(1, len(nums)):\\n        for j in range(i):\\n            if nums[i] > nums[j]:\\n                dp[i] = max(dp[i], dp[j] + 1)\\n    return max(dp)",
+      "javascript": "function lengthOfLIS(nums) {\\n    if (nums.length === 0) return 0;\\n    const dp = new Array(nums.length).fill(1);\\n    for (let i = 1; i < nums.length; i++) {\\n        for (let j = 0; j < i; j++) {\\n            if (nums[i] > nums[j]) {\\n                dp[i] = Math.max(dp[i], dp[j] + 1);\\n            }\\n        }\\n    }\\n    return Math.max(...dp);\\n}"
+    },
+    "starterCode": {
+      "python": "def lengthOfLIS(nums):\\n    # Your code here",
+      "javascript": "function lengthOfLIS(nums) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 28,
+    "title": "Sliding Window Maximum",
+    "question": "Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def maxSlidingWindow(nums, k):\\n    if not nums:\\n        return []\\n    window, res = [], []\\n    for i, x in enumerate(nums):\\n        if i >= k and window[0] == i - k:\\n            window.pop(0)\\n        while window and nums[window[-1]] < x:\\n            window.pop()\\n        window.append(i)\\n        if i >= k - 1:\\n            res.append(nums[window[0]])\\n    return res",
+      "javascript": "function maxSlidingWindow(nums, k) {\\n    if (!nums.length || k === 0) return [];\\n    const res = [];\\n    const window = [];\\n    for (let i = 0; i < nums.length; i++) {\\n        while (window.length && window[0] <= i - k) {\\n            window.shift();\\n        }\\n        while (window.length && nums[window[window.length - 1]] < nums[i]) {\\n            window.pop();\\n        }\\n        window.push(i);\\n        if (i >= k - 1) {\\n            res.push(nums[window[0]]);\\n        }\\n    }\\n    return res;\\n}"
+    },
+    "starterCode": {
+      "python": "def maxSlidingWindow(nums, k):\\n    # Your code here",
+      "javascript": "function maxSlidingWindow(nums, k) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 29,
+    "title": "Decode Ways",
+    "question": "A message containing letters from A-Z is being encoded to numbers using the following mapping: 'A' -> 1, 'B' -> 2, ..., 'Z' -> 26. Given a non-empty string containing only digits, determine the total number of ways to decode it.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def numDecodings(s):\\n    if not s or s[0] == '0':\\n        return 0\\n    dp = [0] * (len(s) + 1)\\n    dp[0], dp[1] = 1, 1\\n    for i in range(2, len(s) + 1):\\n        if 0 < int(s[i-1:i]) <= 9:\\n            dp[i] += dp[i - 1]\\n        if 10 <= int(s[i-2:i]) <= 26:\\n            dp[i] += dp[i - 2]\\n    return dp[len(s)]",
+      "javascript": "function numDecodings(s) {\\n    if (!s || s[0] === '0') return 0;\\n    let dp = new Array(s.length + 1).fill(0);\\n    dp[0] = 1, dp[1] = 1;\\n    for (let i = 2; i <= s.length; i++) {\\n        if (s[i-1] !== '0') dp[i] += dp[i - 1];\\n        if (s.substring(i - 2, i) >= '10' && s.substring(i - 2, i) <= '26') dp[i] += dp[i - 2];\\n    }\\n    return dp[s.length];\\n}"
+    },
+    "starterCode": {
+      "python": "def numDecodings(s):\\n    # Your code here",
+      "javascript": "function numDecodings(s) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 30,
+    "title": "Coin Change",
+    "question": "You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def coinChange(coins, amount):\\n    dp = [float('inf')] * (amount + 1)\\n    dp[0] = 0\\n    for coin in coins:\\n        for x in range(coin, amount + 1):\\n            dp[x] = min(dp[x], dp[x - coin] + 1)\\n    return dp[amount] if dp[amount] != float('inf') else -1",
+      "javascript": "function coinChange(coins, amount) {\\n    const dp = new Array(amount + 1).fill(Infinity);\\n    dp[0] = 0;\\n    for (let coin of coins) {\\n        for (let i = coin; i <= amount; i++) {\\n            dp[i] = Math.min(dp[i], dp[i - coin] + 1);\\n        }\\n    }\\n    return dp[amount] !== Infinity ? dp[amount] : -1;\\n}"
+    },
+    "starterCode": {
+      "python": "def coinChange(coins, amount):\\n    # Your code here",
+      "javascript": "function coinChange(coins, amount) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 31,
+    "title": "Maximum Product Subarray",
+    "question": "Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def maxProduct(nums):\\n    if not nums:\\n        return 0\\n    max_prod = min_prod = ans = nums[0]\\n    for i in range(1, len(nums)):\\n        if nums[i] < 0:\\n            max_prod, min_prod = min_prod, max_prod\\n        max_prod = max(nums[i], max_prod * nums[i])\\n        min_prod = min(nums[i], min_prod * nums[i])\\n        ans = max(ans, max_prod)\\n    return ans",
+      "javascript": "function maxProduct(nums) {\\n    if (nums.length === 0) return 0;\\n    let maxProd = nums[0], minProd = nums[0], ans = nums[0];\\n    for (let i = 1; i < nums.length; i++) {\\n        if (nums[i] < 0) [maxProd, minProd] = [minProd, maxProd];\\n        maxProd = Math.max(nums[i], maxProd * nums[i]);\\n        minProd = Math.min(nums[i], minProd * nums[i]);\\n        ans = Math.max(ans, maxProd);\\n    }\\n    return ans;\\n}"
+    },
+    "starterCode": {
+      "python": "def maxProduct(nums):\\n    # Your code here",
+      "javascript": "function maxProduct(nums) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 32,
+    "title": "Word Break",
+    "question": "Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def wordBreak(s, wordDict):\\n    dp = [False] * (len(s) + 1)\\n    dp[0] = True\\n    for i in range(1, len(s) + 1):\\n        for word in wordDict:\\n            if dp[i - len(word)] and s[i - len(word):i] == word:\\n                dp[i] = True\\n                break\\n    return dp[len(s)]",
+      "javascript": "function wordBreak(s, wordDict) {\\n    const dp = new Array(s.length + 1).fill(false);\\n    dp[0] = true;\\n    for (let i = 1; i <= s.length; i++) {\\n        for (const word of wordDict) {\\n            if (i >= word.length && dp[i - word.length] && s.substring(i - word.length, i) === word) {\\n                dp[i] = true;\\n                break;\\n            }\\n        }\\n    }\\n    return dp[s.length];\\n}"
+    },
+    "starterCode": {
+      "python": "def wordBreak(s, wordDict):\\n    # Your code here",
+      "javascript": "function wordBreak(s, wordDict) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 33,
+    "title": "Copy List with Random Pointer",
+    "question": "A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null. Return a deep copy of the list.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "class Node:\\n    def __init__(self, val, next=None, random=None):\\n        self.val = val\\n        self.next = next\\n        self.random = random\\n\\ndef copyRandomList(head):\\n    if not head:\\n        return None\\n    curr = head\\n    while curr:\\n        new_node = Node(curr.val, curr.next)\\n        curr.next = new_node\\n        curr = new_node.next\\n    curr = head\\n    while curr:\\n        curr.next.random = curr.random.next if curr.random else None\\n        curr = curr.next.next\\n    curr_old_list = head\\n    curr_new_list = head.next\\n    head_new = head.next\\n    while curr_old_list:\\n        curr_old_list.next = curr_old_list.next.next\\n        curr_new_list.next = curr_new_list.next.next if curr_new_list.next else None\\n        curr_old_list = curr_old_list.next\\n        curr_new_list = curr_new_list.next\\n    return head_new",
+      "javascript": "function Node(val, next, random) {\\n    this.val = val;\\n    this.next = next || null;\\n    this.random = random || null;\\n}\\nfunction copyRandomList(head) {\\n    if (!head) return null;\\n    let curr = head;\\n    while (curr) {\\n        const newNode = new Node(curr.val, curr.next);\\n        curr.next = newNode;\\n        curr = newNode.next;\\n    }\\n    curr = head;\\n    while (curr) {\\n        curr.next.random = curr.random ? curr.random.next : null;\\n        curr = curr.next.next;\\n    }\\n    let oldList = head;\\n    let newList = head.next;\\n    let headNew = head.next;\\n    while (oldList) {\\n        oldList.next = oldList.next.next;\\n        newList.next = newList.next ? newList.next.next : null;\\n        oldList = oldList.next;\\n        newList = newList.next;\\n    }\\n    return headNew;\\n}"
+    },
+    "starterCode": {
+      "python": "class Node:\\n    def __init__(self, val, next=None, random=None):\\n        # Your code here\\ndef copyRandomList(head):\\n    # Your code here",
+      "javascript": "function Node(val, next, random) {\\n    // Your code here\\n}\\nfunction copyRandomList(head) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 34,
+    "title": "Insert Interval",
+    "question": "Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def insert(intervals, newInterval):\\n    res, n = [], len(intervals)\\n    i = 0\\n    while i < n and intervals[i][1] < newInterval[0]:\\n        res.append(intervals[i])\\n        i += 1\\n    while i < n and intervals[i][0] <= newInterval[1]:\\n        newInterval = [min(newInterval[0], intervals[i][0]), max(newInterval[1], intervals[i][1])]\\n        i += 1\\n    res.append(newInterval)\\n    while i < n:\\n        res.append(intervals[i])\\n        i += 1\\n    return res",
+      "javascript": "function insert(intervals, newInterval) {\\n    const res = [];\\n    let i = 0;\\n    while (i < intervals.length && intervals[i][1] < newInterval[0]) {\\n        res.push(intervals[i]);\\n        i++;\\n    }\\n    while (i < intervals.length && intervals[i][0] <= newInterval[1]) {\\n        newInterval = [Math.min(newInterval[0], intervals[i][0]), Math.max(newInterval[1], intervals[i][1])];\\n        i++;\\n    }\\n    res.push(newInterval);\\n    while (i < intervals.length) {\\n        res.push(intervals[i]);\\n        i++;\\n    }\\n    return res;\\n}"
+    },
+    "starterCode": {
+      "python": "def insert(intervals, newInterval):\\n    # Your code here",
+      "javascript": "function insert(intervals, newInterval) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 35,
+    "title": "Surrounded Regions",
+    "question": "Given a 2D board containing 'X' and 'O', capture all regions surrounded by 'X'. A region is captured by flipping all 'O's into 'X's in that surrounded region.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def solve(board):\\n    if not board or not board[0]:\\n        return\\n    m, n = len(board), len(board[0])\\n    def dfs(i, j):\\n        if i < 0 or j < 0 or i >= m or j >= n or board[i][j] != 'O':\\n            return\\n        board[i][j] = 'D'\\n        dfs(i + 1, j)\\n        dfs(i - 1, j)\\n        dfs(i, j + 1)\\n        dfs(i, j - 1)\\n    for i in range(m):\\n        for j in range(n):\\n            if board[i][j] == 'O' and (i in [0, m-1] or j in [0, n-1]):\\n                dfs(i, j)\\n    for i in range(m):\\n        for j in range(n):\\n            if board[i][j] == 'O':\\n                board[i][j] = 'X'\\n            elif board[i][j] == 'D':\\n                board[i][j] = 'O'",
+      "javascript": "function solve(board) {\\n    if (!board || !board[0]) return;\\n    const m = board.length, n = board[0].length;\\n    function dfs(i, j) {\\n        if (i < 0 || j < 0 || i >= m || j >= n || board[i][j] !== 'O') return;\\n        board[i][j] = 'D';\\n        dfs(i + 1, j); dfs(i - 1, j); dfs(i, j + 1); dfs(i, j - 1);\\n    }\\n    for (let i = 0; i < m; i++) {\\n        for (let j = 0; j < n; j++) {\\n            if (board[i][j] === 'O' && (i === 0 || i === m - 1 || j === 0 || j === n - 1)) {\\n                dfs(i, j);\\n            }\\n        }\\n    }\\n    for (let i = 0; i < m; i++) {\\n        for (let j = 0; j < n; j++) {\\n            if (board[i][j] === 'O') board[i][j] = 'X';\\n            else if (board[i][j] === 'D') board[i][j] = 'O';\\n        }\\n    }\\n}"
+    },
+    "starterCode": {
+      "python": "def solve(board):\\n    # Your code here",
+      "javascript": "function solve(board) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 36,
+    "title": "Word Search II",
+    "question": "Given a 2D board and a list of words from the dictionary, find all words in the board. Each word must be constructed from letters of sequentially adjacent cells.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "class TrieNode:\\n    def __init__(self):\\n        self.children = {}\\n        self.isEnd = False\\n        self.word = ''\\n\\ndef findWords(board, words):\\n    root = TrieNode()\\n    for word in words:\\n        node = root\\n        for char in word:\\n            if char not in node.children:\\n                node.children[char] = TrieNode()\\n            node = node.children[char]\\n        node.isEnd = True\\n        node.word = word\\n    ROWS, COLS = len(board), len(board[0])\\n    res, visit = set(), set()\\n    def dfs(r, c, node):\\n        if (r < 0 or c < 0 or r >= ROWS or c >= COLS or\\n            board[r][c] not in node.children or (r, c) in visit):\\n            return\\n        visit.add((r, c))\\n        node = node.children[board[r][c]]\\n        if node.isEnd:\\n            res.add(node.word)\\n        dfs(r + 1, c, node)\\n        dfs(r - 1, c, node)\\n        dfs(r, c + 1, node)\\n        dfs(r, c - 1, node)\\n        visit.remove((r, c))\\n    for r in range(ROWS):\\n        for c in range(COLS):\\n            dfs(r, c, root)\\n    return list(res)",
+      "javascript": "class TrieNode {\\n    constructor() {\\n        this.children = {};\\n        this.isEnd = false;\\n        this.word = '';\\n    }\\n}\\nfunction findWords(board, words) {\\n    const root = new TrieNode();\\n    words.forEach(word => {\\n        let node = root;\\n        for (const char of word) {\\n            if (!node.children[char]) node.children[char] = new TrieNode();\\n            node = node.children[char];\\n        }\\n        node.isEnd = true;\\n        node.word = word;\\n    });\\n    const ROWS = board.length, COLS = board[0].length;\\n    const res = new Set();\\n    const visit = new Set();\\n    function dfs(r, c, node) {\\n        if (r < 0 || c < 0 || r >= ROWS || c >= COLS || !node.children[board[r][c]] || visit.has(`${r},${c}`)) return;\\n        visit.add(`${r},${c}`);\\n        node = node.children[board[r][c]];\\n        if (node.isEnd) res.add(node.word);\\n        dfs(r + 1, c, node); dfs(r - 1, c, node); dfs(r, c + 1, node); dfs(r, c - 1, node);\\n        visit.delete(`${r},${c}`);\\n    }\\n    for (let r = 0; r < ROWS; r++) {\\n        for (let c = 0; c < COLS; c++) {\\n            dfs(r, c, root);\\n        }\\n    }\\n    return Array.from(res);\\n}"
+    },
+    "starterCode": {
+      "python": "def findWords(board, words):\\n    # Your code here",
+      "javascript": "function findWords(board, words) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 37,
+    "title": "House Robber III",
+    "question": "The thief has found himself a new place for his thievery again. There is only one entrance to this area, called the 'root.' Besides the root, each house has one and only one parent house. After a tour, the smart thief realized that 'all houses in this place form a binary tree'. It will automatically contact the police if two directly-linked houses were broken into on the same night.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "class TreeNode:\\n    def __init__(self, x):\\n        self.val = x\\n        self.left = None\\n        self.right = None\\n\\ndef rob(root):\\n    def helper(node):\\n        if not node:\\n            return (0, 0)\\n        left = helper(node.left)\\n        right = helper(node.right)\\n        rob = node.val + left[1] + right[1]\\n        not_rob = max(left) + max(right)\\n        return (rob, not_rob)\\n    return max(helper(root))",
+      "javascript": "function TreeNode(val) {\\n    this.val = val;\\n    this.left = this.right = null;\\n}\\nfunction rob(root) {\\n    function helper(node) {\\n        if (!node) return [0, 0];\\n        const left = helper(node.left);\\n        const right = helper(node.right);\\n        const rob = node.val + left[1] + right[1];\\n        const notRob = Math.max(...left) + Math.max(...right);\\n        return [rob, notRob];\\n    }\\n    return Math.max(...helper(root));\\n}"
+    },
+    "starterCode": {
+      "python": "class TreeNode:\\n    def __init__(self, x):\\n        # Your code here\\ndef rob(root):\\n    # Your code here",
+      "javascript": "function TreeNode(val) {\\n    // Your code here\\n}\\nfunction rob(root) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 38,
+    "title": "Count of Smaller Numbers After Self",
+    "question": "You are given an integer array nums and you have to return a new counts array. The counts array has the property where counts[i] is the number of smaller elements to the right of nums[i].",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def countSmaller(nums):\\n    def sort(enum):\\n        half = len(enum) // 2\\n        if half:\\n            left, right = sort(enum[:half]), sort(enum[half:])\\n            for i in range(len(enum))[::-1]:\\n                if not right or left and left[-1][1] > right[-1][1]:\\n                    smaller[left[-1][0]] += len(right)\\n                    enum[i] = left.pop()\\n                else:\\n                    enum[i] = right.pop()\\n        return enum\\n    smaller = [0] * len(nums)\\n    sort(list(enumerate(nums)))\\n    return smaller",
+      "javascript": "function countSmaller(nums) {\\n    function sort(enumNums) {\\n        const half = Math.floor(enumNums.length / 2);\\n        if (half) {\\n            const left = sort(enumNums.slice(0, half)), right = sort(enumNums.slice(half));\\n            for (let i = enumNums.length - 1; i >= 0; i--) {\\n                if (!right.length || (left.length && left[left.length - 1][1] > right[right.length - 1][1])) {\\n                    smaller[left[left.length - 1][0]] += right.length;\\n                    enumNums[i] = left.pop();\\n                } else {\\n                    enumNums[i] = right.pop();\\n                }\\n            }\\n        }\\n        return enumNums;\\n    }\\n    const smaller = new Array(nums.length).fill(0);\\n    sort(nums.map((num, index) => [index, num]));\\n    return smaller;\\n}"
+    },
+    "starterCode": {
+      "python": "def countSmaller(nums):\\n    # Your code here",
+      "javascript": "function countSmaller(nums) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 39,
+    "title": "Burst Balloons",
+    "question": "Given n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by an array nums. You are asked to burst all the balloons. If you burst balloon i, you will get nums[left] * nums[i] * nums[right] coins. Here left and right are adjacent indices of i.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def maxCoins(nums):\\n    nums = [1] + [i for i in nums if i > 0] + [1]\\n    n = len(nums)\\n    dp = [[0] * n for _ in range(n)]\\n    for length in range(2, n):\\n        for left in range(0, n - length):\\n            right = left + length\\n            for i in range(left + 1, right):\\n                dp[left][right] = max(dp[left][right], nums[left] * nums[i] * nums[right] + dp[left][i] + dp[i][right])\\n    return dp[0][n - 1]",
+      "javascript": "function maxCoins(nums) {\\n    nums = [1, ...nums.filter(num => num > 0), 1];\\n    const n = nums.length;\\n    const dp = Array.from({ length: n }, () => Array(n).fill(0));\\n    for (let length = 2; length < n; length++) {\\n        for (let left = 0; left < n - length; left++) {\\n            const right = left + length;\\n            for (let i = left + 1; i < right; i++) {\\n                dp[left][right] = Math.max(dp[left][right], nums[left] * nums[i] * nums[right] + dp[left][i] + dp[i][right]);\\n            }\\n        }\\n    }\\n    return dp[0][n - 1];\\n}"
+    },
+    "starterCode": {
+      "python": "def maxCoins(nums):\\n    # Your code here",
+      "javascript": "function maxCoins(nums) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 40,
+    "title": "Minimum Window Subsequence",
+    "question": "Given strings S and T, find the minimum (contiguous) substring W of S, so that T is a subsequence of W. If there is no such window in S that covers all characters in T, return the empty string ''.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def minWindow(S, T):\\n    m, n = len(S), len(T)\\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\\n    for i in range(m + 1):\\n        for j in range(n + 1):\\n            if j == 0:\\n                dp[i][j] = i + 1\\n            elif i > 0:\\n                dp[i][j] = dp[i - 1][j - 1] + 1 if S[i - 1] == T[j - 1] else dp[i - 1][j]\\n    start, length = 0, m + 1\\n    for i in range(m + 1):\\n        if dp[i][n] <= m:\\n            if i - dp[i][n] + 1 < length:\\n                start = dp[i][n] - 1\\n                length = i - dp[i][n] + 1\\n    return '' if length == m + 1 else S[start:start + length]",
+      "javascript": "function minWindow(S, T) {\\n    const m = S.length, n = T.length;\\n    const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));\\n    for (let i = 0; i <= m; i++) {\\n        for (let j = 0; j <= n; j++) {\\n            if (j === 0) dp[i][j] = i + 1;\\n            else if (i > 0) dp[i][j] = S[i - 1] === T[j - 1] ? dp[i - 1][j - 1] + 1 : dp[i - 1][j];\\n        }\\n    }\\n    let start = 0, length = m + 1;\\n    for (let i = 0; i <= m; i++) {\\n        if (dp[i][n] <= m) {\\n            if (i - dp[i][n] + 1 < length) {\\n                start = dp[i][n] - 1;\\n                length = i - dp[i][n] + 1;\\n            }\\n        }\\n    }\\n    return length === m + 1 ? '' : S.substring(start, start + length);\\n}"
+    },
+    "starterCode": {
+      "python": "def minWindow(S, T):\\n    # Your code here",
+      "javascript": "function minWindow(S, T) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 41,
+    "title": "Maximum Width of Binary Tree",
+    "question": "Given a binary tree, find the maximum width of the tree. The width of a tree is the number of elements on the widest level. Note: The binary tree has the same structure as a full binary tree, but some nodes might be null.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "class TreeNode:\\n    def __init__(self, val=0, left=None, right=None):\\n        self.val = val\\n        self.left = left\\n        self.right = right\\n\\ndef widthOfBinaryTree(root):\\n    if not root:\\n        return 0\\n    max_width = 0\\n    queue = [(root, 0)]\\n    while queue:\\n        level_length = len(queue)\\n        _, first = queue[0]\\n        _, last = queue[-1]\\n        max_width = max(max_width, last - first + 1)\\n        for _ in range(level_length):\\n            node, index = queue.pop(0)\\n            if node.left:\\n                queue.append((node.left, 2 * index))\\n            if node.right:\\n                queue.append((node.right, 2 * index + 1))\\n    return max_width",
+      "javascript": "function TreeNode(val, left = null, right = null) {\\n    this.val = val;\\n    this.left = left;\\n    this.right = right;\\n}\\nfunction widthOfBinaryTree(root) {\\n    if (!root) return 0;\\n    let max_width = 0;\\n    let queue = [[root, 0]];\\n    while (queue.length) {\\n        let level_length = queue.length;\\n        let first = queue[0][1];\\n        let last = queue[level_length - 1][1];\\n        max_width = Math.max(max_width, last - first + 1);\\n        for (let i = 0; i < level_length; i++) {\\n            let [node, index] = queue.shift();\\n            if (node.left) queue.push([node.left, 2 * index]);\\n            if (node.right) queue.push([node.right, 2 * index + 1]);\\n        }\\n    }\\n    return max_width;\\n}"
+    },
+    "starterCode": {
+      "python": "class TreeNode:\\n    def __init__(self, val=0, left=None, right=None):\\n        # Your code here\\ndef widthOfBinaryTree(root):\\n    # Your code here",
+      "javascript": "function TreeNode(val, left = null, right = null) {\\n    // Your code here\\n}\\nfunction widthOfBinaryTree(root) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 42,
+    "title": "Partition Labels",
+    "question": "A string S of lowercase letters is given. We want to partition this string into as many parts as possible so that each letter appears in at most one part. Return a list of integers representing the size of these parts. Example: Given S = 'ababcbacadefegdehijhklij', the output should be [9,7,8].",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def partitionLabels(S):\\n    last = {c: i for i, c in enumerate(S)}\\n    j = anchor = 0\\n    ans = []\\n    for i, c in enumerate(S):\\n        j = max(j, last[c])\\n        if i == j:\\n            ans.append(i - anchor + 1)\\n            anchor = i + 1\\n    return ans",
+      "javascript": "function partitionLabels(S) {\\n    let last = {};\\n    for (let i = 0; i < S.length; i++) {\\n        last[S[i]] = i;\\n    }\\n    let j = 0, anchor = 0;\\n    let ans = [];\\n    for (let i = 0; i < S.length; i++) {\\n        j = Math.max(j, last[S[i]]);\\n        if (i === j) {\\n            ans.push(i - anchor + 1);\\n            anchor = i + 1;\\n        }\\n    }\\n    return ans;\\n}"
+    },
+    "starterCode": {
+      "python": "def partitionLabels(S):\\n    # Your code here",
+      "javascript": "function partitionLabels(S) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 43,
+    "title": "Kth Smallest Element in a BST",
+    "question": "Given a binary search tree, write a function kthSmallest to find the kth smallest element in it. Example: Given root = [3,1,4,null,2], k = 1, kth smallest element would be 1.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "class TreeNode:\\n    def __init__(self, x):\\n        self.val = x\\n        self.left = None\\n        self.right = None\\n\\ndef kthSmallest(root, k):\\n    def inorder(r):\\n        return inorder(r.left) + [r.val] + inorder(r.right) if r else []\\n    return inorder(root)[k - 1]",
+      "javascript": "function TreeNode(val) {\\n    this.val = val;\\n    this.left = this.right = null;\\n}\\nfunction kthSmallest(root, k) {\\n    function inorder(node) {\\n        return node ? inorder(node.left).concat([node.val]).concat(inorder(node.right)) : [];\\n    }\\n    return inorder(root)[k - 1];\\n}"
+    },
+    "starterCode": {
+      "python": "class TreeNode:\\n    def __init__(self, x):\\n        # Your code here\\ndef kthSmallest(root, k):\\n    # Your code here",
+      "javascript": "function TreeNode(val) {\\n    // Your code here\\n}\\nfunction kthSmallest(root, k) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 44,
+    "title": "Palindrome Partitioning",
+    "question": "Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s. Example: Given s = 'aab', return [['a', 'a', 'b'], ['aa', 'b']].",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def partition(s):\\n    def dfs(s, path, res):\\n        if not s:\\n            res.append(path)\\n            return\\n        for i in range(1, len(s) + 1):\\n            if s[:i] == s[:i][::-1]:\\n                dfs(s[i:], path + [s[:i]], res)\\n    res = []\\n    dfs(s, [], res)\\n    return res",
+      "javascript": "function partition(s) {\\n    function dfs(start, path, res) {\\n        if (start === s.length) {\\n            res.push([...path]);\\n            return;\\n        }\\n        for (let end = start + 1; end <= s.length; end++) {\\n            const sub = s.substring(start, end);\\n            if (sub === sub.split('').reverse().join('')) {\\n                path.push(sub);\\n                dfs(end, path, res);\\n                path.pop();\\n            }\\n        }\\n    }\\n    const res = [];\\n    dfs(0, [], res);\\n    return res;\\n}"
+    },
+    "starterCode": {
+      "python": "def partition(s):\\n    # Your code here",
+      "javascript": "function partition(s) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 45,
+    "title": "Flatten Nested List Iterator",
+    "question": "Implement an iterator to flatten a nested list of integers. Each element is either an integer or a list whose elements may also be integers or other lists.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "class NestedIterator:\\n    def __init__(self, nestedList):\\n        self.stack = nestedList[::-1]\\n    def next(self):\\n        return self.stack.pop().getInteger()\\n    def hasNext(self):\\n        while self.stack and not self.stack[-1].isInteger():\\n            self.stack.extend(self.stack.pop().getList()[::-1])\\n        return bool(self.stack)",
+      "javascript": "class NestedIterator {\\n    constructor(nestedList) {\\n        this.stack = nestedList.reverse();\\n    }\\n    next() {\\n        return this.stack.pop().getInteger();\\n    }\\n    hasNext() {\\n        while (this.stack.length && !this.stack[this.stack.length - 1].isInteger()) {\\n            const list = this.stack.pop().getList();\\n            this.stack.push(...list.reverse());\\n        }\\n        return this.stack.length > 0;\\n    }\\n}"
+    },
+    "starterCode": {
+      "python": "class NestedIterator:\\n    def __init__(self, nestedList):\\n        # Your code here\\n    def next(self):\\n        # Your code here\\n    def hasNext(self):\\n        # Your code here",
+      "javascript": "class NestedIterator {\\n    constructor(nestedList) {\\n        // Your code here\\n    }\\n    next() {\\n        // Your code here\\n    }\\n    hasNext() {\\n        // Your code here\\n    }\\n}"
+    }
+  },
+  {
+    "id": 46,
+    "title": "Design Search Autocomplete System",
+    "question": "Design a search autocomplete system for a search engine. Users may input a sentence (at least one word and end with a special character '#'). For each character they type except '#', you need to return the top 3 historical hot sentences that have prefix the same as the part of sentence already typed.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "class AutocompleteSystem:\\n    def __init__(self, sentences, times):\\n        # Your initialization code here\\n    def input(self, c):\\n        # Your input handling code here",
+      "javascript": "class AutocompleteSystem {\\n    constructor(sentences, times) {\\n        // Your initialization code here\\n    }\\n    input(c) {\\n        // Your input handling code here\\n    }\\n}"
+    },
+    "starterCode": {
+      "python": "class AutocompleteSystem:\\n    def __init__(self, sentences, times):\\n        # Your code here\\n    def input(self, c):\\n        # Your code here",
+      "javascript": "class AutocompleteSystem {\\n    constructor(sentences, times) {\\n        // Your code here\\n    }\\n    input(c) {\\n        // Your code here\\n    }\\n}"
+    }
+  },
+
+  {
+    "id": 47,
+    "title": "Binary Tree Right Side View",
+    "question": "Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom. Example: For a binary tree [1,2,3,null,5,null,4], the right side view should be [1, 3, 4].",
+     "category": "algorithm",
+     "solutions": {
+      "python": "class TreeNode:\\n    def __init__(self, x):\\n        self.val = x\\n        self.left = None\\n        self.right = None\\n\\ndef rightSideView(root):\\n    if not root:\\n        return []\\n    rightside = []\\n    def helper(node, level):\\n        if level == len(rightside):\\n            rightside.append(node.val)\\n        for child in [node.right, node.left]:\\n            if child:\\n                helper(child, level + 1)\\n    helper(root, 0)\\n    return rightside",
+      "javascript": "function TreeNode(val) {\\n    this.val = val;\\n    this.left = this.right = null;\\n}\\nfunction rightSideView(root) {\\n    if (!root) return [];\\n    const rightSide = [];\\n    function helper(node, level) {\\n        if (level === rightSide.length) {\\n            rightSide.push(node.val);\\n        }\\n        [node.right, node.left].forEach(child => {\\n            if (child) helper(child, level + 1);\\n        });\\n    }\\n    helper(root, 0);\\n    return rightSide;\\n}"
+    },
+    "starterCode": {
+      "python": "class TreeNode:\\n    def __init__(self, x):\\n        # Your code here\\ndef rightSideView(root):\\n    # Your code here",
+      "javascript": "function TreeNode(val) {\\n    // Your code here\\n}\\nfunction rightSideView(root) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 48,
+    "title": "Minimum Path Sum",
+    "question": "Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path. Note: You can only move either down or right at any point in time. Example: Given the grid [[1,3,1],[1,5,1],[4,2,1]], the minimum path sum is 7.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def minPathSum(grid):\\n    if not grid:\\n        return 0\\n    for i in range(1, len(grid)):\\n        grid[i][0] += grid[i-1][0]\\n    for j in range(1, len(grid[0])):\\n        grid[0][j] += grid[0][j-1]\\n    for i in range(1, len(grid)):\\n        for j in range(1, len(grid[0])):\\n            grid[i][j] += min(grid[i-1][j], grid[i][j-1])\\n    return grid[-1][-1]",
+      "javascript": "function minPathSum(grid) {\\n    if (!grid || grid.length === 0) return 0;\\n    for (let i = 1; i < grid.length; i++) {\\n        grid[i][0] += grid[i - 1][0];\\n    }\\n    for (let j = 1; j < grid[0].length; j++) {\\n        grid[0][j] += grid[0][j - 1];\\n    }\\n    for (let i = 1; i < grid.length; i++) {\\n        for (let j = 1; j < grid[0].length; j++) {\\n            grid[i][j] += Math.min(grid[i - 1][j], grid[i][j - 1]);\\n        }\\n    }\\n    return grid[grid.length - 1][grid[0].length - 1];\\n}"
+    },
+    "starterCode": {
+      "python": "def minPathSum(grid):\\n    # Your code here",
+      "javascript": "function minPathSum(grid) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 49,
+    "title": "Largest Rectangle in Histogram",
+    "question": "Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram. Example: Given heights = [2,1,5,6,2,3], the largest rectangle has area = 10.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def largestRectangleArea(heights):\\n    stack = [-1]\\n    max_area = 0\\n    for i in range(len(heights)):\\n        while stack[-1] != -1 and heights[stack[-1]] >= heights[i]:\\n            max_area = max(max_area, heights[stack.pop()] * (i - stack[-1] - 1))\\n        stack.append(i)\\n    while stack[-1] != -1:\\n        max_area = max(max_area, heights[stack.pop()] * (len(heights) - stack[-1] - 1))\\n    return max_area",
+      "javascript": "function largestRectangleArea(heights) {\\n    const stack = [-1];\\n    let maxArea = 0;\\n    for (let i = 0; i < heights.length; i++) {\\n        while (stack[stack.length - 1] !== -1 && heights[stack[stack.length - 1]] >= heights[i]) {\\n            maxArea = Math.max(maxArea, heights[stack.pop()] * (i - stack[stack.length - 1] - 1));\\n        }\\n        stack.push(i);\\n    }\\n    while (stack[stack.length - 1] !== -1) {\\n        maxArea = Math.max(maxArea, heights[stack.pop()] * (heights.length - stack[stack.length - 1] - 1));\\n    }\\n    return maxArea;\\n}"
+    },
+    "starterCode": {
+      "python": "def largestRectangleArea(heights):\\n    # Your code here",
+      "javascript": "function largestRectangleArea(heights) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 50,
+    "title": "Find Peak Element",
+    "question": "A peak element is an element that is greater than its neighbors. Given an input array nums, where nums[i] ≠ nums[i+1], find a peak element and return its index. Example: In array [1, 2, 3, 1], 3 is a peak element and your function should return the index number 2.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def findPeakElement(nums):\\n    left, right = 0, len(nums) - 1\\n    while left < right:\\n        mid = (left + right) // 2\\n        if nums[mid] > nums[mid + 1]:\\n            right = mid\\n        else:\\n            left = mid + 1\\n    return left",
+      "javascript": "function findPeakElement(nums) {\\n    let left = 0, right = nums.length - 1;\\n    while (left < right) {\\n        const mid = Math.floor((left + right) / 2);\\n        if (nums[mid] > nums[mid + 1]) right = mid;\\n        else left = mid + 1;\\n    }\\n    return left;\\n}"
+    },
+    "starterCode": {
+      "python": "def findPeakElement(nums):\\n    # Your code here",
+      "javascript": "function findPeakElement(nums) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 51,
+    "title": "Task Scheduler",
+    "question": "Given a characters array tasks, representing the tasks a CPU needs to do, where each letter represents a different task. Tasks could be done in any order. Each task is done in one unit of time. For each unit of time, the CPU could complete either one task or just be idle. However, there is a non-negative integer n that represents the cooldown period between two same tasks (the same letter in the array), that is that there must be at least n units of time between any two same tasks. Return the least number of units of times that the CPU will take to finish all the given tasks. Example: Given tasks = ['A','A','A','B','B','B'], n = 2, the CPU will take at least 8 units of time.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def leastInterval(tasks, n):\\n    task_counts = collections.Counter(tasks)\\n    max_tasks = max(task_counts.values())\\n    max_count = list(task_counts.values()).count(max_tasks)\\n    return max(len(tasks), (max_tasks - 1) * (n + 1) + max_count)",
+      "javascript": "function leastInterval(tasks, n) {\\n    const taskCounts = tasks.reduce((acc, val) => (acc[val] = (acc[val] || 0) + 1, acc), {});\\n    const maxTasks = Math.max(...Object.values(taskCounts));\\n    const maxCount = Object.values(taskCounts).filter(val => val === maxTasks).length;\\n    return Math.max(tasks.length, (maxTasks - 1) * (n + 1) + maxCount);\\n}"
+    },
+    "starterCode": {
+      "python": "def leastInterval(tasks, n):\\n    # Your code here",
+      "javascript": "function leastInterval(tasks, n) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 52,
+    "title": "Minimum Number of Arrows to Burst Balloons",
+    "question": "There are some spherical balloons spread in two-dimensional space. For each balloon, provided input is the start and end coordinates of the horizontal diameter. An arrow can be shot up exactly vertically from different points along the x-axis. A balloon with xstart and xend bursts by an arrow shot at x if xstart ≤ x ≤ xend. Find the minimum number of arrows that must be shot to burst all balloons. Example: Given points = [[10,16],[2,8],[1,6],[7,12]], the minimum number of arrows that must be shot to burst all balloons is 2.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def findMinArrowShots(points):\\n    if not points:\\n        return 0\\n    points.sort(key=lambda x: x[1])\\n    arrows = 1\\n    first_end = points[0][1]\\n    for x_start, x_end in points:\\n        if first_end < x_start:\\n            arrows += 1\\n            first_end = x_end\\n    return arrows",
+      "javascript": "function findMinArrowShots(points) {\\n    if (points.length === 0) return 0;\\n    points.sort((a, b) => a[1] - b[1]);\\n    let arrows = 1;\\n    let firstEnd = points[0][1];\\n    for (const [xStart, xEnd] of points) {\\n        if (firstEnd < xStart) {\\n            arrows++;\\n            firstEnd = xEnd;\\n        }\\n    }\\n    return arrows;\\n}"
+    },
+    "starterCode": {
+      "python": "def findMinArrowShots(points):\\n    # Your code here",
+      "javascript": "function findMinArrowShots(points) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 53,
+    "title": "Longest Consecutive Sequence",
+    "question": "Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence. Example: Given nums = [100, 4, 200, 1, 3, 2], the longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def longestConsecutive(nums):\\n    num_set = set(nums)\\n    longest_streak = 0\\n    for num in num_set:\\n        if num - 1 not in num_set:\\n            current_num = num\\n            current_streak = 1\\n            while current_num + 1 in num_set:\\n                current_num += 1\\n                current_streak += 1\\n            longest_streak = max(longest_streak, current_streak)\\n    return longest_streak",
+      "javascript": "function longestConsecutive(nums) {\\n    const numSet = new Set(nums);\\n    let longestStreak = 0;\\n    for (const num of numSet) {\\n        if (!numSet.has(num - 1)) {\\n            let currentNum = num;\\n            let currentStreak = 1;\\n            while (numSet.has(currentNum + 1)) {\\n                currentNum++;\\n                currentStreak++;\\n            }\\n            longestStreak = Math.max(longestStreak, currentStreak);\\n        }\\n    }\\n    return longestStreak;\\n}"
+    },
+    "starterCode": {
+      "python": "def longestConsecutive(nums):\\n    # Your code here",
+      "javascript": "function longestConsecutive(nums) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 54,
+    "title": "Serialize and Deserialize N-ary Tree",
+    "question": "Serialize and deserialize an N-ary tree. An N-ary tree is a rooted tree in which each node has no more than N children. Example: Given a tree with root node 1, and children nodes 2, 3, and 4, serialize this tree.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "class Node:\\n    def __init__(self, val=None, children=None):\\n        self.val = val\\n        self.children = children if children is not None else []\\n\\ndef serialize(root):\\n    # Your serialization code here\\ndef deserialize(data):\\n    # Your deserialization code here",
+      "javascript": "class Node {\\n    constructor(val = null, children = []) {\\n        this.val = val;\\n        this.children = children;\\n    }\\n}\\nfunction serialize(root) {\\n    // Your serialization code here\\n}\\nfunction deserialize(data) {\\n    // Your deserialization code here\\n}"
+    },
+    "starterCode": {
+      "python": "class Node:\\n    def __init__(self, val=None, children=None):\\n        # Your code here\\ndef serialize(root):\\n    # Your code here\\ndef deserialize(data):\\n    # Your code here",
+      "javascript": "class Node {\\n    constructor(val = null, children = []) {\\n        // Your code here\\n    }\\n}\\nfunction serialize(root) {\\n    // Your code here\\n}\\nfunction deserialize(data) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 55,
+    "title": "Pacific Atlantic Water Flow",
+    "question": "Given an m x n matrix of non-negative integers representing the height of each unit cell in a continent, the 'Pacific ocean' touches the left and top edges of the matrix and the 'Atlantic ocean' touches the right and bottom edges. Find the list of grid coordinates where water can flow to both the Pacific and Atlantic oceans. Example: Given the matrix [[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]], the coordinates where water can flow to both oceans are [[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]].",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def pacificAtlantic(matrix):\\n    if not matrix or not matrix[0]:\\n        return []\\n    def dfs(i, j, visited, prevHeight):\\n        if (i, j) in visited or i < 0 or i >= len(matrix) or j < 0 or j >= len(matrix[0]) or matrix[i][j] < prevHeight:\\n            return\\n        visited.add((i, j))\\n        for x, y in [(i+1, j), (i-1, j), (i, j+1), (i, j-1)]:\\n            dfs(x, y, visited, matrix[i][j])\\n    pacific, atlantic = set(), set()\\n    for i in range(len(matrix)):\\n        dfs(i, 0, pacific, matrix[i][0])\\n        dfs(i, len(matrix[0]) - 1, atlantic, matrix[i][len(matrix[0]) - 1])\\n    for j in range(len(matrix[0])):\\n        dfs(0, j, pacific, matrix[0][j])\\n        dfs(len(matrix) - 1, j, atlantic, matrix[len(matrix) - 1][j])\\n    return list(pacific & atlantic)",
+      "javascript": "function pacificAtlantic(matrix) {\\n    if (!matrix || matrix.length === 0 || matrix[0].length === 0) return [];\\n    const m = matrix.length, n = matrix[0].length;\\n    const pacific = new Set(), atlantic = new Set();\\n    function dfs(i, j, visited, prevHeight) {\\n        const key = `${i},${j}`;\\n        if (visited.has(key) || i < 0 || i >= m || j < 0 || j >= n || matrix[i][j] < prevHeight) return;\\n        visited.add(key);\\n        [[i + 1, j], [i - 1, j], [i, j + 1], [i, j - 1]].forEach(([x, y]) => dfs(x, y, visited, matrix[i][j]));\\n    }\\n    for (let i = 0; i < m; i++) {\\n        dfs(i, 0, pacific, matrix[i][0]);\\n        dfs(i, n - 1, atlantic, matrix[i][n - 1]);\\n    }\\n    for (let j = 0; j < n; j++) {\\n        dfs(0, j, pacific, matrix[0][j]);\\n        dfs(m - 1, j, atlantic, matrix[m - 1][j]);\\n    }\\n    const result = [];\\n    for (let i = 0; i < m; i++) {\\n        for (let j = 0; j < n; j++) {\\n            if (pacific.has(`${i},${j}`) && atlantic.has(`${i},${j}`)) {\\n                result.push([i, j]);\\n            }\\n        }\\n    }\\n    return result;\\n}"
+    },
+    "starterCode": {
+      "python": "def pacificAtlantic(matrix):\\n    # Your code here",
+      "javascript": "function pacificAtlantic(matrix) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 56,
+    "title": "Valid Parentheses String",
+    "question": "Given a string containing only three types of characters: '(', ')' and '*', write a function to check whether this string is valid. The '*' character could be treated as a single right parenthesis ')' or a single left parenthesis '(' or an empty string. Example: Given s = '(*))', return true.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def checkValidString(s):\\n    leftBalance = rightBalance = 0\\n    n = len(s)\\n    for i in range(n):\\n        leftBalance += 1 if s[i] in '(*' else -1\\n        rightBalance += 1 if s[n-i-1] in ')*' else -1\\n        if leftBalance < 0 or rightBalance < 0: return False\\n    return True",
+      "javascript": "function checkValidString(s) {\\n    let leftBalance = rightBalance = 0;\\n    for (let i = 0; i < s.length; i++) {\\n        leftBalance += (s[i] === '(' || s[i] === '*') ? 1 : -1;\\n        rightBalance += (s[s.length - i - 1] === ')' || s[s.length - i - 1] === '*') ? 1 : -1;\\n        if (leftBalance < 0 || rightBalance < 0) return false;\\n    }\\n    return true;\\n}"
+    },
+    "starterCode": {
+      "python": "def checkValidString(s):\\n    # Your code here",
+      "javascript": "function checkValidString(s) {\\n    // Your code here\\n}"
+    }
+  },
+
+  {
+    "id": 57,
+    "title": "Shortest Unsorted Continuous Subarray",
+    "question": "Given an integer array, you need to find one continuous subarray that if you only sort this subarray in ascending order, then the whole array will be sorted in ascending order. Find the shortest such subarray and output its length. Example: Given nums = [2, 6, 4, 8, 10, 9, 15], the shortest unsorted continuous subarray is [6, 4, 8, 10, 9] and its length is 5.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def findUnsortedSubarray(nums):\\n    n = len(nums)\\n    start, end = -1, -2\\n    min_val, max_val = nums[n - 1], nums[0]\\n    for i in range(1, n):\\n        max_val = max(max_val, nums[i])\\n        min_val = min(min_val, nums[n - 1 - i])\\n        if nums[i] < max_val: end = i\\n        if nums[n - 1 - i] > min_val: start = n - 1 - i\\n    return end - start + 1",
+      "javascript": "function findUnsortedSubarray(nums) {\\n    const n = nums.length;\\n    let start = -1, end = -2;\\n    let minVal = nums[n - 1], maxVal = nums[0];\\n    for (let i = 1; i < n; i++) {\\n        maxVal = Math.max(maxVal, nums[i]);\\n        minVal = Math.min(minVal, nums[n - 1 - i]);\\n        if (nums[i] < maxVal) end = i;\\n        if (nums[n - 1 - i] > minVal) start = n - 1 - i;\\n    }\\n    return end - start + 1;\\n}"
+    },
+    "starterCode": {
+      "python": "def findUnsortedSubarray(nums):\\n    # Your code here",
+      "javascript": "function findUnsortedSubarray(nums) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 58,
+    "title": "Find Median from Data Stream",
+    "question": "The median is the middle value in an ordered integer list. Design a data structure that supports the following two operations: addNum(int num) - Add an integer number from the data stream to the data structure. findMedian() - Return the median of all elements so far. Example: Adding numbers 1, 2, 3, the findMedian should return 2.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "class MedianFinder:\\n    def __init__(self):\\n        self.heaps = [], []\\n    def addNum(self, num):\\n        small, large = self.heaps\\n        heapq.heappush(small, -heapq.heappushpop(large, num))\\n        if len(large) < len(small):\\n            heapq.heappush(large, -heapq.heappop(small))\\n    def findMedian(self):\\n        small, large = self.heaps\\n        if len(large) > len(small):\\n            return float(large[0])\\n        return (large[0] - small[0]) / 2.0",
+      "javascript": "class MedianFinder {\\n    constructor() {\\n        this.small = []; // Max heap\\n        this.large = []; // Min heap\\n    }\\n    addNum(num) {\\n        if (this.small.length === 0 || num < -this.small[0]) {\\n            this.small.push(-num);\\n            this._heapify(this.small, (a, b) => a < b);\\n        } else {\\n            this.large.push(num);\\n            this._heapify(this.large, (a, b) => a > b);\\n        }\\n        if (this.small.length > this.large.length + 1) {\\n            this.large.push(-this.small.shift());\\n            this._heapify(this.large, (a, b) => a > b);\\n        } else if (this.large.length > this.small.length) {\\n            this.small.push(-this.large.shift());\\n            this._heapify(this.small, (a, b) => a < b);\\n        }\\n    }\\n    findMedian() {\\n        if (this.small.length > this.large.length) {\\n            return -this.small[0];\\n        } else {\\n            return (this.large[0] - this.small[0]) / 2;\\n        }\\n    }\\n    _heapify(arr, compare) {\\n        // Custom heapify function\\n    }\\n}"
+    },
+    "starterCode": {
+      "python": "class MedianFinder:\\n    def __init__(self):\\n        # Your code here\\n    def addNum(self, num):\\n        # Your code here\\n    def findMedian(self):\\n        # Your code here",
+      "javascript": "class MedianFinder {\\n    constructor() {\\n        // Your code here\\n    }\\n    addNum(num) {\\n        // Your code here\\n    }\\n    findMedian() {\\n        // Your code here\\n    }\\n    _heapify(arr, compare) {\\n        // Custom heapify function\\n    }\\n}"
+    }
+  },
+
+  {
+    "id": 59,
+    "title": "K Closest Points to Origin",
+    "question": "Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane and an integer k, return the k closest points to the origin (0, 0). Example: Given points = [[1,3],[-2,2]], k = 1, return [[-2,2]].",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def kClosest(points, K):\\n    return sorted(points, key=lambda p: p[0]**2 + p[1]**2)[:K]",
+      "javascript": "function kClosest(points, K) {\\n    return points.sort((a, b) => (a[0]**2 + a[1]**2) - (b[0]**2 + b[1]**2)).slice(0, K);\\n}"
+    },
+    "starterCode": {
+      "python": "def kClosest(points, K):\\n    # Your code here",
+      "javascript": "function kClosest(points, K) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 60,
+    "title": "Minimum Height Trees",
+    "question": "For an undirected graph with tree characteristics, we can choose any node as the root. The result graph is then a rooted tree. Among all possible rooted trees, those with minimum height are called minimum height trees (MHTs). Given a tree of n nodes labelled from 0 to n - 1, and an array of n - 1 edges where edges[i] = [ai, bi] indicates that there is an undirected edge between the two nodes ai and bi in the tree, you can choose any node of the tree as the root. When you select a node x as the root, the result tree has height h. Among all possible rooted trees, those with minimum height (i.e., min(h)) are called minimum height trees (MHTs). Return a list of all MHTs' root labels. Example: Given n = 4, edges = [[1, 0], [1, 2], [1, 3]], the MHTs' root labels are [1].",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def findMinHeightTrees(n, edges):\\n    if n == 1: return [0]\\n    graph = collections.defaultdict(set)\\n    for u, v in edges:\\n        graph[u].add(v)\\n        graph[v].add(u)\\n    leaves = [i for i in range(n) if len(graph[i]) == 1]\\n    while n > 2:\\n        n -= len(leaves)\\n        new_leaves = []\\n        for leaf in leaves:\\n            neighbor = graph[leaf].pop()\\n            graph[neighbor].remove(leaf)\\n            if len(graph[neighbor]) == 1:\\n                new_leaves.append(neighbor)\\n        leaves = new_leaves\\n    return leaves",
+      "javascript": "function findMinHeightTrees(n, edges) {\\n    if (n === 1) return [0];\\n    const graph = new Map();\\n    edges.forEach(([u, v]) => {\\n        if (!graph.has(u)) graph.set(u, new Set());\\n        if (!graph.has(v)) graph.set(v, new Set());\\n        graph.get(u).add(v);\\n        graph.get(v).add(u);\\n    });\\n    let leaves = Array.from({ length: n }, (_, i) => i).filter(i => graph.get(i).size === 1);\\n    while (n > 2) {\\n        n -= leaves.length;\\n        const newLeaves = [];\\n        leaves.forEach(leaf => {\\n            const neighbor = graph.get(leaf).values().next().value;\\n            graph.get(neighbor).delete(leaf);\\n            if (graph.get(neighbor).size === 1) newLeaves.push(neighbor);\\n        });\\n        leaves = newLeaves;\\n    }\\n    return leaves;\\n}"
+    },
+    "starterCode": {
+      "python": "def findMinHeightTrees(n, edges):\\n    # Your code here",
+      "javascript": "function findMinHeightTrees(n, edges) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 61,
+    "title": "N-Queens Problem",
+    "question": "Place N queens on an N×N chessboard so that no two queens threaten each other. A queen can move any number of squares vertically, horizontally, or diagonally. The challenge is to place these queens such that no two queens are in attacking positions. For example, in a 4x4 board, one of the solutions can be represented as [1, 3, 0, 2], which means the queens are placed in positions (0,1), (1,3), (2,0), and (3,2).",
+     "category": "algorithm",
+     "solutions": {
+      "python": "def solveNQueens(n):\\n    def isSafe(board, row, col):\\n        for i in range(row):\\n            if board[i] == col or board[i] - i == col - row or board[i] + i == col + row:\\n                return False\\n        return True\\n    def solve(row, board):\\n        if row == n:\\n            result.append(board[:])\\n            return\\n        for col in range(n):\\n            if isSafe(board, row, col):\\n                board[row] = col\\n                solve(row + 1, board)\\n                board[row] = -1\\n    result = []\\n    solve(0, [-1] * n)\\n    return [['.'*c + 'Q' + '.'*(n-c-1) for c in sol] for sol in result]",
+      "javascript": "function solveNQueens(n) {\\n    const result = [];\\n    const board = Array(n).fill(-1);\\n    function isSafe(row, col) {\\n        for (let i = 0; i < row; i++) {\\n            if (board[i] === col || board[i] - i === col - row || board[i] + i === col + row) {\\n                return false;\\n            }\\n        }\\n        return true;\\n    }\\n    function solve(row) {\\n        if (row === n) {\\n            result.push(board.map(col => '.'.repeat(col) + 'Q' + '.'.repeat(n - col - 1)));\\n            return;\\n        }\\n        for (let col = 0; col < n; col++) {\\n            if (isSafe(row, col)) {\\n                board[row] = col;\\n                solve(row + 1);\\n                board[row] = -1;\\n            }\\n        }\\n    }\\n    solve(0);\\n    return result;\\n}"
+    },
+    "starterCode": {
+      "python": "def solveNQueens(n):\\n    # Your code here",
+      "javascript": "function solveNQueens(n) {\\n    // Your code here\\n}"
+    }
+  },
+  {
+    "id": 62,
+    "title": "Network Delay Time",
+    "question": "Given a network of n nodes, labeled from 1 to n, and an array of times representing directed edges between nodes, find the minimum time it takes for all nodes to receive a signal sent from a given starting node K. The times array is given as a triplet [u, v, w], where u is the source node, v is the target node, and w is the time it takes for a signal to travel from source to target. For example, given times = [[2, 1, 1], [2, 3, 1], [3, 4, 1]], n = 4, and K = 2, the minimum time for all nodes to receive the signal is 2.",
+     "category": "algorithm",
+     "solutions": {
+      "python": "import heapq\\ndef networkDelayTime(times, N, K):\\n    graph = {i: [] for i in range(1, N+1)}\\n    for u, v, w in times:\\n        graph[u].append((v, w))\\n    pq = [(0, K)]\\n    dist = {}\\n    while pq:\\n        time, node = heapq.heappop(pq)\\n        if node not in dist:\\n            dist[node] = time\\n            for v, w in graph[node]:\\n                if v not in dist:\\n                    heapq.heappush(pq, (time + w, v))\\n    return max(dist.values()) if len(dist) == N else -1",
+      "javascript": "function networkDelayTime(times, N, K) {\\n    const graph = Array.from({ length: N + 1 }, () => []);\\n    times.forEach(([u, v, w]) => {\\n        graph[u].push([v, w]);\\n    });\\n    const pq = [[0, K]];\\n    const dist = new Map();\\n    while (pq.length > 0) {\\n        pq.sort((a, b) => a[0] - b[0]);\\n        const [time, node] = pq.shift();\\n        if (!dist.has(node)) {\\n            dist.set(node, time);\\n            graph[node].forEach(([v, w]) => {\\n                if (!dist.has(v)) {\\n                    pq.push([time + w, v]);\\n                }\\n            });\\n        }\\n    }\\n    if (dist.size !== N) return -1;\\n    return Math.max(...dist.values());\\n}"
+    },
+    "starterCode": {
+      "python": "def networkDelayTime(times, N, K):\\n    # Your code here",
+      "javascript": "function networkDelayTime(times, N, K) {\\n    // Your code here\\n}"
+    }
+  }
+  
+  
+]

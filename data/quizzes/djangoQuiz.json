@@ -1,0 +1,153 @@
+[
+    {
+      "question": "What does ORM stand for in Django?",
+      "options": [
+        "Object-Related Mapping",
+        "Object-Request Mapping",
+        "Object-Relational Mapping",
+        "Object-Response Mapping"
+      ],
+      "correctAnswer": "Object-Relational Mapping"
+    },
+    {
+      "question": "Which file is used for URL mapping in Django?",
+      "options": [
+        "views.py",
+        "urls.py",
+        "models.py",
+        "settings.py"
+      ],
+      "correctAnswer": "urls.py"
+    },
+    {
+      "question": "What is a 'migrations' folder used for in Django?",
+      "options": [
+        "Storing static files",
+        "Storing templates",
+        "Tracking changes to the database schema",
+        "Storing application logic"
+      ],
+      "correctAnswer": "Tracking changes to the database schema"
+    },
+    {
+      "question": "In Django, what is a 'view' responsible for?",
+      "options": [
+        "Handling the database schema",
+        "Processing user requests and returning responses",
+        "Storing static files and images",
+        "Defining the structure of the database"
+      ],
+      "correctAnswer": "Processing user requests and returning responses"
+    },
+    {
+      "question": "Which Django feature provides an administrative interface to manage application content?",
+      "options": [
+        "Django Admin",
+        "Django ORM",
+        "Django Middleware",
+        "Django Template"
+      ],
+      "correctAnswer": "Django Admin"
+    },
+    {
+      "question": "What command is used to start a new Django project?",
+      "options": [
+        "django-admin startproject",
+        "django-admin startapp",
+        "django-admin newproject",
+        "django-admin createproject"
+      ],
+      "correctAnswer": "django-admin startproject"
+    },
+    {
+      "question": "Which of the following is a template tag in Django?",
+      "options": [
+        "{% for %}",
+        "{{ for }}",
+        "{{ if }}",
+        "{% if %}"
+      ],
+      "correctAnswer": "{% for %}"
+    },
+    {
+      "question": "In Django, what is the purpose of 'middleware'?",
+      "options": [
+        "To manage database transactions",
+        "To handle requests and responses in a web application",
+        "To store application data",
+        "To render HTML templates"
+      ],
+      "correctAnswer": "To handle requests and responses in a web application"
+    },
+    {
+      "question": "Which command is used to create a new application within a Django project?",
+      "options": [
+        "django-admin startproject",
+        "django-admin newapp",
+        "django-admin startapp",
+        "django-admin createapp"
+      ],
+      "correctAnswer": "django-admin startapp"
+    },
+    {
+      "question": "How are static files such as CSS and JavaScript handled in Django?",
+      "options": [
+        "Using the STATICFILES_DIRS setting",
+        "Through the Django ORM",
+        "Using the MIDDLEWARE setting",
+        "Through the templates"
+      ],
+      "correctAnswer": "Using the STATICFILES_DIRS setting"
+    },
+    {
+      "question": "Which file contains the settings for a Django project?",
+      "options": [
+        "urls.py",
+        "views.py",
+        "wsgi.py",
+        "settings.py"
+      ],
+      "correctAnswer": "settings.py"
+    },
+    {
+      "question": "What is Django REST Framework primarily used for?",
+      "options": [
+        "Managing static files",
+        "Building web APIs",
+        "Database migrations",
+        "User authentication"
+      ],
+      "correctAnswer": "Building web APIs"
+    },
+    {
+      "question": "In Django, what are 'signals' used for?",
+      "options": [
+        "Sending email notifications",
+        "Database indexing",
+        "Allowing decoupled applications to get notified when certain actions occur",
+        "Rendering HTML templates"
+      ],
+      "correctAnswer": "Allowing decoupled applications to get notified when certain actions occur"
+    },
+    {
+      "question": "What type of inheritance does Django's 'AbstractBaseUser' class provide?",
+      "options": [
+        "Single",
+        "Multiple",
+        "Abstract",
+        "None"
+      ],
+      "correctAnswer": "Abstract"
+    },
+    {
+      "question": "Which method is typically used to retrieve a single object from the database in Django?",
+      "options": [
+        "get()",
+        "retrieve()",
+        "fetch()",
+        "select()"
+      ],
+      "correctAnswer": "get()"
+    }
+]
+  

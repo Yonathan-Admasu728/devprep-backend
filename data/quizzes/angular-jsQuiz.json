@@ -1,0 +1,203 @@
+[
+    {
+      "question": "What is the primary purpose of Angular?",
+      "options": [
+        "Backend development",
+        "Mobile app development",
+        "Building user interfaces and single-page applications",
+        "Database management"
+      ],
+      "correctAnswer": "Building user interfaces and single-page applications"
+    },
+    {
+      "question": "Which of the following is a core feature of Angular?",
+      "options": [
+        "Virtual DOM",
+        "Direct manipulation of the DOM",
+        "Two-way data binding",
+        "Server-side rendering"
+      ],
+      "correctAnswer": "Two-way data binding"
+    },
+    {
+      "question": "What is a component in Angular?",
+      "options": [
+        "A part of the HTML document",
+        "A function in JavaScript",
+        "A combination of a template and a class to control a piece of the view",
+        "A service that fetches data"
+      ],
+      "correctAnswer": "A combination of a template and a class to control a piece of the view"
+    },
+    {
+      "question": "What is Angular CLI?",
+      "options": [
+        "A command-line interface for Angular to create projects, generate application code, and perform a variety of ongoing development tasks",
+        "A web server for Angular applications",
+        "A component library for Angular",
+        "An IDE for Angular development"
+      ],
+      "correctAnswer": "A command-line interface for Angular to create projects, generate application code, and perform a variety of ongoing development tasks"
+    },
+    {
+      "question": "Which of the following is a directive in Angular?",
+      "options": [
+        "ngModel",
+        "ngView",
+        "ngController",
+        "ngService"
+      ],
+      "correctAnswer": "ngModel"
+    },
+    {
+      "question": "What is TypeScript in the context of Angular?",
+      "options": [
+        "A frontend framework",
+        "A JavaScript library",
+        "A superset of JavaScript that compiles to plain JavaScript, often used with Angular",
+        "A database query language"
+      ],
+      "correctAnswer": "A superset of JavaScript that compiles to plain JavaScript, often used with Angular"
+    },
+    {
+      "question": "What are services in Angular?",
+      "options": [
+        "HTML components",
+        "CSS stylesheets",
+        "Singleton objects that get instantiated only once during the app's lifetime",
+        "JavaScript functions for DOM manipulation"
+      ],
+      "correctAnswer": "Singleton objects that get instantiated only once during the app's lifetime"
+    },
+    {
+      "question": "How do you bind data to the template in Angular?",
+      "options": [
+        "Using the 'bind' method",
+        "Using the double curly braces {{ }} syntax",
+        "Using a special 'data-bind' attribute",
+        "Using a 'bind-data' directive"
+      ],
+      "correctAnswer": "Using the double curly braces {{ }} syntax"
+    },
+    {
+      "question": "What is the use of the 'ngFor' directive?",
+      "options": [
+        "To create a form control",
+        "To bind a function to a button",
+        "To display a list of items from an array",
+        "To check a condition in the template"
+      ],
+      "correctAnswer": "To display a list of items from an array"
+    },
+    {
+      "question": "Which decorator is used to define a service in Angular?",
+      "options": [
+        "@Injectable",
+        "@Component",
+        "@NgModule",
+        "@Directive"
+      ],
+      "correctAnswer": "@Injectable"
+    },
+    {
+      "question": "What is the purpose of 'ngOnInit' in Angular?",
+      "options": [
+        "To perform module imports",
+        "To declare variables",
+        "To perform component initialization and data retrieval",
+        "To define input properties"
+      ],
+      "correctAnswer": "To perform component initialization and data retrieval"
+    },
+    {
+      "question": "What is a 'module' in Angular?",
+      "options": [
+        "A collection of components, directives, pipes, and services that are related",
+        "A CSS file that styles components",
+        "A server-side entity",
+        "A single component"
+      ],
+      "correctAnswer": "A collection of components, directives, pipes, and services that are related"
+    },
+    {
+      "question": "How do you create a two-way data binding in Angular?",
+      "options": [
+        "Using the 'ngModel' directive",
+        "Using the 'ngBind' directive",
+        "By manually synchronizing values in the component and template",
+        "Using the 'ngTwoWay' directive"
+      ],
+      "correctAnswer": "Using the 'ngModel' directive"
+    },
+    {
+      "question": "What is a 'pipe' used for in Angular?",
+      "options": [
+        "To create a new instance of a component",
+        "To filter and format data before it's displayed in the view",
+        "To pass data into a service",
+        "To manage routing between components"
+      ],
+      "correctAnswer": "To filter and format data before it's displayed in the view"
+    },
+    {
+      "question": "What is the purpose of 'dependency injection' in Angular?",
+      "options": [
+        "To inject data into components",
+        "To create a dependency tree",
+        "To improve performance",
+        "To create and manage dependencies between different parts of an application"
+      ],
+      "correctAnswer": "To create and manage dependencies between different parts of an application"
+    },
+    {
+      "question": "What is the purpose of 'ngIf' directive?",
+      "options": [
+        "To iterate over an array",
+        "To bind data to properties",
+        "To conditionally include a template block",
+        "To handle user input"
+      ],
+      "correctAnswer": "To conditionally include a template block"
+    },
+    {
+      "question": "What are 'observables' in Angular?",
+      "options": [
+        "A type of array",
+        "Functions that track changes in the DOM",
+        "Asynchronous data streams used in Angular applications",
+        "A method to perform HTTP requests"
+      ],
+      "correctAnswer": "Asynchronous data streams used in Angular applications"
+    },
+    {
+      "question": "How can you handle forms in Angular?",
+      "options": [
+        "Using ReactiveFormsModule or FormsModule",
+        "Using only HTML form elements",
+        "By directly manipulating the DOM",
+        "Using the 'ngForm' directive"
+      ],
+      "correctAnswer": "Using ReactiveFormsModule or FormsModule"
+    },
+    {
+      "question": "Which Angular lifecycle hook is called when data-bound properties of a directive change?",
+      "options": [
+        "ngOnChanges",
+        "ngOnInit",
+        "ngDoCheck",
+        "ngAfterContentChecked"
+      ],
+      "correctAnswer": "ngOnChanges"
+    },
+    {
+      "question": "What is the purpose of 'RouterModule' in Angular?",
+      "options": [
+        "To manage application state",
+        "To handle database operations",
+        "To configure navigation and routing rules in the application",
+        "To create and manage forms"
+      ],
+      "correctAnswer": "To configure navigation and routing rules in the application"
+    }
+  ]
+  

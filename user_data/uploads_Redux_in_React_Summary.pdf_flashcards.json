@@ -1,0 +1,14 @@
+[
+    {
+        "question": "What is Redux?",
+        "answer": "Redux is a predictable state container for JavaScript apps, often used with libraries like React for managing state."
+    },
+    {
+        "question": "What does Redux help simplify in the context of React?",
+        "answer": "Redux helps simplify state management in React applications."
+    },
+    {
+        "question": "Can Redux only be used with React?",
+        "answer": "No, Redux can be used with any JavaScript framework or library, but it is most commonly associated with React."
+    }
+]

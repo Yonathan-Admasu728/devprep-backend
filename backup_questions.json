@@ -1,0 +1,685 @@
+[
+
+    {
+        "question": {"text": "How do you optimize website performance and improve loading speed?", "audio_id": "q1-optimize.mp3"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You nailed it! Speed is the name of the game, my friend! Imagine your website is a sports car. You wouldn't fill it with unnecessary junk, right? So, we minify our CSS and JavaScript files—strip 'em down to the bare essentials. We also use lazy loading for images; think of it as your car only using gas when it actually needs to move. And let's not forget CDNs, the pit stops of the internet, strategically located to deliver your website's content in the blink of an eye.",
+            "audio_id": "correct_elab_ans_optimize-1.mp3"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "Actually, Speed is the name of the game, my friend! Imagine your website is a sports car. You wouldn't fill it with unnecessary junk, right? So, we minify our CSS and JavaScript files—strip 'em down to the bare essentials. We also use lazy loading for images; think of it as your car only using gas when it actually needs to move. And let's not forget CDNs, the pit stops of the internet, strategically located to deliver your website's content in the blink of an eye.",
+            "audio_id": "incorrect_elab_ans_optimize-1.mp3"
+          },
+          "transition": {
+            "text": "Excellent! On to the next.",
+            "audio_id": "trans_boxmodel"
+          }
+        }
+      },
+          {
+            "question": {"text": "What is React?", "audio_id": "q1.mp3"},
+            "response": {
+              "correct_elaborated_answer": {
+                "text": "You got it! React is a JavaScript library for building UI components. It's like a Lego set for UI.",
+                "audio_id": "correct_elab_ans_1.mp3"
+              },
+              "incorrect_elaborated_answer": {
+                "text": "Actually, React is a JavaScript library, not a framework. Think of it as the paintbrush for your web canvas.",
+                "audio_id": "incorrect_elab_ans_1.mp3"
+              },
+              "transition": {
+                "text": "Great job! Let's move on.",
+                "audio_id": "trans_1"
+              }
+            }
+          },
+    
+          {
+            "question": {"text": "What are the differences between inline, block, and inline-block elements?", "audio_id": "q3.mp3"},
+            "response": {
+              "correct_elaborated_answer": {
+                "text": "You are right! Think of them as items you would place on a bookshelf.Inline elements, are like those individual books you neatly line up side by side. They only take up as much space as they need, and they're happy to sit next to each other on the same shelf.Block elements, on the other hand, are the big storage boxes you have. They're the divas of the HTML world, demanding all the horizontal space on that shelf and refusing to share it with anyone else. They'll even push everything else down to a new row.Now, inline-block elements, are the best of both worlds. Imagine them as smaller, more cooperative storage containers. They respect each other's personal space but are still willing to sit side by side in harmony.So, whether you're organizing your home or your webpage, knowing which 'box' to use can make all the difference!",
+                "audio_id": "correct_elab_ans_3inline.mp3"
+              },
+              "incorrect_elaborated_answer": {
+                "text": "Think of them as items you would place on a bookshelf.Inline elements, are like those individual books you neatly line up side by side. They only take up as much space as they need, and they're happy to sit next to each other on the same shelf.Block elements, on the other hand, are the big storage boxes you have. They're the divas of the HTML world, demanding all the horizontal space on that shelf and refusing to share it with anyone else. They'll even push everything else down to a new row.Now, inline-block elements, are the best of both worlds. Imagine them as smaller, more cooperative storage containers. They respect each other's personal space but are still willing to sit side by side in harmony.So, whether you're organizing your home or your webpage, knowing which 'box' to use can make all the difference!",
+                "audio_id": "incorrect_elab_ans_3inline.mp3"
+              },
+              "transition": {
+                "text": "Excellent! On to the next.",
+                "audio_id": "trans_boxmodel"
+              }
+            }
+          },
+          {
+            "question": {"text": "What is the MVC design pattern?", "audio_id": "q2.mp3"},
+            "response": {
+              "correct_elaborated_answer": {
+                "text": "You're right! MVC stands for Model-View-Controller. It's like a well-organized kitchen.",
+                "audio_id": "correct_elab_ans_2.mp3"
+              },
+              "incorrect_elaborated_answer": {
+                "text": "MVC stands for Model-View-Controller. It's a design pattern that separates an application into three interconnected components. Think of it as a theater production.",
+                "audio_id": "incorrect_elab_ans_2.mp3"
+              },
+              "transition": {
+                "text": "Awesome! Ready for the next one?",
+                "audio_id": "trans_2"
+              }
+            }
+          },
+    
+          {
+            "question": {"text": "What is Next.js?", "audio_id": "q_nextjs.mp3"},
+            "response": {
+              "correct_elaborated_answer": {
+                "text": "You got it! Next.js is a React framework commonly used for server-side rendering and static site generation.",
+                "audio_id": "correct_elab_ans_nextjs.mp3"
+              },
+              "incorrect_elaborated_answer": {
+                "text": "Next.js is a React framework. It's commonly used for server-side rendering and static site generation.",
+                "audio_id": "incorrect_elab_ans_nextjs.mp3"
+              },
+              "transition": {
+                "text": "Great job! Let's move on.",
+                "audio_id": "trans_nextjs"
+              }
+            }
+          },
+          {
+            "question": {"text": "What is the Box Model in CSS?", "audio_id": "q_boxmodel.mp3"},
+            "response": {
+              "correct_elaborated_answer": {
+                "text": "You're right! The Box Model includes margin, border, padding, and content. It's a fundamental concept in CSS layout.",
+                "audio_id": "correct_elab_ans_boxmodel.mp3"
+              },
+              "incorrect_elaborated_answer": {
+                "text": "The Box Model includes margin, border, padding, and content. It's a fundamental concept in CSS layout.",
+                "audio_id": "incorrect_elab_ans_boxmodel.mp3"
+              },
+              "transition": {
+                "text": "Excellent! On to the next.",
+                "audio_id": "trans_boxmodel"
+              }
+            }
+          },
+    
+          {
+            "question": {"text": "What is 'localStorage'?", "audio_id": "q_localStorage.mp3"},
+            "response": {
+              "correct_elaborated_answer": {
+                "text": "You nailed it! 'localStorage' is a web storage that allows you to store key-value pairs. It's client-side and has a larger storage limit than cookies.",
+                "audio_id": "correct_elab_ans_localStorage.mp3"
+              },
+              "incorrect_elaborated_answer": {
+                "text": "'localStorage' is a web storage that allows you to store key-value pairs. It's client-side and has a larger storage limit than cookies.",
+                "audio_id": "incorrect_elab_ans_localStorage.mp3"
+              },
+              "transition": {
+                "text": "Fantastic! Let's keep this momentum going.",
+                "audio_id": "trans_localStorage"
+              }
+            }
+          },
+          
+          {
+            "question": {"text": "What is 'debouncing' in JavaScript?", "audio_id": "q_debouncing.mp3"},
+            "response": {
+              "correct_elaborated_answer": {
+                "text": "You're right! Debouncing limits the rate at which a function can fire. It's like a snooze button, delaying action until a set time has passed.",
+                "audio_id": "correct_elab_ans_debouncing.mp3"
+              },
+              "incorrect_elaborated_answer": {
+                "text": "Debouncing limits the rate at which a function can fire. It's often used in handling events like scrolling and resizing. Think of debouncing as the referee in a game.",
+                "audio_id": "incorrect_elab_ans_debouncing.mp3"
+              },
+              "transition": {
+                "text": "Great job! Let's move on.",
+                "audio_id": "trans_debouncing"
+              }
+            }
+          },
+          {
+            "question": {"text": "What is 'throttling' in JavaScript?", "audio_id": "q_throttling.mp3"},
+            "response": {
+              "correct_elaborated_answer": {
+                "text": "You're right! Throttling limits the rate at which a function can fire and ensures it executes regularly. It's like a metronome for function calls.",
+                "audio_id": "correct_elab_ans_throttling.mp3"
+              },
+              "incorrect_elaborated_answer": {
+                "text": "Throttling limits the rate at which a function can fire. Unlike debouncing, it guarantees the function will execute regularly. Think of it as the speed limit on a road.",
+                "audio_id": "incorrect_elab_ans_throttling.mp3"
+              },
+              "transition": {
+                "text": "Excellent! You've completed all the questions I have for you today feel free to ask me any questions you have.",
+                "audio_id": "trans_throttling.mp3"
+              }
+            }
+          },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    {
+        "question": {"text": "What are Progressive Web Apps (PWAs)?", "audio_id": "q_pwas"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "Great answer! PWAs are web apps that behave like native apps, offering features like offline access and push notifications.",
+            "audio_id": "correct_elab_ans_pwas"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "PWAs are web apps that behave like native apps. They offer features like offline access and push notifications.",
+            "audio_id": "incorrect_elab_ans_pwas"
+          },
+          "transition": {
+            "text": "Awesome! Ready for the next one?",
+            "audio_id": "trans_pwas"
+          }
+        }
+      },
+      {
+        "question": {
+          "text": "What is the Box Model in CSS?",
+          "audio_id": "q_boxmodel"
+        },
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You're right! The Box Model includes margin, border, padding, and content. It's a fundamental concept in CSS layout.",
+            "audio_id": "correct_elab_ans_boxmodel"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "The Box Model includes margin, border, padding, and content. It's a fundamental concept in CSS layout.",
+            "audio_id": "incorrect_elab_ans_boxmodel"
+          },
+          "transition": {
+            "text": "Excellent! On to the next.",
+            "audio_id": "trans_boxmodel"
+          }
+        }
+      },
+      {
+        "question": {
+          "text": "Imagine you are optimizing a website's performance. What would you do?",
+          "audio_id": "q_optimization",
+          "keywords": ["lazy loading", "minification", "CDN", "caching"]
+        },
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "Fantastic! Lazy loading, minification, using a CDN, and caching are excellent strategies for performance optimization.",
+            "audio_id": "correct_elab_ans_optimization"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "Lazy loading, minification, using a CDN, and caching are strategies you could use for performance optimization.",
+            "audio_id": "incorrect_elab_ans_optimization"
+          },
+          "transition": {
+            "text": "Great! Let's move on.",
+            "audio_id": "trans_optimization"
+          }
+        }
+      },
+      
+      {
+        "question": {"text": "What is responsive design?", "audio_id": "q_responsive_design"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You got it! Responsive design adapts to different screen sizes and often uses media queries to achieve this.",
+            "audio_id": "correct_elab_ans_responsive_design"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "Responsive design adapts to different screen sizes. It often uses media queries to achieve this.",
+            "audio_id": "incorrect_elab_ans_responsive_design"
+          },
+          "transition": {
+            "text": "Fantastic! Let's keep this momentum going.",
+            "audio_id": "trans_responsive_design"
+          }
+        }
+      },{
+        "question": {"text": "What are microinteractions?", "audio_id": "q_microinteractions"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You're right! Microinteractions are small animations that engage the user and provide feedback.",
+            "audio_id": "correct_elab_ans_microinteractions"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "Microinteractions are small animations that engage the user. They provide feedback and guide the user through an interface.",
+            "audio_id": "incorrect_elab_ans_microinteractions"
+          },
+          "transition": {
+            "text": "You're doing well! Next question coming up.",
+            "audio_id": "trans_microinteractions"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is the DOM?", "audio_id": "q_dom"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "Great answer! The DOM stands for Document Object Model and is a tree-like representation of HTML elements.",
+            "audio_id": "correct_elab_ans_dom"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "The DOM stands for Document Object Model. It's a tree-like representation of HTML elements.",
+            "audio_id": "incorrect_elab_ans_dom"
+          },
+          "transition": {
+            "text": "Excellent! On to the next.",
+            "audio_id": "trans_dom"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is A/B testing?", "audio_id": "q_ab_testing"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You got it! A/B testing involves comparing two versions of a webpage to optimize for a specific outcome.",
+            "audio_id": "correct_elab_ans_ab_testing"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "A/B testing involves comparing two versions of a webpage. It's used to optimize for a specific outcome.",
+            "audio_id": "incorrect_elab_ans_ab_testing"
+          },
+          "transition": {
+            "text": "Awesome! Ready for the next one?",
+            "audio_id": "trans_ab_testing"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is accessibility in web development?", "audio_id": "q_accessibility"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You're right! Accessibility ensures that websites are usable by as many people as possible and often involves following WCAG guidelines.",
+            "audio_id": "correct_elab_ans_accessibility"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "Accessibility ensures that websites are usable by as many people as possible. It often involves following WCAG guidelines.",
+            "audio_id": "incorrect_elab_ans_accessibility"
+          },
+          "transition": {
+            "text": "Fantastic! Let's keep this momentum going.",
+            "audio_id": "trans_accessibility"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is CORS?", "audio_id": "q_cors"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You're right! CORS stands for Cross-Origin Resource Sharing and is a security feature implemented by web browsers.",
+            "audio_id": "correct_elab_ans_cors"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "CORS stands for Cross-Origin Resource Sharing. It's a security feature implemented by web browsers.",
+            "audio_id": "incorrect_elab_ans_cors"
+          },
+          "transition": {
+            "text": "Excellent! On to the next.",
+            "audio_id": "trans_cors"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is Webpack?", "audio_id": "q_webpack"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You got it! Webpack is a module bundler that takes modules with dependencies and generates static assets.",
+            "audio_id": "correct_elab_ans_webpack"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "Webpack is a module bundler. It takes modules with dependencies and generates static assets.",
+            "audio_id": "incorrect_elab_ans_webpack"
+          },
+          "transition": {
+            "text": "Fantastic! Let's keep this momentum going.",
+            "audio_id": "trans_webpack"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is the difference between '==' and '===' in JavaScript?", "audio_id": "q_double_vs_triple_equal"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You're right! '==' performs type coercion, while '===' checks both value and type.",
+            "audio_id": "correct_elab_ans_double_vs_triple_equal"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "'==' performs type coercion, and '===' checks both value and type.",
+            "audio_id": "incorrect_elab_ans_double_vs_triple_equal"
+          },
+          "transition": {
+            "text": "Awesome! Ready for the next one?",
+            "audio_id": "trans_double_vs_triple_equal"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is the CSS 'z-index' property?", "audio_id": "q_z_index"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "Great answer! 'z-index' controls the stacking order of positioned elements and takes integer values.",
+            "audio_id": "correct_elab_ans_z_index"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "'z-index' controls the stacking order of positioned elements and takes integer values.",
+            "audio_id": "incorrect_elab_ans_z_index"
+          },
+          "transition": {
+            "text": "Fantastic! Let's keep this momentum going.",
+            "audio_id": "trans_z_index"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is the 'this' keyword in JavaScript?", "audio_id": "q_this_keyword"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You got it! 'this' refers to the object it belongs to, and its value depends on how the function is invoked.",
+            "audio_id": "correct_elab_ans_this_keyword"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "'this' refers to the object it belongs to, and its value depends on how the function is invoked.",
+            "audio_id": "incorrect_elab_ans_this_keyword"
+          },
+          "transition": {
+            "text": "Awesome! Ready for the next one?",
+            "audio_id": "trans_this_keyword"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is the 'async/await' syntax in JavaScript?", "audio_id": "q_async_await"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You're right! 'async/await' is syntactic sugar over Promises, making asynchronous code look synchronous.",
+            "audio_id": "correct_elab_ans_async_await"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "'async/await' is syntactic sugar over Promises, making asynchronous code look synchronous.",
+            "audio_id": "incorrect_elab_ans_async_await"
+          },
+          "transition": {
+            "text": "Fantastic! Let's keep this momentum going.",
+            "audio_id": "trans_async_await"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is GraphQL?", "audio_id": "q_graphql"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "Great answer! GraphQL is a query language for APIs that allows clients to request only the data they need.",
+            "audio_id": "correct_elab_ans_graphql"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "GraphQL is a query language for APIs that allows clients to request only the data they need.",
+            "audio_id": "incorrect_elab_ans_graphql"
+          },
+          "transition": {
+            "text": "You're doing well! Next question coming up.",
+            "audio_id": "trans_graphql"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is the 'Viewport' meta tag?", "audio_id": "q_viewport"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You got it! The 'Viewport' meta tag controls the page's dimensions and scaling and is essential for responsive design.",
+            "audio_id": "correct_elab_ans_viewport"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "The 'Viewport' meta tag controls the page's dimensions and scaling and is essential for responsive design.",
+            "audio_id": "incorrect_elab_ans_viewport"
+          },
+          "transition": {
+            "text": "Excellent! On to the next.",
+            "audio_id": "trans_viewport"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is CSS Grid?", "audio_id": "q_css_grid"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You're right! CSS Grid is a 2D layout system that allows you to create complex layouts using rows and columns.",
+            "audio_id": "correct_elab_ans_css_grid"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "CSS Grid is a 2D layout system that allows you to create complex layouts using rows and columns.",
+            "audio_id": "incorrect_elab_ans_css_grid"
+          },
+          "transition": {
+            "text": "You're doing well! Next question coming up.",
+            "audio_id": "trans_css_grid"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is the 'Shadow DOM'?", "audio_id": "q_shadow_dom"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "Great answer! The 'Shadow DOM' is used for encapsulation and keeps an element's features private.",
+            "audio_id": "correct_elab_ans_shadow_dom"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "The 'Shadow DOM' is used for encapsulation and keeps an element's features private, so they can't be accidentally overwritten.",
+            "audio_id": "incorrect_elab_ans_shadow_dom"
+          },
+          "transition": {
+            "text": "Excellent! On to the next.",
+            "audio_id": "trans_shadow_dom"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is SASS?", "audio_id": "q_sass"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You're right! SASS is a CSS preprocessor that allows for variables, nested rules, and more.",
+            "audio_id": "correct_elab_ans_sass"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "SASS is a CSS preprocessor that allows for variables, nested rules, and more.",
+            "audio_id": "incorrect_elab_ans_sass"
+          },
+          "transition": {
+            "text": "Fantastic! Let's keep this momentum going.",
+            "audio_id": "trans_sass"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is the Virtual DOM?", "audio_id": "q_virtual_dom"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You got it! The Virtual DOM is an in-memory representation of the real DOM, used for optimization.",
+            "audio_id": "correct_elab_ans_virtual_dom"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "The Virtual DOM is an in-memory representation of the real DOM. It's used for optimization to minimize direct manipulation of the DOM.",
+            "audio_id": "incorrect_elab_ans_virtual_dom"
+          },
+          "transition": {
+            "text": "Excellent! On to the next.",
+            "audio_id": "trans_virtual_dom"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is JSX?", "audio_id": "q_jsx"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You're right! JSX stands for JavaScript XML and is syntactic sugar for writing HTML elements in React.",
+            "audio_id": "correct_elab_ans_jsx"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "JSX stands for JavaScript XML. It's syntactic sugar for writing HTML elements in React.",
+            "audio_id": "incorrect_elab_ans_jsx"
+          },
+          "transition": {
+            "text": "Fantastic! Let's keep this momentum going.",
+            "audio_id": "trans_jsx"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is Flexbox?", "audio_id": "q_flexbox"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You nailed it! Flexbox is a one-dimensional layout model in CSS that allows for more predictable design of complex layouts.",
+            "audio_id": "correct_elab_ans_flexbox"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "Flexbox is a one-dimensional layout model in CSS. It allows you to design complex layout structures in a more predictable way.",
+            "audio_id": "incorrect_elab_ans_flexbox"
+          },
+          "transition": {
+            "text": "Excellent! On to the next.",
+            "audio_id": "trans_flexbox"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is an IIFE in JavaScript?", "audio_id": "q_iife"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You nailed it! IIFE stands for Immediately Invoked Function Expression and it's a function that runs as soon as it's defined.",
+            "audio_id": "correct_elab_ans_iife"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "IIFE stands for Immediately Invoked Function Expression. It's a function that runs as soon as it's defined.",
+            "audio_id": "incorrect_elab_ans_iife"
+          },
+          "transition": {
+            "text": "Awesome! Ready for the next one?",
+            "audio_id": "trans_iife"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is the 'alt' attribute in HTML?", "audio_id": "q_alt"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You're right! The 'alt' attribute provides alternative text for images and is important for accessibility.",
+            "audio_id": "correct_elab_ans_alt"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "The 'alt' attribute provides alternative text for images. It's important for accessibility.",
+            "audio_id": "incorrect_elab_ans_alt"
+          },
+          "transition": {
+            "text": "Fantastic! Let's keep this momentum going.",
+            "audio_id": "trans_alt"
+          }
+        }
+      },
+
+      {
+        "question": {"text": "What is 'hoisting' in JavaScript?", "audio_id": "q_hoisting"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "Exactly! Hoisting moves variable and function declarations to the top of their containing scope. Only the declarations are hoisted, not the initializations.",
+            "audio_id": "correct_elab_ans_hoisting"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "Hoisting moves variable and function declarations to the top of their containing scope. Only the declarations are hoisted, not the initializations.",
+            "audio_id": "incorrect_elab_ans_hoisting"
+          },
+          "transition": {
+            "text": "Awesome! Ready for the next one?",
+            "audio_id": "trans_hoisting"
+          }
+        }
+      },
+
+
+
+
+
+
+
+
+
+
+
+      {
+        "question": {"text": "What is 'localStorage'?", "audio_id": "q_localStorage"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You nailed it! 'localStorage' is a web storage that allows you to store key-value pairs. It's client-side and has a larger storage limit than cookies.",
+            "audio_id": "correct_elab_ans_localStorage"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "'localStorage' is a web storage that allows you to store key-value pairs. It's client-side and has a larger storage limit than cookies.",
+            "audio_id": "incorrect_elab_ans_localStorage"
+          },
+          "transition": {
+            "text": "Fantastic! Let's keep this momentum going.",
+            "audio_id": "trans_localStorage"
+          }
+        }
+      },
+      
+      {
+        "question": {"text": "What is 'debouncing' in JavaScript?", "audio_id": "q_debouncing"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You're right! Debouncing limits the rate at which a function can fire. It's like a snooze button, delaying action until a set time has passed.",
+            "audio_id": "correct_elab_ans_debouncing"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "Debouncing limits the rate at which a function can fire. It's often used in handling events like scrolling and resizing. Think of debouncing as the referee in a game.",
+            "audio_id": "incorrect_elab_ans_debouncing"
+          },
+          "transition": {
+            "text": "Great job! Let's move on.",
+            "audio_id": "trans_debouncing"
+          }
+        }
+      },
+      {
+        "question": {"text": "What is 'throttling' in JavaScript?", "audio_id": "q_throttling"},
+        "response": {
+          "correct_elaborated_answer": {
+            "text": "You're right! Throttling limits the rate at which a function can fire and ensures it executes regularly. It's like a metronome for function calls.",
+            "audio_id": "correct_elab_ans_throttling"
+          },
+          "incorrect_elaborated_answer": {
+            "text": "Throttling limits the rate at which a function can fire. Unlike debouncing, it guarantees the function will execute regularly. Think of it as the speed limit on a road.",
+            "audio_id": "incorrect_elab_ans_throttling"
+          },
+          "transition": {
+            "text": "Excellent! You've completed all the questions I have for you today feel free to ask me any questions you have.",
+            "audio_id": "trans_throttling"
+          }
+        }
+      }
+    
+  
+  
+  
+]

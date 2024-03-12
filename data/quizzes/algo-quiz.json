@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Why is Big-O analysis important in algorithms?",
+    "options": [
+      "For debugging purposes",
+      "For code styling",
+      "For measuring efficiency",
+      "For code documentation"
+    ],
+    "correctAnswer": "For measuring efficiency"
+  },
+  {
+    "question": "What is the key difference between lists and trees?",
+    "options": [
+      "Data storage",
+      "Data type",
+      "Data structure",
+      "Data manipulation"
+    ],
+    "correctAnswer": "Data structure"
+  },
+  {
+    "question": "How do maps primarily differ from lists?",
+    "options": [
+      "Data retrieval speed",
+      "Data type",
+      "Indexing method",
+      "Data storage"
+    ],
+    "correctAnswer": "Indexing method"
+  },
+  {
+    "question": "What is the primary use of graphs in data structures?",
+    "options": [
+      "Data storage",
+      "Modeling relationships",
+      "Data manipulation",
+      "Data retrieval"
+    ],
+    "correctAnswer": "Modeling relationships"
+  },
+  {
+    "question": "What is the main purpose of loops in programming?",
+    "options": [
+      "Data storage",
+      "Repetitive execution",
+      "Data retrieval",
+      "Data manipulation"
+    ],
+    "correctAnswer": "Repetitive execution"
+  },
+  {
+    "question": "How do functions enhance code quality?",
+    "options": [
+      "By reducing redundancy",
+      "By adding complexity",
+      "By increasing code length",
+      "By making debugging harder"
+    ],
+    "correctAnswer": "By reducing redundancy"
+  },
+  {
+    "question": "Why are if statements important in algorithms?",
+    "options": [
+      "For data storage",
+      "For decision-making",
+      "For data retrieval",
+      "For data manipulation"
+    ],
+    "correctAnswer": "For decision-making"
+  },
+  {
+    "question": "Why is understanding data structures essential for developers?",
+    "options": [
+      "For debugging",
+      "For code styling",
+      "For performance optimization",
+      "For code documentation"
+    ],
+    "correctAnswer": "For performance optimization"
+  },
+  {
+    "question": "What distinguishes a binary tree from a regular tree?",
+    "options": [
+      "Node color",
+      "Number of children",
+      "Tree height",
+      "Tree depth"
+    ],
+    "correctAnswer": "Number of children"
+  },
+  {
+    "question": "What does Big-O notation primarily indicate?",
+    "options": [
+      "Code length",
+      "Code style",
+      "Algorithm efficiency",
+      "Debugging ease"
+    ],
+    "correctAnswer": "Algorithm efficiency"
+  },
+  {
+    "question": "How do linked lists primarily differ from arrays?",
+    "options": [
+      "Data type",
+      "Data storage",
+      "Data retrieval speed",
+      "Dynamic size"
+    ],
+    "correctAnswer": "Dynamic size"
+  },
+  {
+    "question": "What is the primary function of a hash map?",
+    "options": [
+      "Data manipulation",
+      "Data storage",
+      "Data retrieval",
+      "Mapping keys to values"
+    ],
+    "correctAnswer": "Mapping keys to values"
+  }
+]

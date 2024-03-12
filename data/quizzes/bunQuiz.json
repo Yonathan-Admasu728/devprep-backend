@@ -1,0 +1,203 @@
+[
+    {
+      "question": "What is Bun.js primarily built with?",
+      "options": [
+        "JavaScript",
+        "TypeScript",
+        "Zig",
+        "Rust"
+      ],
+      "correctAnswer": "Zig"
+    },
+    {
+      "question": "Which of the following is a feature of Bun.js?",
+      "options": [
+        "Native Windows support",
+        "Built-in machine learning libraries",
+        "Native TypeScript and JSX support",
+        "Integrated relational database"
+      ],
+      "correctAnswer": "Native TypeScript and JSX support"
+    },
+    {
+      "question": "How does Bun.js handle package management?",
+      "options": [
+        "Using npm",
+        "Using its built-in package manager",
+        "Through Webpack",
+        "Using Yarn only"
+      ],
+      "correctAnswer": "Using its built-in package manager"
+    },
+    {
+      "question": "What aspect of Bun.js offers a significant performance advantage?",
+      "options": [
+        "Parallel computing capabilities",
+        "Faster package management",
+        "Native image processing",
+        "Built-in AI algorithms"
+      ],
+      "correctAnswer": "Faster package management"
+    },
+    {
+      "question": "Bun.js is best suited for which type of applications?",
+      "options": [
+        "Desktop applications",
+        "High-traffic web servers",
+        "Mobile applications",
+        "Blockchain applications"
+      ],
+      "correctAnswer": "High-traffic web servers"
+    },
+    {
+      "question": "Which debugging tool is supported by Bun.js?",
+      "options": [
+        "Eclipse debugger",
+        "Chrome DevTools",
+        "Visual Studio debugger",
+        "GDB"
+      ],
+      "correctAnswer": "Chrome DevTools"
+    },
+    {
+      "question": "In Bun.js, how is asynchronous code commonly handled?",
+      "options": [
+        "Callbacks",
+        "Promises",
+        "Event loop",
+        "Threads"
+      ],
+      "correctAnswer": "Promises"
+    },
+    {
+      "question": "Which of these is a best practice when working with Bun.js?",
+      "options": [
+        "Frequent use of global variables",
+        "Writing synchronous code for I/O operations",
+        "Leveraging native Bun.js modules for performance",
+        "Using only external libraries for core functionalities"
+      ],
+      "correctAnswer": "Leveraging native Bun.js modules for performance"
+    },
+    {
+      "question": "What is the primary role of Zig in Bun.js?",
+      "options": [
+        "Front-end development",
+        "Package management",
+        "Underlying runtime efficiency",
+        "User interface design"
+      ],
+      "correctAnswer": "Underlying runtime efficiency"
+    },
+    {
+      "question": "How does Bun.js's approach to TypeScript support differ from Node.js?",
+      "options": [
+        "Bun.js requires additional plugins",
+        "Bun.js does not support TypeScript",
+        "Bun.js natively supports TypeScript without transpilation",
+        "Bun.js uses a custom version of TypeScript"
+      ],
+      "correctAnswer": "Bun.js natively supports TypeScript without transpilation"
+    },
+    {
+      "question": "In Bun.js, what is the advantage of native JSX support?",
+      "options": [
+        "Eliminates the need for CSS",
+        "Allows direct use of SQL within JavaScript",
+        "Reduces need for external JSX transpilation",
+        "Automatically optimizes image assets"
+      ],
+      "correctAnswer": "Reduces need for external JSX transpilation"
+    },
+    {
+      "question": "Which statement accurately describes a feature of Bun.js?",
+      "options": [
+        "Incorporates a visual design tool",
+        "Includes a built-in relational database",
+        "Offers built-in transpilation and bundling",
+        "Focuses on mobile-first application development"
+      ],
+      "correctAnswer": "Offers built-in transpilation and bundling"
+    },
+    {
+      "question": "What kind of applications benefit most from Bun.js's performance?",
+      "options": [
+        "Batch processing applications",
+        "Real-time data processing applications",
+        "Standalone desktop applications",
+        "Graphic design software"
+      ],
+      "correctAnswer": "Real-time data processing applications"
+    },
+    {
+      "question": "Which of the following is a recommended use case for Bun.js?",
+      "options": [
+        "Machine learning model training",
+        "High-frequency trading systems",
+        "API backends",
+        "3D rendering engines"
+      ],
+      "correctAnswer": "API backends"
+    },
+    {
+      "question": "How does Bun.js improve startup times compared to Node.js?",
+      "options": [
+        "By compiling JavaScript to native code",
+        "Using just-in-time compilation",
+        "Through advanced caching mechanisms",
+        "By reducing the number of dependencies"
+      ],
+      "correctAnswer": "Through advanced caching mechanisms"
+    },
+    {
+      "question": "In Bun.js, what is a primary benefit of its single-threaded nature?",
+      "options": [
+        "Enhanced security features",
+        "Simplified concurrency model",
+        "Automatic multi-threading",
+        "Reduced memory usage"
+      ],
+      "correctAnswer": "Simplified concurrency model"
+    },
+    {
+      "question": "What is a key consideration when integrating Bun.js with existing Node.js projects?",
+      "options": [
+        "Complete rewrite of the codebase",
+        "Compatibility of third-party libraries",
+        "Changing the programming language",
+        "Upgrading the user interface"
+      ],
+      "correctAnswer": "Compatibility of third-party libraries"
+    },
+    {
+      "question": "How does Bun.js handle server-side rendering (SSR)?",
+      "options": [
+        "It doesn't support SSR",
+        "Using a separate SSR framework",
+        "By leveraging its fast performance and native JSX support",
+        "Through client-side rendering emulation"
+      ],
+      "correctAnswer": "By leveraging its fast performance and native JSX support"
+    },
+    {
+      "question": "What is an advantage of Bun.js's event-driven, non-blocking I/O model?",
+      "options": [
+        "Higher accuracy in computations",
+        "Improved graphics processing",
+        "Efficient handling of concurrent connections",
+        "Automated error correction"
+      ],
+      "correctAnswer": "Efficient handling of concurrent connections"
+    },
+    {
+      "question": "Which of these statements about Bun.js is true?",
+      "options": [
+        "It's primarily used for blockchain development",
+        "It supports Chrome DevTools for debugging",
+        "It requires a Java runtime environment",
+        "Focused on hardware-level programming"
+      ],
+      "correctAnswer": "It supports Chrome DevTools for debugging"
+    }
+  ]
+  

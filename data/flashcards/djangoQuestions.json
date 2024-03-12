@@ -1,0 +1,203 @@
+[
+    {
+        "question": "What is Django and what are its key features?",
+        "answer": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Key features include an ORM, a built-in admin panel, a templating engine, routing, authentication, and built-in security features."
+    },
+    {
+        "question": "Explain the Django architecture.",
+        "answer": "Django follows the MVT (Model-View-Template) architecture, a variant of MVC (Model-View-Controller). It consists of Models for handling the database, Views for processing user requests and returning responses, and Templates for rendering the HTML."
+    },
+    {
+        "question": "What is the role of the model in Django's MVC architecture?",
+        "answer": "In Django's MVC architecture, the Model represents the data structure. It is a Python class that defines the structure of an application's database, essentially representing the database schema."
+    },
+    {
+        "question": "Describe Django's template system.",
+        "answer": "Django's template system provides a way to generate HTML dynamically. Templates are HTML files with placeholders and template tags that allow for inserting Python variables and logic into HTML content."
+    },
+    {
+        "question": "How does Django handle URL routing?",
+        "answer": "Django handles URL routing using a URL dispatcher. URLs are matched with corresponding views through patterns in the urls.py file. This allows Django to delegate requests to the appropriate view based on the requested URL."
+    },
+    {
+        "question": "Explain the Django ORM and its advantages.",
+        "answer": "The Django ORM (Object-Relational Mapping) is a feature that facilitates interaction with the database using Python objects. It abstracts the database operations and provides a simpler syntax for querying data, enhancing code readability and maintainability."
+    },
+    {
+        "question": "What are Django views and how are they used?",
+        "answer": "Django views are Python functions or classes that receive web requests and return web responses. Views access the data needed to satisfy requests via models and delegate the formatting of the response to templates."
+    },
+    {
+        "question": "How do you implement forms in Django?",
+        "answer": "Forms in Django are implemented using the Django forms library. It provides a way to create HTML forms and handle their submission, including data validation and processing."
+    },
+    {
+        "question": "What is Django REST Framework and why is it used?",
+        "answer": "Django REST Framework is an extension for Django that provides tools to build web APIs. It simplifies the creation of RESTful APIs with features like serializers, viewsets, and authentication. It's used for its browsable API, serialization, and easy-to-write logic."
+    },
+    {
+        "question": "Describe Django's security features.",
+        "answer": "Django includes several built-in security features to protect against common attacks like CSRF, SQL injection, XSS, and clickjacking. It manages user authentication and permissions, and ensures secure communication."
+    },
+    {
+        "question": "How do you manage static files in Django?",
+        "answer": "Static files in Django, like CSS, JavaScript, and images, are managed by configuring STATIC_URL and STATICFILES_DIRS in settings, and using the static template tag in templates to build the URL for these files."
+    },
+    {
+        "question": "What are Django middleware and how do they work?",
+        "answer": "Django middleware is a framework of hooks into Django's request/response processing. It's a way to globally alter Django's input or output. Each middleware component is responsible for doing some specific function. For example, Django includes middleware to manage sessions, GZip content, and handle CSRF protection."
+    },
+    {
+        "question": "Explain the Django migrations system.",
+        "answer": "Django migrations are Django's way of propagating changes you make to your models (adding a field, deleting a model, etc.) into your database schema. Migrations are designed to be mostly automatic, but they still require some occasional manual intervention."
+    },
+    {
+        "question": "What is the Django template context?",
+        "answer": "The Django template context is a data structure that holds all the data to be displayed in a template. When rendering a template, you pass a context variable to the template engine, which processes the template and returns the rendered content."
+    },
+    {
+        "question": "How do you customize the Django admin interface?",
+        "answer": "The Django admin interface can be customized by overriding templates, adding or modifying admin views, customizing model forms, and using built-in options in the ModelAdmin class to change field display, ordering, and many other admin functionalities."
+    },
+    {
+        "question": "What is the Django signal and how is it used?",
+        "answer": "Django signals are a form of communication between different parts of a Django project. They allow certain senders to notify a set of receivers when certain actions occur. They're used for decoupling parts of a Django application."
+    },
+    {
+        "question": "How do you handle file uploads in Django?",
+        "answer": "File uploads in Django are handled using FileField or ImageField in models, which create a form field that lets users upload files. The files are saved in the location specified by the MEDIA_ROOT and MEDIA_URL settings."
+    },
+    {
+        "question": "Explain the use of session in Django.",
+        "answer": "Sessions in Django are a way to store data (usually user-specific) that needs to be persisted between requests. Session data is stored server-side, and a session key is sent to the client to access the stored information."
+    },
+    {
+        "question": "What is Django\u2019s caching framework and how does it work?",
+        "answer": "Django's caching framework stores dynamic web pages to reduce the response time. Pages are stored in a cache after the first request, and subsequent requests are served from the cache. Django supports several cache backends like Memcached, file-based caching, and more."
+    },
+    {
+        "question": "How do you implement API authentication and authorization in Django?",
+        "answer": "API authentication and authorization in Django can be implemented using Django\u2019s built-in authentication system or packages like Django OAuth Toolkit or Django REST Framework, which provide more advanced functionalities like token-based authentication."
+    },
+    {
+        "question": "What is a QuerySet in Django and how do you use it?",
+        "answer": "A QuerySet in Django is a collection of database queries to retrieve objects from your database. It allows you to read the data from the database, filter it, and order it."
+    },
+    {
+        "question": "Explain Django's class-based views and how they differ from function-based views.",
+        "answer": "Class-based views in Django are an alternative to function-based views that break down the handling of requests into methods for each HTTP method (GET, POST, etc.). They are reusable and help in writing DRY (Don't Repeat Yourself) code."
+    },
+    {
+        "question": "What are Django context processors?",
+        "answer": "Context processors in Django are Python functions that add data to each context when a template is rendered. They are used for data that you need to make available globally to all templates."
+    },
+    {
+        "question": "How do you extend the Django user model?",
+        "answer": "The Django user model can be extended by either subclassing AbstractUser (for extensive changes) or using a one-to-one link to a user profile model for additional user data."
+    },
+    {
+        "question": "What is the purpose of the manage.py file in Django?",
+        "answer": "The manage.py file in Django is a command-line utility that lets you interact with your Django project in various ways. It's a thin wrapper around the django-admin.py tool for specific project use."
+    },
+    {
+        "question": "How do you ensure the security of your Django application?",
+        "answer": "To ensure security in a Django application, use Django\u2019s built-in protections against XSS, CSRF, SQL injection, and clickjacking. Regularly update Django version, use HTTPS, secure user data, and follow best practices for user authentication and authorization."
+    },
+    {
+        "question": "Explain the role of middleware in Django.",
+        "answer": "Middleware in Django is a framework of hooks and processors to modify the request and response objects globally. It is used for session management, user authentication, cross-site request forgery protection, content compression, and more."
+    },
+    {
+        "question": "What are Django templates, and how do you use them?",
+        "answer": "Django templates are HTML files mixed with Django Template Language (DTL). They define the structure of the output generated by server-side code. Templates are used to render dynamic data, allowing separation of presentation and business logic."
+    },
+    {
+        "question": "How does Django handle database migrations?",
+        "answer": "Django handles database migrations using its 'makemigrations' and 'migrate' commands. It tracks model changes and translates them into database schema changes, thus keeping the database schema in sync with the models."
+    },
+    {
+        "question": "Describe how Django's testing framework works.",
+        "answer": "Django's testing framework is built on Python's unittest library. It allows writing and running unit tests for Django applications. Tests are written as methods of a subclass of 'django.test.TestCase' which provides a range of assertions and helpers."
+    },
+    {
+        "question": "What is a Django app and how is it different from a project?",
+        "answer": "A Django app is a web application that does something \u2013 e.g., a blog, a database of public records, or a simple poll app. A project is a collection of configurations and apps. One project can contain multiple apps, or a single app can be used in multiple projects."
+    },
+    {
+        "question": "Explain the use of the 'static' directory in Django.",
+        "answer": "The 'static' directory in Django is used to store static files like CSS, JavaScript, and images. These files aren't dynamically generated and are served as-is to the user's browser."
+    },
+    {
+        "question": "How do you create a custom template filter in Django?",
+        "answer": "A custom template filter in Django can be created by defining a Python function that takes one or two arguments, registering it using the @register.filter decorator, and then using it in a template."
+    },
+    {
+        "question": "What are Django signals and how would you use them?",
+        "answer": "Django signals are a form of messaging. They allow decoupled applications to get notified when actions occur elsewhere. Signals are used for tasks such as clearing cache, sending notifications, or updating related objects when a certain event occurs."
+    },
+    {
+        "question": "How do you use Django for building RESTful APIs?",
+        "answer": "Django can be used for building RESTful APIs by using the Django REST framework (DRF). DRF is a powerful, flexible toolkit that provides features like serializers, viewsets, and authentication classes for building web APIs."
+    },
+    {
+        "question": "How can you optimize the performance of a Django application?",
+        "answer": "To optimize a Django application, use database indexing, query optimization, caching, and avoid using unnecessary database queries. Additionally, use Django's built-in features like select_related and prefetch_related to reduce database hits."
+    },
+    {
+        "question": "What is CSRF protection in Django, and how does it work?",
+        "answer": "CSRF (Cross Site Request Forgery) protection in Django is a security feature that protects against unauthorized transactions from a user. Django uses a token in forms to ensure that the request is made by the authenticated user."
+    },
+    {
+        "question": "Explain Django\u2019s content types framework.",
+        "answer": "Django\u2019s content types framework is a system for tracking models across Django applications. It enables generic relations with models, allowing models to associate with other models in a generic way."
+    },
+    {
+        "question": "What is the use of the Django template language (DTL)?",
+        "answer": "Django template language (DTL) is used for defining the structure of an output document, typically HTML. It allows for dynamic content generation, separating presentation from business logic, with tags and filters for controlling the rendering of templates."
+    },
+    {
+        "question": "How do you implement custom authentication in Django?",
+        "answer": "Custom authentication in Django can be implemented by creating a custom authentication backend. This involves defining a class that inherits from BaseBackend and overrides the authenticate and get_user methods."
+    },
+    {
+        "question": "What are Django Models and how do you use them?",
+        "answer": "Django models are Python classes that define the structure of an application's database. Each model represents a database table and the fields of the model represent the columns of the table. Models are used to create, read, update, and delete records in the database."
+    },
+    {
+        "question": "How do you manage database transactions in Django?",
+        "answer": "Database transactions in Django are managed using Django's transaction management utilities. This can be done using the @transaction.atomic decorator or the transaction.atomic() context manager to ensure atomic transactions."
+    },
+    {
+        "question": "Explain the use of Django managers.",
+        "answer": "Django managers are classes that provide interface through which database query operations are provided to Django models. They are used for accessing the database and can be customized to include additional methods for querying the database."
+    },
+    {
+        "question": "What are Django template tags and filters?",
+        "answer": "Django template tags are a part of Django template language and are used for processing data and controlling the flow of templates. Filters are used for modifying and filtering variables in templates. Both tags and filters enable complex rendering logic in templates."
+    },
+    {
+        "question": "Describe how to use Django\u2019s built-in signals.",
+        "answer": "Django\u2019s built-in signals are used to allow decoupled applications to get notified when certain actions occur. To use them, connect a signal to a receiver function, which will be called whenever the signal is sent."
+    },
+
+    {
+        "question": "How do you handle multiple databases in Django?",
+        "answer": "Django can handle multiple databases by defining them in the DATABASES setting. You can use database routers to control the database interaction for different models and queries."
+    },
+    {
+        "question": "What is Django middleware?",
+        "answer": "Django middleware is a framework of hooks into Django's request/response processing. It's a way to process requests and responses globally. Middleware components are executed in the order they are defined in the MIDDLEWARE setting."
+    },
+    {
+        "question": "Explain how Django\u2019s session framework works.",
+        "answer": "Django's session framework allows storing and retrieving arbitrary data on a per-site-visitor basis. It stores data on the server side and abstracts the sending and receiving of cookies. Sessions are a way to store information across requests."
+    },
+    {
+        "question": "What is the use of the Django admin interface?",
+        "answer": "The Django admin interface is a powerful, built-in interface for managing content. It provides a quick and easy way to manage database-backed applications. It's used for creating, updating, and deleting records and can be customized to fit the needs of your application."
+    },
+    {
+        "question": "How can you extend or customize the functionality of Django\u2019s admin interface?",
+        "answer": "Django's admin interface can be extended or customized by overriding admin templates, creating custom admin views, customizing the ModelAdmin class, and using hooks provided by Django admin to add custom processing."
+    }
+]

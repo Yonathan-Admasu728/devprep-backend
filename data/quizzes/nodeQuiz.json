@@ -1,0 +1,203 @@
+[
+    {
+      "question": "What is Node.js primarily used for?",
+      "options": [
+        "Front-end development",
+        "Building desktop applications",
+        "Back-end development",
+        "3D rendering"
+      ],
+      "correctAnswer": "Back-end development"
+    },
+    {
+      "question": "Which of the following is an advantage of using Node.js?",
+      "options": [
+        "Native support for SQL databases",
+        "High performance for CPU-intensive tasks",
+        "Asynchronous, non-blocking I/O model",
+        "Built-in support for machine learning"
+      ],
+      "correctAnswer": "Asynchronous, non-blocking I/O model"
+    },
+    {
+      "question": "What is npm in the context of Node.js?",
+      "options": [
+        "A Node.js version manager",
+        "A Node.js framework",
+        "The package manager for Node.js",
+        "A Node.js testing tool"
+      ],
+      "correctAnswer": "The package manager for Node.js"
+    },
+    {
+      "question": "Which of these is a core module in Node.js?",
+      "options": [
+        "Express",
+        "Lodash",
+        "fs (File System)",
+        "React"
+      ],
+      "correctAnswer": "fs (File System)"
+    },
+    {
+      "question": "Node.js applications are written in which language?",
+      "options": [
+        "C++",
+        "JavaScript",
+        "Python",
+        "Java"
+      ],
+      "correctAnswer": "JavaScript"
+    },
+    {
+      "question": "What does the 'event loop' in Node.js do?",
+      "options": [
+        "Handles event-based HTTP requests",
+        "Manages the order of script execution",
+        "Allows Node.js to perform non-blocking I/O operations",
+        "Automatically scales the application"
+      ],
+      "correctAnswer": "Allows Node.js to perform non-blocking I/O operations"
+    },
+    {
+      "question": "Which of these frameworks is commonly used with Node.js for web application development?",
+      "options": [
+        "Angular",
+        "Express",
+        "Vue.js",
+        "Bootstrap"
+      ],
+      "correctAnswer": "Express"
+    },
+    {
+      "question": "How does Node.js handle child processes?",
+      "options": [
+        "It does not support child processes",
+        "Using the 'child_process' module",
+        "Through multithreading",
+        "By creating new instances of the V8 engine"
+      ],
+      "correctAnswer": "Using the 'child_process' module"
+    },
+    {
+      "question": "What is the primary use case for the Node.js 'stream' module?",
+      "options": [
+        "Streaming real-time video data",
+        "Handling continuous data flows",
+        "Live broadcasting",
+        "Streaming data from databases"
+      ],
+      "correctAnswer": "Handling continuous data flows"
+    },
+    {
+      "question": "Node.js can be described as:",
+      "options": [
+        "Single-threaded",
+        "Multi-threaded",
+        "Running on a single process only",
+        "Incapable of asynchronous processing"
+      ],
+      "correctAnswer": "Single-threaded"
+    },
+    {
+      "question": "Which tool is used to test Node.js applications?",
+      "options": [
+        "Jest",
+        "Selenium",
+        "Webpack",
+        "JIRA"
+      ],
+      "correctAnswer": "Jest"
+    },
+    {
+      "question": "What is the purpose of middleware in Node.js applications?",
+      "options": [
+        "Intercepting and modifying HTTP requests in a web application",
+        "Transpiling JavaScript code",
+        "Managing database connections",
+        "Creating RESTful APIs"
+      ],
+      "correctAnswer": "Intercepting and modifying HTTP requests in a web application"
+    },
+    {
+      "question": "What is the main function of the Node.js 'http' module?",
+      "options": [
+        "Parsing HTML content",
+        "Encrypting data",
+        "Creating an HTTP server",
+        "Managing user sessions"
+      ],
+      "correctAnswer": "Creating an HTTP server"
+    },
+    {
+      "question": "Which of the following databases is commonly used with Node.js?",
+      "options": [
+        "Oracle",
+        "MongoDB",
+        "SQL Server",
+        "SQLite"
+      ],
+      "correctAnswer": "MongoDB"
+    },
+    {
+      "question": "What does the 'callback' function in Node.js do?",
+      "options": [
+        "It is called at the start of every module",
+        "It is a function passed as an argument to be executed after completion",
+        "It initializes the Node.js environment",
+        "It handles errors during application execution"
+      ],
+      "correctAnswer": "It is a function passed as an argument to be executed after completion"
+    },
+    {
+      "question": "Which of these is NOT a feature of Node.js?",
+      "options": [
+        "JavaScript execution on the server",
+        "Native support for TypeScript",
+        "Non-blocking I/O model",
+        "Built-in support for package management"
+      ],
+      "correctAnswer": "Native support for TypeScript"
+    },
+    {
+      "question": "How does Node.js improve performance compared to traditional web servers?",
+      "options": [
+        "By using multi-threading",
+        "Through its event-driven architecture",
+        "By limiting the number of requests",
+        "Using server-side caching"
+      ],
+      "correctAnswer": "Through its event-driven architecture"
+    },
+    {
+      "question": "Which feature makes Node.js particularly suitable for building RESTful APIs?",
+      "options": [
+        "JSON parsing capabilities",
+        "Integrated front-end framework",
+        "High performance for database operations",
+        "XML data handling"
+      ],
+      "correctAnswer": "JSON parsing capabilities"
+    },
+    {
+      "question": "Node.js is an ideal choice for developing:",
+      "options": [
+        "CPU-intensive applications",
+        "Real-time web applications",
+        "Desktop software",
+        "System drivers"
+      ],
+      "correctAnswer": "Real-time web applications"
+    },
+    {
+      "question": "What is the primary advantage of Node.js's non-blocking I/O model?",
+      "options": [
+        "Faster CPU computations",
+        "Improved error handling",
+        "Efficient handling of concurrent requests",
+        "Enhanced security protocols"
+      ],
+      "correctAnswer": "Efficient handling of concurrent requests"
+    }
+  ]
+  

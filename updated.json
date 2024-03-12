@@ -1,0 +1,586 @@
+[
+
+  {
+    "question": {"text": "Can you explain the different phases of the React component lifecycle? How would you optimize component rendering in each phase?", "audio_id": "q_one.mp3"},
+    "key_phrases": ["Mounting", "Updating", "Unmounting", "shouldComponentUpdate", "React.memo", "optimize", "prevent unnecessary re-renders"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! The React component lifecycle has three main phases: Mounting, Updating, and Unmounting. For optimization, you can use shouldComponentUpdate or React.memo to prevent unnecessary re-renders in the Updating phase.",
+        "audio_id": "one_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, The React component lifecycle has three main phases: Mounting, Updating, and Unmounting. For optimization, you can use shouldComponentUpdate or React.memo to prevent unnecessary re-renders in the Updating phase.",
+        "audio_id": "one_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },
+  {
+    "question": {"text": "Describe your experience with state management libraries like Redux or React Context. Can you give an example of when you would use one over the other?", "audio_id": "q_two.mp3"},
+    "key_phrases": ["Redux", "React Context", "large applications", "complex state logic", "prop drilling", "global state", "component-local state"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! here is another great answer. I've used both Redux and React Context. Redux is great for large applications with complex state logic, while Context is simpler and ideal for prop drilling issues. I'd use Redux for global state and Context for component-local state.",
+        "audio_id": "two_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Here is a great answer. I've used both Redux and React Context. Redux is great for large applications with complex state logic, while Context is simpler and ideal for prop drilling issues. I'd use Redux for global state and Context for component-local state.",
+        "audio_id": "two_2.mp3"
+      },
+      "transition": {
+        "text": "Great job! Let's move on.",
+        "audio_id": "trans_1"
+      }
+    }
+  },
+  {
+    "question": {"text": "What are the advantages of using Next.js over create-react-app for a React project? Can you explain the concept of Server-Side Rendering (SSR) in Next.js?", "audio_id": "q_three.mp3"},
+    "key_phrases": ["Next.js", "create-react-app", "Server-Side Rendering", "SSR", "Static Site Generation", "SSG", "automatic code splitting", "SEO", "initial page load", "HTML"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! Next.js offers features like Server-Side Rendering (SSR), Static Site Generation (SSG), and automatic code splitting. SSR is beneficial for SEO and initial page load performance. It renders the React component server-side and sends the HTML to the client.",
+        "audio_id": "three_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, Next.js offers features like Server-Side Rendering (SSR), Static Site Generation (SSG), and automatic code splitting. SSR is beneficial for SEO and initial page load performance. It renders the React component server-side and sends the HTML to the client.",
+        "audio_id": "three_2.mp3"
+      },
+      "transition": {
+        "text": "Excellent! On to the next.",
+        "audio_id": "trans_boxmodel"
+      }
+    }
+  },
+  {
+    "question": {"text": "How do you optimize a React application for better performance? Discuss techniques like lazy loading, code splitting, and memoization.", "audio_id": "q_four"},
+    "key_phrases": ["optimize", "React application", "lazy loading", "React.lazy()", "code splitting", "Webpack", "React.memo", "functional components", "React DevTools", "bottlenecks"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! here is another great answer. To optimize React apps, I use lazy loading with React.lazy(), implement code splitting with Webpack, and use React.memo for functional components. I also profile components using React DevTools to identify bottlenecks.",
+        "audio_id": "four_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Here is a great answer. To optimize React apps, I use lazy loading with React.lazy(), implement code splitting with Webpack, and use React.memo for functional components. I also profile components using React DevTools to identify bottlenecks.",
+        "audio_id": "four_2.mp3"
+      },
+      "transition": {
+        "text": "Great job! let's keep this momentum going. ",
+        "audio_id": "trans_two"
+      }
+    }
+  },
+  {
+    "question": {"text": "How do you approach styling in a large-scale React application? What are the pros and cons of using CSS-in-JS libraries like styled-components?", "audio_id": "q_five.mp3"},
+    "key_phrases": ["styling", "large-scale", "React application", "CSS-in-JS", "styled-components", "scoped styling", "dynamic theming", "performance overhead", "traditional CSS"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! here is another great answer. In large-scale projects, I prefer using CSS-in-JS libraries like styled-components for scoped styling and dynamic theming. However, they can have a slight performance overhead compared to traditional CSS.",
+        "audio_id": "five_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Here is a great answer. In large-scale projects, I prefer using CSS-in-JS libraries like styled-components for scoped styling and dynamic theming. However, they can have a slight performance overhead compared to traditional CSS.",
+        "audio_id": "five_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },
+  {
+    "question": {"text": "Walk me through the steps you would take to integrate a RESTful API into a React application. How would you handle errors and loading states?", "audio_id": "q_six.mp3"},
+    "key_phrases": ["integrate", "RESTful API", "Axios", "Fetch", "loading states", "boolean flag", "errors", "try-catch", ".catch()", "caching strategies", "frequently accessed data"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You got it! here is another great answer. To integrate a RESTful API, I'd use Axios or Fetch to make requests. I handle loading states using a boolean flag and errors using try-catch blocks or .catch() method. I also implement caching strategies for frequently accessed data.",
+        "audio_id": "six_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Here is a great answer.To integrate a RESTful API, I'd use Axios or Fetch to make requests. I handle loading states using a boolean flag and errors using try-catch blocks or .catch() method. I also implement caching strategies for frequently accessed data.",
+        "audio_id": "six_2.mp3"
+      },
+      "transition": {
+        "text": "Great job! Let's move on.",
+        "audio_id": "trans_1"
+      }
+    }
+  },
+  {
+    "question": {"text":"What testing libraries or frameworks do you prefer for testing React components? Can you explain the importance of snapshot testing?", "audio_id": "q_seven.mp3"},
+    "key_phrases": ["testing libraries", "frameworks", "Jest", "React Testing Library", "unit tests", "integration tests", "snapshot testing", "unintended UI changes", "stored snapshot"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! here is another great answer. I prefer using Jest along with React Testing Library for unit and integration tests. Snapshot testing is crucial for detecting unintended UI changes by comparing the current UI to a stored snapshot.",
+        "audio_id": "seven_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Here is a great answer.I prefer using Jest along with React Testing Library for unit and integration tests. Snapshot testing is crucial for detecting unintended UI changes by comparing the current UI to a stored snapshot.",
+        "audio_id": "seven_2.mp3"
+      },
+      "transition": {
+        "text": "Excellent! On to the next.",
+        "audio_id": "trans_boxmodel"
+      }
+    }
+  },
+  {
+    "question": {"text":"Can you describe a challenging front-end architecture problem you've solved? How did you ensure that the solution was maintainable and scalable?", "audio_id": "q_eight.mp3"},
+    "key_phrases": ["challenging", "front-end architecture", "real-time dashboard", "micro-frontend architecture", "manageable pieces", "maintain", "scale"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! here is another model answer that can highlight your knowledge and skills. I once had to build a real-time dashboard with various widgets. I used a micro-frontend architecture, breaking down the dashboard into smaller, more manageable pieces. This made the codebase easier to maintain and scale.",
+        "audio_id": "eight_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Here is a great answer template highlighting your skills .I once had to build a real-time dashboard with various widgets. I used a micro-frontend architecture, breaking down the dashboard into smaller, more manageable pieces. This made the codebase easier to maintain and scale.",
+        "audio_id": "eight_2.mp3"
+      },
+      "transition": {
+        "text": "Great job! let's keep this momentum going. ",
+        "audio_id": "trans_two"
+      }
+    }
+  },
+  {
+    "question": {"text":"Explain the concept of Virtual DOM in React and how it improves performance.", "audio_id": "q_nine.mp3"},
+    "key_phrases": ["Virtual DOM", "in-memory representation", "batch updates", "minimize", "actual DOM", "performance improvements"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! The Virtual DOM is an in-memory representation of the actual DOM. React uses it to batch updates and minimize direct manipulation of the actual DOM, leading to performance improvements.",
+        "audio_id": "nine_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, The Virtual DOM is an in-memory representation of the actual DOM. React uses it to batch updates and minimize direct manipulation of the actual DOM, leading to performance improvements.",
+        "audio_id": "nine_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },
+  {
+    "question": {"text":"What are React Hooks and how have they changed component development?", "audio_id": "q_ten.mp3"},
+    "key_phrases": ["React Hooks", "functions", "functional components", "manage state", "side-effects", "reuse", "stateful logic", "modular code"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! React Hooks are functions that allow functional components to manage state and side-effects. They've made it easier to reuse stateful logic and have led to cleaner, more modular code.",
+        "audio_id": "ten_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "React Hooks are functions that allow functional components to manage state and side-effects. They've made it easier to reuse stateful logic and have led to cleaner, more modular code.",
+        "audio_id": "ten_2.mp3"
+      },
+      "transition": {
+        "text": "Great job! Let's move on.",
+        "audio_id": "trans_1"
+      }
+    }
+  },
+  {
+    "question": {"text":"Describe the role of 'getStaticProps', 'getServerSideProps', and 'getInitialProps' in Next.js.", "audio_id": "q_elvn.mp3"},
+    "key_phrases": ["getStaticProps", "getServerSideProps", "getInitialProps", "Next.js", "Static Site Generation", "Server-Side Rendering", "data fetching", "page level", "rendering", "data-fetching strategies"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": " You are right! In Next.js, 'getStaticProps' is used for Static Site Generation, 'getServerSideProps' for Server-Side Rendering, and 'getInitialProps' for data fetching at the page level. Each serves a different purpose in terms of rendering and data-fetching strategies.",
+        "audio_id": "elvn_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": " In Next.js, 'getStaticProps' is used for Static Site Generation, 'getServerSideProps' for Server-Side Rendering, and 'getInitialProps' for data fetching at the page level. Each serves a different purpose in terms of rendering and data-fetching strategies.",
+        "audio_id": "elvn_2.mp3"
+      },
+      "transition": {
+        "text": "Excellent! On to the next.",
+        "audio_id": "trans_boxmodel"
+      }
+    }
+  },
+  {
+    "question": {"text":"How do you handle form validation in a React application?", "audio_id": "q_tlv.mp3"},
+    "key_phrases": ["handle", "form validation", "React application", "controlled components", "state", "Formik", "React Hook Form", "complex validation scenarios"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! here is another great answer. I usually use controlled components along with state to manage form validation. Libraries like Formik or React Hook Form can also be used for more complex validation scenarios.",
+        "audio_id": "tlv_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Here is a great answer. I usually use controlled components along with state to manage form validation. Libraries like Formik or React Hook Form can also be used for more complex validation scenarios.",
+        "audio_id": "tlv_2.mp3"
+      },
+      "transition": {
+        "text": "Great job! let's keep this momentum going. ",
+        "audio_id": "trans_two"
+      }
+    }
+  },
+  {
+    "question": {"text": "What are the key considerations for ensuring accessibility in a React application?", "audio_id": "q_thrtin.mp3"},
+    "key_phrases": ["key considerations", "ensuring", "accessibility", "React application", "semantic HTML", "ARIA attributes", "keyboard navigation", "screen readers", "audit tools"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You got it! here is another great answer.To ensure accessibility, I use semantic HTML tags, ARIA attributes, and keyboard navigation. I also test the application using screen readers and accessibility audit tools.",
+        "audio_id": "thrtin_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Here is a great answer. To ensure accessibility, I use semantic HTML tags, ARIA attributes, and keyboard navigation. I also test the application using screen readers and accessibility audit tools.",
+        "audio_id": "thrtin_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },
+  {
+    "question": {"text": "How do you approach internationalization and localization in a front-end application?", "audio_id": "q_fortin.mp3"},
+    "key_phrases": ["approach", "internationalization", "localization", "front-end application", "i18next", "manage translations", "language files", "dynamically rendering", "user's locale"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "That's well put. here is another great answer.I use libraries like i18next to manage translations and localize the application. This involves setting up language files and dynamically rendering text based on the user's locale.",
+        "audio_id": "fortin_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Here is a great answer. I use libraries like i18next to manage translations and localize the application. This involves setting up language files and dynamically rendering text based on the user's locale.",
+        "audio_id": "fortin_2.mp3"
+      },
+      "transition": {
+        "text": "Great job! Let's move on.",
+        "audio_id": "trans_1"
+      }
+    }
+  },
+  {
+    "question": {"text": "What are your strategies for optimizing web performance in a Next.js application?", "audio_id": "q_fiftn.mp3"},
+    "key_phrases": ["strategies", "optimizing", "web performance", "Next.js application", "image optimization", "API route caching", "incremental static regeneration", "Lighthouse", "performance audits"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! here is another great answer.I leverage Next.js features like image optimization, API route caching, and incremental static regeneration to optimize web performance. I also use Lighthouse for performance audits.",
+        "audio_id": "fiftn_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Here is a great answer. I leverage Next.js features like image optimization, API route caching, and incremental static regeneration to optimize web performance. I also use Lighthouse for performance audits.",
+        "audio_id": "fiftn_2.mp3"
+      },
+      "transition": {
+        "text": "Excellent! On to the next.",
+        "audio_id": "trans_boxmodel"
+      }
+    }
+  },
+  {
+    "question": {"text": "How do you manage side-effects in a React application?", "audio_id": "q_sixtn.mp3"},
+    "key_phrases": ["manage", "side-effects", "React application", "useEffect hook", "functional components", "middleware", "Redux Thunk", "Redux Saga"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! here is another great answer.I use the 'useEffect' hook for managing side-effects in functional components. For more complex scenarios, middleware like Redux Thunk or Redux Saga can be used.",
+        "audio_id": "sixtn_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Here is a great answer. I use the 'useEffect' hook for managing side-effects in functional components. For more complex scenarios, middleware like Redux Thunk or Redux Saga can be used.",
+        "audio_id": "sixtn_2.mp3"
+      },
+      "transition": {
+        "text": "Great job! let's keep this momentum going. ",
+        "audio_id": "trans_two"
+      }
+    }
+  },
+
+  {
+    "question": {"text": "What is the significance of React's unidirectional data flow?", "audio_id": "q_svtn.mp3"},
+        "key_phrases": ["significance", "unidirectional data flow", "React", "state", "predictable", "parent components", "child components", "props", "debug", "understand"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! Unidirectional data flow in React ensures that the state is managed in a predictable manner. It flows from parent components down to child components via props, making it easier to debug and understand the application.",
+        "audio_id": "svtn_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, Unidirectional data flow in React ensures that the state is managed in a predictable manner. It flows from parent components down to child components via props, making it easier to debug and understand the application.",
+        "audio_id": "svtn_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },
+  {
+    "question": {"text": "How do you handle authentication and authorization in a Next.js application?", "audio_id": "q_egtn.mp3"},
+    "key_phrases": ["handle", "authentication", "authorization", "Next.js application", "JWT", "store tokens", "securely", "API routes", "server-side", "role-based access controls"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! I typically use JWT for authentication and store tokens securely. Next.js API routes can be used to handle authentication logic server-side. For authorization, role-based access controls are implemented.",
+        "audio_id": "egtn_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, I typically use JWT for authentication and store tokens securely. Next.js API routes can be used to handle authentication logic server-side. For authorization, role-based access controls are implemented.",
+        "audio_id": "egtn_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },
+  {
+    "question": {"text": "Explain the concept of Higher-Order Components (HOCs) in React.", "audio_id": "q_ntn.mp3"},
+    "key_phrases": ["Explain", "Higher-Order Components", "HOCs", "React", "functions", "component", "return", "new component", "additional props", "behaviors", "reusing", "component logic"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it!Higher-Order Components (HOCs) are functions that take a component and return a new component with additional props or behaviors. They are used for reusing component logic.",
+        "audio_id": "ntn_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, Higher-Order Components (HOCs) are functions that take a component and return a new component with additional props or behaviors. They are used for reusing component logic.",
+        "audio_id": "ntn_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },
+  {
+    "question": {"text": "How do you ensure code quality and maintainability in a large React project?", "audio_id": "q_twny.mp3"},
+    "key_phrases": ["ensure", "code quality", "maintainability", "large React project", "ESLint", "static code analysis", "Prettier", "code formatting", "code reviews", "unit tests", "continuous integration"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! I use ESLint for static code analysis and Prettier for code formatting. Code reviews, unit tests, and continuous integration are also part of the workflow to ensure code quality and maintainability.",
+        "audio_id": "twny_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, I use ESLint for static code analysis and Prettier for code formatting. Code reviews, unit tests, and continuous integration are also part of the workflow to ensure code quality and maintainability.",
+        "audio_id": "twny_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },
+  {
+    "question": {"text": "What are React Fragments and what problem do they solve?", "audio_id": "q_twty1.mp3"},
+    "key_phrases": ["React Fragments", "group", "multiple elements", "extra nodes", "DOM", "unnecessary wrapper divs", "cleaner", "efficient code"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! React Fragments allow you to group multiple elements without adding extra nodes to the DOM. They solve the problem of unnecessary wrapper divs, leading to cleaner and more efficient code.",
+        "audio_id": "twty1_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, React Fragments allow you to group multiple elements without adding extra nodes to the DOM. They solve the problem of unnecessary wrapper divs, leading to cleaner and more efficient code.",
+        "audio_id": "twty1_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },
+  {
+    "question": {"text": "How do you manage application state in a Next.js project?", "audio_id": "q_twty2.mp3"},
+    "key_phrases": ["manage", "application state", "Next.js project", "global state management", "Redux", "Zustand", "local state", "useState", "useReducer"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! For global state management in Next.js, I often use Redux or Zustand. For local state, React's built-in useState and useReducer hooks are sufficient.",
+        "audio_id": "twty2_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, For global state management in Next.js, I often use Redux or Zustand. For local state, React's built-in useState and useReducer hooks are sufficient.",
+        "audio_id": "twty2_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },
+  {
+    "question": {"text":  "What are the benefits of using TypeScript with React?", "audio_id": "q_twty3.mp3"},
+    "key_phrases": ["benefits", "TypeScript", "React", "static type checking", "catches errors", "code readability", "maintainability", "large-scale projects"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! TypeScript provides static type checking, which catches errors early. It also enhances code readability and maintainability, making it easier to work on large-scale projects.",
+        "audio_id": "twty3_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, TypeScript provides static type checking, which catches errors early. It also enhances code readability and maintainability, making it easier to work on large-scale projects.",
+        "audio_id": "twty3_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },
+  {
+    "question": {"text": "How do you handle client-side routing in a single-page application (SPA) built with React?", "audio_id": "q_twty4.mp3"},
+    "key_phrases": ["handle", "client-side routing", "single-page application", "SPA", "React", "React Router", "dynamic routing", "nested routes", "route guards", "control access"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! I usually use React Router for client-side routing in SPAs. It allows for dynamic routing, nested routes, and route guards to control access to different parts of the application..",
+        "audio_id": "twty4_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, I usually use React Router for client-side routing in SPAs. It allows for dynamic routing, nested routes, and route guards to control access to different parts of the application.",
+        "audio_id": "twty4_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },
+  {
+    "question": {"text": "What is the role of React's Context API and how does it compare to Redux?", "audio_id": "q_twty5.mp3"},
+    "key_phrases": ["role", "React's Context API", "pass data", "component tree", "props", "simpler", "Redux", "complex state management"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! React's Context API provides a way to pass data through the component tree without having to pass props manually at every level. It's simpler than Redux but may not be suitable for complex state management.",
+        "audio_id": "twty5_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, React's Context API provides a way to pass data through the component tree without having to pass props manually at every level. It's simpler than Redux but may not be suitable for complex state management.",
+        "audio_id": "twty5_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },
+  {
+    "question": {"text": "How do you optimize images and other media assets in a Next.js application?", "audio_id": "q_twty6.mp3"},
+    "key_phrases": ["optimize", "images", "media assets", "Next.js application", "Image component", "automatically", "lazy loading", "compression", "improve performance"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! Next.js provides an Image component that automatically optimizes images. For other media assets, I use techniques like lazy loading and compression to improve performance.",
+        "audio_id": "twty6_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, Next.js provides an Image component that automatically optimizes images. For other media assets, I use techniques like lazy loading and compression to improve performance.",
+        "audio_id": "twty6_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },    
+  {
+    "question": {"text": "Explain the use of 'refs' in React and give an example scenario where you would use them.", "audio_id": "q_twty7.mp3"},
+    "key_phrases": ["Explain", "refs", "React", "access", "DOM nodes", "React elements", "focus management", "text selection", "triggering animations"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! Refs in React are used to access DOM nodes or React elements directly. They are commonly used for focus management, text selection, or triggering animations.",
+        "audio_id": "twty7_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, Refs in React are used to access DOM nodes or React elements directly. They are commonly used for focus management, text selection, or triggering animations.",
+        "audio_id": "twty7_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  }, 
+  {
+    "question": {"text": "How do you ensure a React application is SEO-friendly?", "audio_id": "q_twty8.mp3"},
+    "key_phrases": ["ensure", "React application", "SEO-friendly", "server-side rendering", "static site generation", "initial page loads", "meta tags", "schema markup", "search engine indexing"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! To make a React application SEO-friendly, I use server-side rendering or static site generation for initial page loads. I also use meta tags and schema markup for better search engine indexing.",
+        "audio_id": "twty8_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, To make a React application SEO-friendly, I use server-side rendering or static site generation for initial page loads. I also use meta tags and schema markup for better search engine indexing.",
+        "audio_id": "twty8_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },
+  {
+    "question": {"text": "What are the key differences between functional and class components in React?", "audio_id": "q_twty9.mp3"},
+    "key_phrases": ["key differences", "functional components", "class components", "React", "simpler", "easier to test", "hooks", "state", "lifecycle features", "boilerplate", "lifecycle methods", "side-effects"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! Functional components are simpler and easier to test. They can use hooks for state and lifecycle features. Class components, on the other hand, require more boilerplate and use lifecycle methods for side-effects.",
+        "audio_id": "twty9_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, Functional components are simpler and easier to test. They can use hooks for state and lifecycle features. Class components, on the other hand, require more boilerplate and use lifecycle methods for side-effects.",
+        "audio_id": "twty9_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  }, 
+  {
+    "question": {"text": "How do you handle server-side logic in a Next.js application?", "audio_id": "q_thrry.mp3"},
+    "key_phrases": ["handle", "server-side logic", "Next.js application", "API routes", "pages/api directory", "Node.js", "seamless", "integrate", "front-end"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! In Next.js, server-side logic can be handled using API routes. These routes are placed in the 'pages/api' directory and can be written in Node.js, making it seamless to integrate with the front-end.",
+        "audio_id": "thrry_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, In Next.js, server-side logic can be handled using API routes. These routes are placed in the 'pages/api' directory and can be written in Node.js, making it seamless to integrate with the front-end.",
+        "audio_id": "thrry_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },
+  {
+    "question": {"text": "What are React Portals and where would you use them?", "audio_id": "q_thrry1.mp3"},
+    "key_phrases": ["React Portals", "render", "children", "DOM node", "outside", "DOM hierarchy", "parent component", "modals", "tooltips", "pop-ups"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! React Portals provide a way to render children into a DOM node that exists outside the DOM hierarchy of the parent component. They are commonly used for modals, tooltips, and pop-ups.",
+        "audio_id": "thrry1_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, React Portals provide a way to render children into a DOM node that exists outside the DOM hierarchy of the parent component. They are commonly used for modals, tooltips, and pop-ups.",
+        "audio_id": "thrry1_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  },
+  {
+    "question": {"text": "How do you manage dependencies and packages in a front-end project?", "audio_id": "q_thrry2.mp3"},
+    "key_phrases": ["manage", "dependencies", "packages", "front-end project", "package managers", "npm", "yarn", "track", "package versions", "regularly update", "up-to-date", "secure"],
+    "response": {
+      "correct_elaborated_answer": {
+        "text": "You nailed it! I use package managers like npm or yarn to manage dependencies. I also keep track of package versions and regularly update them to ensure the project stays up-to-date and secure.",
+        "audio_id": "thrry2_1.mp3"
+      },
+      "incorrect_elaborated_answer": {
+        "text": "Actually, I use package managers like npm or yarn to manage dependencies. I also keep track of package versions and regularly update them to ensure the project stays up-to-date and secure.",
+        "audio_id": "thrry2_2.mp3"
+      },
+      "transition": {
+        "text": "Awesome! Ready for the next one?",
+        "audio_id": "trans_2"
+      }
+    }
+  }
+          
+    
+ 
+    ]
+  
+  
+  

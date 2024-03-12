@@ -1,0 +1,203 @@
+[
+    {
+      "question": "What is Vue.js primarily used for?",
+      "options": [
+        "Backend development",
+        "Mobile app development",
+        "Building user interfaces and single-page applications",
+        "Data analysis"
+      ],
+      "correctAnswer": "Building user interfaces and single-page applications"
+    },
+    {
+      "question": "Which of the following is a core feature of Vue.js?",
+      "options": [
+        "Virtual DOM",
+        "Use of jQuery",
+        "Server-side rendering",
+        "Dependency on Angular"
+      ],
+      "correctAnswer": "Virtual DOM"
+    },
+    {
+      "question": "What directive is used in Vue.js to bind an element’s attribute to an expression?",
+      "options": [
+        "v-bind",
+        "v-model",
+        "v-on",
+        "v-if"
+      ],
+      "correctAnswer": "v-bind"
+    },
+    {
+      "question": "How are reactive properties of a Vue instance declared?",
+      "options": [
+        "In the 'data' function",
+        "In the 'methods' function",
+        "In the 'computed' function",
+        "In the 'mounted' function"
+      ],
+      "correctAnswer": "In the 'data' function"
+    },
+    {
+      "question": "What is the purpose of the 'computed' properties in Vue.js?",
+      "options": [
+        "To store asynchronous operations",
+        "To directly mutate the state",
+        "For calculations that will be reactive when dependencies change",
+        "To perform DOM manipulations"
+      ],
+      "correctAnswer": "For calculations that will be reactive when dependencies change"
+    },
+    {
+      "question": "Which Vue.js lifecycle hook is called after the component has been mounted to the DOM?",
+      "options": [
+        "created",
+        "mounted",
+        "updated",
+        "destroyed"
+      ],
+      "correctAnswer": "mounted"
+    },
+    {
+      "question": "What is Vuex used for in a Vue.js application?",
+      "options": [
+        "Routing",
+        "State management",
+        "Server-side rendering",
+        "Data binding"
+      ],
+      "correctAnswer": "State management"
+    },
+    {
+      "question": "What directive is used for conditional rendering of elements in Vue.js?",
+      "options": [
+        "v-if",
+        "v-for",
+        "v-show",
+        "v-bind"
+      ],
+      "correctAnswer": "v-if"
+    },
+    {
+      "question": "How do you register a local component in Vue.js?",
+      "options": [
+        "Globally using Vue.component",
+        "Using the 'components' option within a parent component",
+        "By importing it in the main.js file",
+        "Using Vue.use()"
+      ],
+      "correctAnswer": "Using the 'components' option within a parent component"
+    },
+    {
+      "question": "In Vue.js, what is a 'slot' used for?",
+      "options": [
+        "Memory allocation",
+        "Distribution of reusable functionalities",
+        "Inserting dynamic HTML content into child components",
+        "Data binding"
+      ],
+      "correctAnswer": "Inserting dynamic HTML content into child components"
+    },
+    {
+      "question": "What is the use of the 'key' attribute in list rendering in Vue.js?",
+      "options": [
+        "To improve performance by maintaining internal component state",
+        "To uniquely identify each element in the list",
+        "To specify the sort order of the list",
+        "To bind data to list elements"
+      ],
+      "correctAnswer": "To uniquely identify each element in the list"
+    },
+    {
+      "question": "What Vue.js syntax would you use to execute a method when a button is clicked?",
+      "options": [
+        "v-bind:click",
+        "v-model:click",
+        "v-on:click",
+        "v-click"
+      ],
+      "correctAnswer": "v-on:click"
+    },
+    {
+      "question": "Which of the following is true about Vue.js components?",
+      "options": [
+        "They cannot emit custom events",
+        "They can only be used once",
+        "They are reusable Vue instances",
+        "They do not have access to the parent scope"
+      ],
+      "correctAnswer": "They are reusable Vue instances"
+    },
+    {
+      "question": "In Vue.js, what is a mixin used for?",
+      "options": [
+        "To globally register controllers",
+        "For form validation",
+        "To reuse functionalities across components",
+        "To manipulate the DOM"
+      ],
+      "correctAnswer": "To reuse functionalities across components"
+    },
+    {
+      "question": "What does the 'v-model' directive provide?",
+      "options": [
+        "Conditional rendering",
+        "List rendering",
+        "Two-way data binding on form inputs",
+        "Event handling"
+      ],
+      "correctAnswer": "Two-way data binding on form inputs"
+    },
+    {
+      "question": "What is the command to create a new Vue.js project using Vue CLI?",
+      "options": [
+        "vue create project-name",
+        "npm install vue",
+        "vue init project-name",
+        "npm start vue-project"
+      ],
+      "correctAnswer": "vue create project-name"
+    },
+    {
+      "question": "Which method is called right before a Vue component is destroyed?",
+      "options": [
+        "beforeDestroy",
+        "destroyed",
+        "beforeUnmount",
+        "unmounted"
+      ],
+      "correctAnswer": "beforeDestroy"
+    },
+    {
+      "question": "What is the purpose of Vue Router in a Vue.js application?",
+      "options": [
+        "State management",
+        "Handling HTTP requests",
+        "Managing URL routing and navigation",
+        "Server-side rendering"
+      ],
+      "correctAnswer": "Managing URL routing and navigation"
+    },
+    {
+      "question": "How do you access the parent component instance from a child component in Vue.js?",
+      "options": [
+        "Using this.$parent",
+        "Using this.$root",
+        "Using this.$child",
+        "Using this.$refs"
+      ],
+      "correctAnswer": "Using this.$parent"
+    },
+    {
+      "question": "In Vue.js, what is the difference between computed properties and methods?",
+      "options": [
+        "Computed properties are cached, methods are not",
+        "Methods can accept arguments, computed properties cannot",
+        "Computed properties are asynchronous, methods are synchronous",
+        "Both A and B"
+      ],
+      "correctAnswer": "Both A and B"
+    }
+  ]
+  
